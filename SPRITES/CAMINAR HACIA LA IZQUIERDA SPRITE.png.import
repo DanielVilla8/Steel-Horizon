@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1avqgkdry62s"
-path="res://.godot/imported/CAMINAR HACIA LA IZQUIERDA SPRITE.png-3185b39ab5489dcf7a769bba65369eea.ctex"
+uid="uid://bjbd26jy5y5ql"
+path="res://.godot/imported/CAMINAR HACIA LA IZQUIERDA SPRITE.png-3683c96d1b9ac2c7a98e7749e05a1e3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CAMINAR HACIA LA IZQUIERDA SPRITE.png"
-dest_files=["res://.godot/imported/CAMINAR HACIA LA IZQUIERDA SPRITE.png-3185b39ab5489dcf7a769bba65369eea.ctex"]
+source_file="res://SPRITES/CAMINAR HACIA LA IZQUIERDA SPRITE.png"
+dest_files=["res://.godot/imported/CAMINAR HACIA LA IZQUIERDA SPRITE.png-3683c96d1b9ac2c7a98e7749e05a1e3e.ctex"]
 
 [params]
 

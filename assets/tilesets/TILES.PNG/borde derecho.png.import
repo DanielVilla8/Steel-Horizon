@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g6nmf0gk4hn"
-path="res://.godot/imported/CAMINAR HACIA ABAJO SPRITES.png-41f7917d2370a50123296dadd022449b.ctex"
+uid="uid://c5d80alcy2sx"
+path="res://.godot/imported/borde derecho.png-2b82b7c796489eef4de1f0e056d3feba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CAMINAR HACIA ABAJO SPRITES.png"
-dest_files=["res://.godot/imported/CAMINAR HACIA ABAJO SPRITES.png-41f7917d2370a50123296dadd022449b.ctex"]
+source_file="res://assets/tilesets/TILES.PNG/borde derecho.png"
+dest_files=["res://.godot/imported/borde derecho.png-2b82b7c796489eef4de1f0e056d3feba.ctex"]
 
 [params]
 

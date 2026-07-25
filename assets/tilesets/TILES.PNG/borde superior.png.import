@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dub56u7syhn2s"
-path="res://.godot/imported/CAMINAR HACIA ARRIBASPRITES.png-d7f48a23e80538465d5ce41ad11cdaa1.ctex"
+uid="uid://bts6gof5ordio"
+path="res://.godot/imported/borde superior.png-1b41eb457a6d90ebbab5016609a49fb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CAMINAR HACIA ARRIBASPRITES.png"
-dest_files=["res://.godot/imported/CAMINAR HACIA ARRIBASPRITES.png-d7f48a23e80538465d5ce41ad11cdaa1.ctex"]
+source_file="res://assets/tilesets/TILES.PNG/borde superior.png"
+dest_files=["res://.godot/imported/borde superior.png-1b41eb457a6d90ebbab5016609a49fb6.ctex"]
 
 [params]
 

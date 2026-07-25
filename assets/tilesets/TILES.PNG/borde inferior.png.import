@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj7pwt3vq4d2w"
-path="res://.godot/imported/CAMINAR HACIA LA DERECHA SPRITE.png-00b28dea5e7e9b685a743b7f8632e398.ctex"
+uid="uid://cxj3xrd1if8ni"
+path="res://.godot/imported/borde inferior.png-03ad3fd072447a3e5f2c3559dbf6ac4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CAMINAR HACIA LA DERECHA SPRITE.png"
-dest_files=["res://.godot/imported/CAMINAR HACIA LA DERECHA SPRITE.png-00b28dea5e7e9b685a743b7f8632e398.ctex"]
+source_file="res://assets/tilesets/TILES.PNG/borde inferior.png"
+dest_files=["res://.godot/imported/borde inferior.png-03ad3fd072447a3e5f2c3559dbf6ac4c.ctex"]
 
 [params]
 
