@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://1dwjpwbrjbax" path="res://assets/Tiles/EED.png" id="9_nq5ya"]
 [ext_resource type="Texture2D" uid="uid://dxrubhmyltgl0" path="res://assets/Tiles/CAJAOBJETOS.png" id="10_bvndd"]
 [ext_resource type="PackedScene" uid="uid://bel6o1civt72w" path="res://scenes/personajes/enemigo_2.tscn" id="11_6xx4h"]
+[ext_resource type="PackedScene" uid="uid://ynik3s7f8154" path="res://scenes/personajes/enemigo_3.tscn" id="12_tab38"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsxu7"]
 texture = ExtResource("1_1xvmb")
@@ -341,55 +342,140 @@ position = Vector2(320, 161)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint_enemigo1"), NodePath("../Waypoints/waypoint2_enemigo1")]
 
-[node name="enemigo 3" parent="." unique_id=549511151 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_1" parent="." unique_id=549511151 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(140, 338)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint3_enemigo2"), NodePath("../Waypoints/waypoint4_enemigo2")]
 
-[node name="enemigo 4" parent="." unique_id=626947083 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_2" parent="." unique_id=626947083 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(63.000004, 1056)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint5_enemigo3"), NodePath("../Waypoints/waypoint6_enemigo3")]
 
-[node name="enemigo 5" parent="." unique_id=498544571 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_3" parent="." unique_id=498544571 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(447, 1441)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint7_enemigo4"), NodePath("../Waypoints/waypoint8_enemigo4")]
 
-[node name="enemigo 6" parent="." unique_id=1854941935 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_4" parent="." unique_id=1854941935 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(701, 640)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint9_enemigo5"), NodePath("../Waypoints/waypoint10_enemigo5")]
 
-[node name="enemigo 7" parent="." unique_id=354307876 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_5" parent="." unique_id=354307876 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(447, 574)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint11_enemigo6"), NodePath("../Waypoints/waypoint12_enemigo6")]
 
-[node name="enemigo 8" parent="." unique_id=741751208 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_6" parent="." unique_id=741751208 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(733, 899.00006)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint13_enemigo7"), NodePath("../Waypoints/waypoint14_enemigo7")]
 
-[node name="enemigo 9" parent="." unique_id=1572688539 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_7" parent="." unique_id=1572688539 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(1054, 1409)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint15_enemigo8"), NodePath("../Waypoints/waypoint16_enemigo8")]
 
-[node name="enemigo 10" parent="." unique_id=1395094703 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_8" parent="." unique_id=1395094703 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(865, 383)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint17_enemigo9"), NodePath("../Waypoints/waypoint18_enemigo9")]
 
-[node name="enemigo 11" parent="." unique_id=1666447131 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_9" parent="." unique_id=1666447131 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(703, 1251)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint5_enemigo3"), NodePath("../Waypoints/waypoint6_enemigo3")]
 
-[node name="enemigo 12" parent="." unique_id=1293967591 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
+[node name="enemigo 2_10" parent="." unique_id=1293967591 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(1024, 575)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint21_enemigo11"), NodePath("../Waypoints/waypoint22_enemigo11")]
+
+[node name="enemigo 3" parent="." unique_id=1232024634 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1121, 99.00001)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint23_enemigo12"), NodePath("../Waypoints/waypoint24_enemigo12")]
+
+[node name="enemigo 3_1" parent="." unique_id=472475951 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1464, 263)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint25_enemigo13"), NodePath("../Waypoints/waypoint26_enemigo13")]
+
+[node name="enemigo 3_2" parent="." unique_id=1015742788 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1427, 584)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint27_enemigo14"), NodePath("../Waypoints/waypoint28_enemigo14")]
+
+[node name="enemigo 3_3" parent="." unique_id=1619692150 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1176, 937)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint29_enemigo15"), NodePath("../Waypoints/waypoint30_enemigo15")]
+
+[node name="enemigo 3_4" parent="." unique_id=748258331 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1463, 1233)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint31_enemigo16"), NodePath("../Waypoints/waypoint32_enemigo16")]
+
+[node name="enemigo 3_5" parent="." unique_id=1211703161 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1654.0001, 646.00006)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint33_enemigo17"), NodePath("../Waypoints/waypoint34_enemigo17")]
+
+[node name="enemigo 3_6" parent="." unique_id=1101553630 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1783, 553)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint35_enemigo18"), NodePath("../Waypoints/waypoint36_enemigo18")]
+
+[node name="enemigo 3_7" parent="." unique_id=593793732 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(2041.0001, 133)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint35_enemigo18"), NodePath("../Waypoints/waypoint36_enemigo18")]
+
+[node name="enemigo 3_8" parent="." unique_id=1818617922 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(2100, 586)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint39_enemigo20"), NodePath("../Waypoints/waypoint40_enemigo20")]
+
+[node name="enemigo 3_9" parent="." unique_id=1436926109 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1848, 936.00006)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint41_enemigo21"), NodePath("../Waypoints/waypoint42_enemigo21")]
+
+[node name="enemigo 3_10" parent="." unique_id=953498991 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1689, 1253)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint43_enemigo22"), NodePath("../Waypoints/waypoint44_enemigo22")]
+
+[node name="enemigo 3_11" parent="." unique_id=1386448307 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(2358, 872.00006)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint45_enemigo23"), NodePath("../Waypoints/waypoint46_enemigo23")]
+
+[node name="enemigo 3_12" parent="." unique_id=732405539 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(2167, 1256)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint47_enemigo24"), NodePath("../Waypoints/waypoint48_enemigo24")]
+
+[node name="enemigo 3_13" parent="." unique_id=1449636561 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1975.0001, 1153)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint49_enemigo25"), NodePath("../Waypoints/waypoint50_enemigo25")]
+
+[node name="enemigo 3_14" parent="." unique_id=779813371 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(2424, 463)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint51_enemigo26"), NodePath("../Waypoints/waypoint52_enemigo26")]
+
+[node name="enemigo 3_15" parent="." unique_id=894862252 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(2423, 1446)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint53_enemigo27"), NodePath("../Waypoints/waypoint54_enemigo27")]
+
+[node name="enemigo 3_16" parent="." unique_id=2004265150 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
+position = Vector2(1589, 1471)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint55_enemigo28"), NodePath("../Waypoints/waypoint56_enemigo28")]
 
 [node name="Waypoints" type="Node2D" parent="." unique_id=284101230]
 position = Vector2(69, 76)
@@ -459,3 +545,105 @@ position = Vector2(955, 499)
 
 [node name="waypoint22_enemigo11" type="Marker2D" parent="Waypoints" unique_id=1440510874]
 position = Vector2(954, 757)
+
+[node name="waypoint23_enemigo12" type="Marker2D" parent="Waypoints" unique_id=892512956]
+position = Vector2(1053, 21)
+
+[node name="waypoint24_enemigo12" type="Marker2D" parent="Waypoints" unique_id=232775623]
+position = Vector2(1052, 277)
+
+[node name="waypoint25_enemigo13" type="Marker2D" parent="Waypoints" unique_id=556421572]
+position = Vector2(1402, 212)
+
+[node name="waypoint26_enemigo13" type="Marker2D" parent="Waypoints" unique_id=1927823855]
+position = Vector2(1403, 470)
+
+[node name="waypoint27_enemigo14" type="Marker2D" parent="Waypoints" unique_id=1094696350]
+position = Vector2(1373, 533)
+
+[node name="waypoint28_enemigo14" type="Marker2D" parent="Waypoints" unique_id=2071804243]
+position = Vector2(1115, 534)
+
+[node name="waypoint29_enemigo15" type="Marker2D" parent="Waypoints" unique_id=2038801034]
+position = Vector2(1117, 886)
+
+[node name="waypoint30_enemigo15" type="Marker2D" parent="Waypoints" unique_id=646812121]
+position = Vector2(1372, 884)
+
+[node name="waypoint31_enemigo16" type="Marker2D" parent="Waypoints" unique_id=525951001]
+position = Vector2(1402, 1175)
+
+[node name="waypoint32_enemigo16" type="Marker2D" parent="Waypoints" unique_id=1369507177]
+position = Vector2(1401, 916)
+
+[node name="waypoint33_enemigo17" type="Marker2D" parent="Waypoints" unique_id=1922221547]
+position = Vector2(1595, 597)
+
+[node name="waypoint34_enemigo17" type="Marker2D" parent="Waypoints" unique_id=736978507]
+position = Vector2(1595, 852)
+
+[node name="waypoint35_enemigo18" type="Marker2D" parent="Waypoints" unique_id=1257356526]
+position = Vector2(1723, 501)
+
+[node name="waypoint36_enemigo18" type="Marker2D" parent="Waypoints" unique_id=1968765236]
+position = Vector2(1724, 245)
+
+[node name="waypoint37_enemigo19" type="Marker2D" parent="Waypoints" unique_id=847602040]
+position = Vector2(1981, 86)
+
+[node name="waypoint38_enemigo19" type="Marker2D" parent="Waypoints" unique_id=1827377913]
+position = Vector2(1722, 86)
+
+[node name="waypoint39_enemigo20" type="Marker2D" parent="Waypoints" unique_id=679916252]
+position = Vector2(2040, 533)
+
+[node name="waypoint40_enemigo20" type="Marker2D" parent="Waypoints" unique_id=830288545]
+position = Vector2(2044, 276)
+
+[node name="waypoint41_enemigo21" type="Marker2D" parent="Waypoints" unique_id=2084344345]
+position = Vector2(1787, 886)
+
+[node name="waypoint42_enemigo21" type="Marker2D" parent="Waypoints" unique_id=518143772]
+position = Vector2(1788, 1140)
+
+[node name="waypoint43_enemigo22" type="Marker2D" parent="Waypoints" unique_id=605054258]
+position = Vector2(1628, 1205)
+
+[node name="waypoint44_enemigo22" type="Marker2D" parent="Waypoints" unique_id=425496605]
+position = Vector2(1627, 1397)
+
+[node name="waypoint45_enemigo23" type="Marker2D" parent="Waypoints" unique_id=33033585]
+position = Vector2(2299, 821)
+
+[node name="waypoint46_enemigo23" type="Marker2D" parent="Waypoints" unique_id=1857626996]
+position = Vector2(2040, 822)
+
+[node name="waypoint47_enemigo24" type="Marker2D" parent="Waypoints" unique_id=55439219]
+position = Vector2(2107, 1205)
+
+[node name="waypoint48_enemigo24" type="Marker2D" parent="Waypoints" unique_id=1003914397]
+position = Vector2(2105, 1400)
+
+[node name="waypoint49_enemigo25" type="Marker2D" parent="Waypoints" unique_id=714928976]
+position = Vector2(1915, 1078)
+
+[node name="waypoint50_enemigo25" type="Marker2D" parent="Waypoints" unique_id=1426777376]
+position = Vector2(1915, 823)
+
+[node name="waypoint51_enemigo26" type="Marker2D" parent="Waypoints" unique_id=1855825486]
+position = Vector2(2365, 405)
+
+[node name="waypoint52_enemigo26" type="Marker2D" parent="Waypoints" unique_id=1189362814]
+position = Vector2(2365, 148)
+
+[node name="waypoint53_enemigo27" type="Marker2D" parent="Waypoints" unique_id=1333316377]
+position = Vector2(2363, 1395)
+
+[node name="waypoint54_enemigo27" type="Marker2D" parent="Waypoints" unique_id=1168710856]
+position = Vector2(2363, 1141)
+
+[node name="waypoint55_enemigo28" type="Marker2D" parent="Waypoints" unique_id=1448538178]
+position = Vector2(1528, 1399)
+
+[node name="waypoint56_enemigo28" type="Marker2D" parent="Waypoints" unique_id=1222108124]
+position = Vector2(1246, 1396)
