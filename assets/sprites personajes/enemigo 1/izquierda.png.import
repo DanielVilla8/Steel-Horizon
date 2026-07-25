@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bom7psl7tiejk"
-path="res://.godot/imported/CAMINAR HACIA LA IZQUIERDA SPRITE.png-8465d97cef530d5b6fe05a327a0b493b.ctex"
+uid="uid://c55lxx0g15q75"
+path="res://.godot/imported/izquierda.png-b7ee36d381a5892ada6d86d0aac0bfd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites personajes/CAMINAR HACIA LA IZQUIERDA SPRITE.png"
-dest_files=["res://.godot/imported/CAMINAR HACIA LA IZQUIERDA SPRITE.png-8465d97cef530d5b6fe05a327a0b493b.ctex"]
+source_file="res://assets/sprites personajes/enemigo 1/izquierda.png"
+dest_files=["res://.godot/imported/izquierda.png-b7ee36d381a5892ada6d86d0aac0bfd7.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blwx6ncajnowg"
-path="res://.godot/imported/CAMINAR HACIA ABAJO SPRITES.png-0ee9a4613565d4f876ca2fd33d150797.ctex"
+path="res://.godot/imported/CAMINAR HACIA ABAJO SPRITES.png-b479465d19674a0f8f44853dc0d7d830.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites personajes/CAMINAR HACIA ABAJO SPRITES.png"
-dest_files=["res://.godot/imported/CAMINAR HACIA ABAJO SPRITES.png-0ee9a4613565d4f876ca2fd33d150797.ctex"]
+source_file="res://assets/sprites personajes/personaje principal/CAMINAR HACIA ABAJO SPRITES.png"
+dest_files=["res://.godot/imported/CAMINAR HACIA ABAJO SPRITES.png-b479465d19674a0f8f44853dc0d7d830.ctex"]
 
 [params]
 

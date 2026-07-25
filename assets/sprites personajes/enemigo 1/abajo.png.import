@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwje2a60la01q"
-path="res://.godot/imported/CAMINAR HACIA LA DERECHA SPRITE.png-a7925b9a7c09d66deb8dde9afa63b8bf.ctex"
+uid="uid://d1igqem6uciqj"
+path="res://.godot/imported/abajo.png-eda1f63bdfbc57d8f363d19b40180d5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites personajes/CAMINAR HACIA LA DERECHA SPRITE.png"
-dest_files=["res://.godot/imported/CAMINAR HACIA LA DERECHA SPRITE.png-a7925b9a7c09d66deb8dde9afa63b8bf.ctex"]
+source_file="res://assets/sprites personajes/enemigo 1/abajo.png"
+dest_files=["res://.godot/imported/abajo.png-eda1f63bdfbc57d8f363d19b40180d5f.ctex"]
 
 [params]
 

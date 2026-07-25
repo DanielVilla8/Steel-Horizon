@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bioe2om1d42qa"]
 
 [ext_resource type="Texture2D" uid="uid://3ipvj1q13n1b" path="res://assets/Tiles/union TIN.png" id="1_kveyk"]
-[ext_resource type="Texture2D" uid="uid://bwyc7jrq02cbv" path="res://assets/Tiles/borde derecho.png" id="1_wq4qd"]
+[ext_resource type="Texture2D" uid="uid://bfj6sm3wk0nj6" path="res://assets/Tiles/borde derecho.png" id="1_wq4qd"]
 [ext_resource type="Texture2D" uid="uid://8rdasrloywb8" path="res://assets/Tiles/borde inferior.png" id="2_q1gfa"]
 [ext_resource type="Texture2D" uid="uid://c7ve68hqkiypx" path="res://assets/Tiles/borde union V.png" id="3_5hsx1"]
 [ext_resource type="Texture2D" uid="uid://cpb2qijxiqki4" path="res://assets/Tiles/UNION T SUPERIOR.png" id="4_jy68v"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://cnoaelysder85" path="res://scenes/personajes/personaje_principal.gd" id="17_tjwcb"]
 [ext_resource type="Texture2D" uid="uid://dxrubhmyltgl0" path="res://assets/Tiles/CAJAOBJETOS.png" id="18_t2358"]
 [ext_resource type="Texture2D" uid="uid://b7ubywto3hy40" path="res://assets/Tiles/SEÑAL.png" id="19_hsltj"]
+[ext_resource type="PackedScene" uid="uid://ciqnsjowa6mae" path="res://scenes/personajes/enemigo_1.tscn" id="24_dm5hg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_no2j0"]
 load_path = "res://.godot/imported/suelo.png-de13b7f08a8dafc4447edc5045d0eb4a.ctex"
@@ -455,3 +456,38 @@ limit_left = 0
 limit_top = 0
 limit_right = 1280
 limit_bottom = 1280
+
+[node name="enemigo 1" parent="." unique_id=1563502562 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
+position = Vector2(608, 641)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint_enemigo1"), NodePath("../Waypoints/waypoint2_enemigo1")]
+
+[node name="enemigo 2" parent="." unique_id=816885085 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
+position = Vector2(931, 343)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint3_enemigo2"), NodePath("../Waypoints/waypoint4_enemigo2")]
+
+[node name="enemigo 3" parent="." unique_id=1670277959 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
+position = Vector2(608, 1164)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint5_enemigo3"), NodePath("../Waypoints/waypoint6_enemigo3")]
+
+[node name="Waypoints" type="Node2D" parent="." unique_id=642373536]
+
+[node name="waypoint_enemigo1" type="Marker2D" parent="Waypoints" unique_id=28856585]
+position = Vector2(608, 641)
+
+[node name="waypoint2_enemigo1" type="Marker2D" parent="Waypoints" unique_id=1155928588]
+position = Vector2(610, 358)
+
+[node name="waypoint3_enemigo2" type="Marker2D" parent="Waypoints" unique_id=956252691]
+position = Vector2(931, 343)
+
+[node name="waypoint4_enemigo2" type="Marker2D" parent="Waypoints" unique_id=1685625607]
+position = Vector2(1214, 342)
+
+[node name="waypoint5_enemigo3" type="Marker2D" parent="Waypoints" unique_id=1168459859]
+position = Vector2(608, 1164)
+
+[node name="waypoint6_enemigo3" type="Marker2D" parent="Waypoints" unique_id=1385359758]
+position = Vector2(612, 935)

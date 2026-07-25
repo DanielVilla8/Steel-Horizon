@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfj6sm3wk0nj6"
-path="res://.godot/imported/borde derecho.png-958120347cc92cdf940c1f8eb692cede.ctex"
+uid="uid://dn184irlura6q"
+path="res://.godot/imported/CAMINAR HACIA ARRIBASPRITES.png-57b6b661de421a0c1c278199fe9d3b29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites personajes/borde derecho.png"
-dest_files=["res://.godot/imported/borde derecho.png-958120347cc92cdf940c1f8eb692cede.ctex"]
+source_file="res://assets/sprites personajes/personaje principal/CAMINAR HACIA ARRIBASPRITES.png"
+dest_files=["res://.godot/imported/CAMINAR HACIA ARRIBASPRITES.png-57b6b661de421a0c1c278199fe9d3b29.ctex"]
 
 [params]
 

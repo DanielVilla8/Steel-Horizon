@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfj6sm3wk0nj6"
-path="res://.godot/imported/borde derecho.png-1b92709399474bec10f2e1ff39f51924.ctex"
+uid="uid://wbndmul0moq0"
+path="res://.godot/imported/derecha.png-5fa1d816b1d7667de0600248fb42e91f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/borde derecho.png"
-dest_files=["res://.godot/imported/borde derecho.png-1b92709399474bec10f2e1ff39f51924.ctex"]
+source_file="res://assets/sprites personajes/enemigo 1/derecha.png"
+dest_files=["res://.godot/imported/derecha.png-5fa1d816b1d7667de0600248fb42e91f.ctex"]
 
 [params]
 
