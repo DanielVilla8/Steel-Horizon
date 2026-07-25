@@ -1,41 +1,41 @@
 [gd_scene format=3 uid="uid://ynik3s7f8154"]
 
-[ext_resource type="Texture2D" uid="uid://cqfxvqrnab71y" path="res://assets/sprites personajes/enemigo 3/abajo.png" id="1_tgy2r"]
+[ext_resource type="Texture2D" uid="uid://cfhvnobh0make" path="res://assets/sprites personajes/enemigo 3/abajo.png" id="1_tgy2r"]
 [ext_resource type="Script" uid="uid://lur8chdraub3" path="res://scenes/personajes/enemigo_3.gd" id="1_xgyan"]
-[ext_resource type="Texture2D" uid="uid://cimp0ffx7pfuw" path="res://assets/sprites personajes/enemigo 3/arriba.png" id="2_xgyan"]
+[ext_resource type="Texture2D" uid="uid://c8uts1fclrb6i" path="res://assets/sprites personajes/enemigo 3/arriba.png" id="2_xgyan"]
 [ext_resource type="Texture2D" uid="uid://ckvwxbfw0gpmh" path="res://assets/sprites personajes/enemigo 3/izquierda.png" id="3_u5666"]
 [ext_resource type="Texture2D" uid="uid://bgy2q2fg8xxeq" path="res://assets/sprites personajes/enemigo 3/derecha.png" id="4_7pado"]
 [ext_resource type="Script" uid="uid://cywr7bkyx8dxh" path="res://scenes/personajes/special_collision.gd" id="6_u5666"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_acchp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5666"]
 atlas = ExtResource("1_tgy2r")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pado"]
+atlas = ExtResource("1_tgy2r")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acchp"]
+atlas = ExtResource("1_tgy2r")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmao4"]
 atlas = ExtResource("1_tgy2r")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k7nip"]
-atlas = ExtResource("1_tgy2r")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ecq8r"]
-atlas = ExtResource("1_tgy2r")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pc8le"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7nip"]
 atlas = ExtResource("2_xgyan")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wuw5w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecq8r"]
 atlas = ExtResource("2_xgyan")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0j6yk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc8le"]
 atlas = ExtResource("2_xgyan")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pmc86"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuw5w"]
 atlas = ExtResource("2_xgyan")
 region = Rect2(96, 0, 32, 32)
 
@@ -75,16 +75,16 @@ region = Rect2(96, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_u5666")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pado")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_acchp")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tmao4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k7nip")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ecq8r")
 }],
 "loop": 1,
 "name": &"above",
@@ -92,16 +92,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_k7nip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecq8r")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_pc8le")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wuw5w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0j6yk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pmc86")
 }],
 "loop": 1,
 "name": &"below",
@@ -151,7 +151,7 @@ script = ExtResource("1_xgyan")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=327563527]
 position = Vector2(3, 9)
 sprite_frames = SubResource("SpriteFrames_iof2f")
-animation = &"below"
+animation = &"rigth"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=506950257]
 position = Vector2(4, 9)
@@ -159,7 +159,7 @@ shape = SubResource("RectangleShape2D_s26vt")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1714082870]
 
-[node name="SpecialCollision" type="CollisionPolygon2D" parent="Area2D" unique_id=616681820]
+[node name="specialCollision" type="CollisionPolygon2D" parent="Area2D" unique_id=616681820]
 polygon = PackedVector2Array(0, 0, -48, 16, -56, 8, -56, 0, -56, -8, -48, -16)
 script = ExtResource("6_u5666")
 

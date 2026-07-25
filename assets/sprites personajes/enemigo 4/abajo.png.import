@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfhvnobh0make"
-path="res://.godot/imported/abajo.png-69a94f477e69fb51d93bee6bb2d36a29.ctex"
+uid="uid://cqfxvqrnab71y"
+path="res://.godot/imported/abajo.png-14457051e8fef996da008ae7e7b63df3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites personajes/enemigo 3/abajo.png"
-dest_files=["res://.godot/imported/abajo.png-69a94f477e69fb51d93bee6bb2d36a29.ctex"]
+source_file="res://assets/sprites personajes/enemigo 4/abajo.png"
+dest_files=["res://.godot/imported/abajo.png-14457051e8fef996da008ae7e7b63df3.ctex"]
 
 [params]
 
