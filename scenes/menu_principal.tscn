@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://b60expuqrip3c"]
+
+[ext_resource type="Texture2D" uid="uid://dnehxjeg5fn16" path="res://Imagenes/menu_background_titled_flat.png" id="1_i85hu"]
+[ext_resource type="Script" uid="uid://bubvrx6nxsau3" path="res://scenes/menu_principal.gd" id="1_mk4g1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0ya7"]
+bg_color = Color(0.09803922, 0.019607844, 0.29411766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtglo"]
+bg_color = Color(0.12156863, 0, 0.32156864, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wt34f"]
+bg_color = Color(0.12156863, 0, 0.31764707, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yex4w"]
+bg_color = Color(0.06692751, 1.4499388e-05, 0.29499492, 1)
+
+[node name="Menu Principal" type="Control" unique_id=1141402933]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mk4g1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1944834281]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6872149, 0.68721503, 0.6872149, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=742236140]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i85hu")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=556467170]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -259.0
+offset_right = 117.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 14
+
+[node name="Play" type="Button" parent="ColorRect/VBoxContainer" unique_id=1368721869]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_u0ya7")
+text = "Jugar"
+
+[node name="Continuar" type="Button" parent="ColorRect/VBoxContainer" unique_id=1631117507]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dtglo")
+text = "Continuar"
+
+[node name="Options" type="Button" parent="ColorRect/VBoxContainer" unique_id=1678655730]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_wt34f")
+text = "Opciones"
+
+[node name="Quit" type="Button" parent="ColorRect/VBoxContainer" unique_id=1061210963]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_yex4w")
+text = "Salir"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
