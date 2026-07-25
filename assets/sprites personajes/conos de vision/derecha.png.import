@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgwoplnvs0vn6"
-path="res://.godot/imported/derecha.png-5fa1d816b1d7667de0600248fb42e91f.ctex"
+uid="uid://wbndmul0moq0"
+path="res://.godot/imported/derecha.png-472d2b7bd017858b824c48be5d91a3e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites personajes/enemigo 1/derecha.png"
-dest_files=["res://.godot/imported/derecha.png-5fa1d816b1d7667de0600248fb42e91f.ctex"]
+source_file="res://assets/sprites personajes/conos de vision/derecha.png"
+dest_files=["res://.godot/imported/derecha.png-472d2b7bd017858b824c48be5d91a3e6.ctex"]
 
 [params]
 

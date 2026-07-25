@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb6v4x4tahxq8"
-path="res://.godot/imported/Quieto Derecha.png-1882b0f65143a8ef16899d857e45dcbb.ctex"
+uid="uid://boxuh5rigpnkr"
+path="res://.godot/imported/izquierda.png-50883e7b2a012950a89bc150aa10b7e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/maps/Quieto Derecha.png"
-dest_files=["res://.godot/imported/Quieto Derecha.png-1882b0f65143a8ef16899d857e45dcbb.ctex"]
+source_file="res://assets/sprites personajes/conos de vision/izquierda.png"
+dest_files=["res://.godot/imported/izquierda.png-50883e7b2a012950a89bc150aa10b7e3.ctex"]
 
 [params]
 

@@ -279,7 +279,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsltj"]
 size = Vector2(16, 9)
 
-[node name="personaje principal" type="CharacterBody2D" unique_id=2003850916]
+[node name="personaje principal" type="CharacterBody2D" unique_id=2003850916 groups=["player"]]
 position = Vector2(89, 58)
 metadata/_edit_group_ = true
 
