@@ -152,7 +152,7 @@ waypoints = [null, null]
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=415704841]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_iof2f")
-animation = &"left"
+animation = &"below"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1957772021]
 position = Vector2(0, 10.5)
