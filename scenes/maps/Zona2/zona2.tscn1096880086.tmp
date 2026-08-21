@@ -23,8 +23,6 @@
 [ext_resource type="Script" uid="uid://dcnjcqbcmabtq" path="res://scenes/maps/Zona2/area_2d.gd" id="20_55op1"]
 [ext_resource type="Texture2D" uid="uid://cyhp3vwlyj4st" path="res://assets/Tiles/suelo electro.png" id="21_abtb7"]
 [ext_resource type="Script" uid="uid://xo2vnu8376if" path="res://scenes/maps/Zona2/meta.gd" id="23_53g1x"]
-[ext_resource type="PackedScene" uid="uid://dp5ou3gro13t4" path="res://scenes/maps/Zona2/tarjeta_azul.tscn" id="24_psunf"]
-[ext_resource type="PackedScene" uid="uid://cr80p3ag3poo7" path="res://scenes/maps/Zona2/puerta_2.tscn" id="25_40a0y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r8prv"]
 texture = ExtResource("1_52fvp")
@@ -143,17 +141,18 @@ size = Vector2(718, 15)
 [sub_resource type="GDScript" id="GDScript_53g1x"]
 script/source = "extends Node2D
 
-func _ready():
+func  _ready():
 	visible = true
-
+	
 	for casilla in get_children():
 		print(casilla.name)
-
+		
 		if casilla.has_node(\"AnimatedSprite2D\"):
 			casilla.get_node(\"AnimatedSprite2D\").play()
-
+		
 	await get_tree().create_timer(7.0).timeout
-
+		#Ocultar electricidad
+		
 	visible = false
 "
 
@@ -213,14 +212,6 @@ tile_set = SubResource("TileSet_mbb6w")
 position = Vector2(91, 103.00001)
 scale = Vector2(2.3, 2.3)
 script = ExtResource("11_abtb7")
-
-[node name="Camera2D" type="Camera2D" parent="personaje principal" unique_id=923770360]
-position = Vector2(210.86958, 94.347824)
-scale = Vector2(0.43478262, 0.43478262)
-limit_left = 0
-limit_top = 0
-limit_right = 1600
-limit_bottom = 1280
 
 [node name="Objetos" type="Sprite2D" parent="." unique_id=1555084823]
 
@@ -465,6 +456,9 @@ texture = ExtResource("17_k01jj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D15" unique_id=1926171492]
 position = Vector2(1171, 129.5)
 shape = SubResource("RectangleShape2D_rcyom")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=923770360]
+position = Vector2(574, 321)
 
 [node name="Electricidad" type="Node2D" parent="." unique_id=1003765760]
 script = SubResource("GDScript_53g1x")
@@ -1638,12 +1632,6 @@ script = ExtResource("23_53g1x")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1384982180]
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_q5bq3")
-
-[node name="tarjeta azul" parent="." unique_id=1223472082 instance=ExtResource("24_psunf")]
-position = Vector2(1336, 1152)
-
-[node name="puerta 2" parent="." unique_id=626080026 instance=ExtResource("25_40a0y")]
-position = Vector2(1344, 1232)
 
 [connection signal="body_entered" from="Electricidad/CasillaElectrica" to="Electricidad/CasillaElectrica" method="_on_body_entered"]
 [connection signal="body_entered" from="Electricidad/CasillaElectrica2" to="Electricidad/CasillaElectrica2" method="_on_body_entered"]

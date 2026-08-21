@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dp5ou3gro13t4"]
+
+[ext_resource type="Texture2D" uid="uid://cgru1v3gg7b3v" path="res://assets/Tiles/tarjeta azul.png" id="1_0cmaw"]
+[ext_resource type="Script" uid="uid://hgn7440wh8aw" path="res://scenes/maps/Zona2/tarjeta_azul.gd" id="1_rwh1s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(16, 24)
+
+[node name="tarjeta azul" type="Area2D" unique_id=1223472082]
+script = ExtResource("1_rwh1s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1650689292]
+texture = ExtResource("1_0cmaw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=194109615]
+shape = SubResource("RectangleShape2D_q5bq3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
