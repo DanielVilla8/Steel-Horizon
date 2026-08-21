@@ -24,19 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://dxrubhmyltgl0" path="res://assets/Tiles/CAJAOBJETOS.png" id="18_t2358"]
 [ext_resource type="Texture2D" uid="uid://b7ubywto3hy40" path="res://assets/Tiles/SEÑAL.png" id="19_hsltj"]
 [ext_resource type="PackedScene" uid="uid://ciqnsjowa6mae" path="res://scenes/personajes/enemigo_1.tscn" id="24_dm5hg"]
-[ext_resource type="PackedScene" uid="uid://qdcd28udsyii" path="res://scenes/maps/Zona1/letra_a.tscn" id="25_62qrs"]
-[ext_resource type="PackedScene" uid="uid://cm5kqxm67gl2t" path="res://scenes/maps/Zona1/letra_d.tscn" id="26_5j5ef"]
-[ext_resource type="PackedScene" uid="uid://dn11gb77nnorp" path="res://scenes/maps/Zona1/letra_j.tscn" id="27_2gyoi"]
-[ext_resource type="PackedScene" uid="uid://diefvj872fb6j" path="res://scenes/maps/Zona1/letra_o.tscn" id="28_4vpho"]
-[ext_resource type="PackedScene" uid="uid://b563sshajf6mn" path="res://scenes/maps/Zona1/letra_r.tscn" id="29_342sr"]
-[ext_resource type="PackedScene" uid="uid://ddwsakq30ufyl" path="res://scenes/maps/Zona1/placa.tscn" id="30_2gyoi"]
-[ext_resource type="PackedScene" uid="uid://vpb6ptg5wi3u" path="res://scenes/maps/inventario.tscn" id="31_342sr"]
-[ext_resource type="PackedScene" uid="uid://wd7mxeyeh112" path="res://scenes/maps/Zona1/interfaz_placa.tscn" id="32_hjp7m"]
-[ext_resource type="PackedScene" uid="uid://dr287i4mxq5oo" path="res://scenes/maps/Zona1/tarjeta.tscn" id="33_hjp7m"]
-[ext_resource type="PackedScene" uid="uid://cdwah5h1nlabq" path="res://scenes/maps/Zona1/puerta.tscn" id="34_367bw"]
-[ext_resource type="PackedScene" uid="uid://cykixu0r36rbg" path="res://scenes/maps/llave.tscn" id="35_2cdx0"]
-[ext_resource type="PackedScene" uid="uid://jqv4v3woom5d" path="res://scenes/maps/Zona1/puerta_1.tscn" id="36_3bfdm"]
-[ext_resource type="PackedScene" uid="uid://dugrpa1moxw4i" path="res://scenes/maps/Zona1/puertas_laterales.tscn" id="37_lop1x"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_no2j0"]
 load_path = "res://.godot/imported/suelo.png-de13b7f08a8dafc4447edc5045d0eb4a.ctex"
@@ -228,7 +215,7 @@ tile_set = SubResource("TileSet_aswhn")
 
 [node name="foreground" type="TileMapLayer" parent="." unique_id=2053672652]
 position = Vector2(-2, 0)
-tile_map_data = PackedByteArray("AAALAAAACwAAAAAAAAALAAEACgAAAAAAAAALAAIACgAAAAAAAAALAAMACgAAAAAAAAALAAQACgAAAAAAAAALAAUACgAAAAAAAAALAAYACgAAAAAAAAALAAgACgAAAAAAAAALAAkACgAAAAAAAAALAAoACgAAAAAAAAAAAAEAEAAAAAAAAAAAAAIAEAAAAAAAAAAAAAMAEAAAAAAAAAAAAAQAEAAAAAAAAAAAAAUAEAAAAAAAAAAAAAYAEAAAAAAAAAAAAAcAEAAAAAAAAAAAAAgAEAAAAAAAAAAAAAkAEAAAAAAAAAAAAAoAEAAAAAAAAAAAAAwAEAAAAAAAAAAAAAsAEAAAAAAAAAAAABIAEAAAAAAAAAAAABEAEAAAAAAAAAAAABAAEAAAAAAAAAAAAA8AEAAAAAAAAAAAAA4AEAAAAAAAAAAIAA4ADQAAAAAAAAAIAA8ADQAAAAAAAAAIABAADQAAAAAAAAATAAwADQAAAAAAAAATAA0ADQAAAAAAAAATAA4ADQAAAAAAAAATAA8ADQAAAAAAAAATABAADQAAAAAAAAATABEADQAAAAAAAAATABIADQAAAAAAAAATAAYADQAAAAAAAAATAAUADQAAAAAAAAATAAQADQAAAAAAAAATAAMADQAAAAAAAAATAAIADQAAAAAAAAATAAEADQAAAAAAAAATAAgADQAAAAAAAAATAAkADQAAAAAAAAATAAoADQAAAAAAAAABABMAAQAAAAAAAAACABMAAQAAAAAAAAADABMAAQAAAAAAAAAEABMAAQAAAAAAAAAFABMAAQAAAAAAAAAGABMAAQAAAAAAAAAHABMAAQAAAAAAAAAIABMAAQAAAAAAAAAJABMAAQAAAAAAAAAKABMAAQAAAAAAAAALABMAAQAAAAAAAAAMABMAAQAAAAAAAAANABMAAQAAAAAAAAAQABMAAQAAAAAAAAARABMAAQAAAAAAAAASABMAAQAAAAAAAAAMAAsAAQAAAAAAAAANAAsAAQAAAAAAAAAOAAsAAQAAAAAAAAASAAsAAQAAAAAAAAARAAsAAQAAAAAAAAAMAAAAAwAAAAAAAAANAAAAAwAAAAAAAAAOAAAAAwAAAAAAAAAPAAAAAwAAAAAAAAAQAAAAAwAAAAAAAAARAAAAAwAAAAAAAAASAAAAAwAAAAAAAAABAAAAAwAAAAAAAAACAAAAAwAAAAAAAAADAAAAAwAAAAAAAAAEAAAAAwAAAAAAAAAFAAAAAwAAAAAAAAAGAAAAAwAAAAAAAAAHAAAAAwAAAAAAAAAIAAAAAwAAAAAAAAAJAAAAAwAAAAAAAAAKAAAAAwAAAAAAAAASAAcAAwAAAAAAAAARAAcAAwAAAAAAAAAQAAcAAwAAAAAAAAAMAAcAAwAAAAAAAAANAAcAAwAAAAAAAAAHAA0AAwAAAAAAAAAGAA0AAwAAAAAAAAAFAA0AAwAAAAAAAAAEAA0AAwAAAAAAAAADAA0AAwAAAAAAAAACAA0AAwAAAAAAAAABAA0AAwAAAAAAAAAAABMABQAAAAAAAAATAAAABgAAAAAAAAAAAAAABwAAAAAAAAAIAA0ABgAAAAAAAAATABMABAAAAAAAAAATAAsABAAAAAAAAAAAAA0ADwAAAAAAAAALAAsADgAAAAAAAAALAAcACAAAAAAAAAATAAcADAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAALAAAACwAAAAAAAAALAAEACgAAAAAAAAALAAIACgAAAAAAAAALAAMACgAAAAAAAAALAAQACgAAAAAAAAALAAUACgAAAAAAAAALAAYACgAAAAAAAAALAAgACgAAAAAAAAALAAkACgAAAAAAAAALAAoACgAAAAAAAAAAAAEAEAAAAAAAAAAAAAIAEAAAAAAAAAAAAAMAEAAAAAAAAAAAAAQAEAAAAAAAAAAAAAUAEAAAAAAAAAAAAAYAEAAAAAAAAAAAAAcAEAAAAAAAAAAAAAgAEAAAAAAAAAAAAAkAEAAAAAAAAAAAAAoAEAAAAAAAAAAAAAwAEAAAAAAAAAAAAAsAEAAAAAAAAAAAABIAEAAAAAAAAAAAABEAEAAAAAAAAAAAABAAEAAAAAAAAAAAAA8AEAAAAAAAAAAAAA4AEAAAAAAAAAAIAA4ADQAAAAAAAAAIAA8ADQAAAAAAAAAIABAADQAAAAAAAAATAAwADQAAAAAAAAATAA0ADQAAAAAAAAATAA4ADQAAAAAAAAATAA8ADQAAAAAAAAATABAADQAAAAAAAAATABEADQAAAAAAAAATABIADQAAAAAAAAATAAYADQAAAAAAAAATAAUADQAAAAAAAAATAAQADQAAAAAAAAATAAMADQAAAAAAAAATAAIADQAAAAAAAAATAAEADQAAAAAAAAATAAgADQAAAAAAAAATAAkADQAAAAAAAAATAAoADQAAAAAAAAABABMAAQAAAAAAAAACABMAAQAAAAAAAAADABMAAQAAAAAAAAAEABMAAQAAAAAAAAAFABMAAQAAAAAAAAAGABMAAQAAAAAAAAAHABMAAQAAAAAAAAAIABMAAQAAAAAAAAAJABMAAQAAAAAAAAAKABMAAQAAAAAAAAALABMAAQAAAAAAAAAMABMAAQAAAAAAAAANABMAAQAAAAAAAAAOABMAAQAAAAAAAAAPABMAAQAAAAAAAAAQABMAAQAAAAAAAAARABMAAQAAAAAAAAASABMAAQAAAAAAAAAMAAsAAQAAAAAAAAANAAsAAQAAAAAAAAAOAAsAAQAAAAAAAAASAAsAAQAAAAAAAAARAAsAAQAAAAAAAAAMAAAAAwAAAAAAAAANAAAAAwAAAAAAAAAOAAAAAwAAAAAAAAAPAAAAAwAAAAAAAAAQAAAAAwAAAAAAAAARAAAAAwAAAAAAAAASAAAAAwAAAAAAAAABAAAAAwAAAAAAAAACAAAAAwAAAAAAAAADAAAAAwAAAAAAAAAEAAAAAwAAAAAAAAAFAAAAAwAAAAAAAAAGAAAAAwAAAAAAAAAHAAAAAwAAAAAAAAAIAAAAAwAAAAAAAAAJAAAAAwAAAAAAAAAKAAAAAwAAAAAAAAASAAcAAwAAAAAAAAARAAcAAwAAAAAAAAAQAAcAAwAAAAAAAAAMAAcAAwAAAAAAAAANAAcAAwAAAAAAAAAHAA0AAwAAAAAAAAAGAA0AAwAAAAAAAAAFAA0AAwAAAAAAAAAEAA0AAwAAAAAAAAADAA0AAwAAAAAAAAACAA0AAwAAAAAAAAABAA0AAwAAAAAAAAAAABMABQAAAAAAAAATAAAABgAAAAAAAAAAAAAABwAAAAAAAAAIAA0ABgAAAAAAAAATABMABAAAAAAAAAATAAsABAAAAAAAAAAAAA0ADwAAAAAAAAALAAsADgAAAAAAAAALAAcACAAAAAAAAAATAAcADAAAAAAAAAA=")
 tile_set = SubResource("TileSet_mq8aq")
 
 [node name="Objetos" type="Sprite2D" parent="." unique_id=1294800886]
@@ -446,7 +433,6 @@ position = Vector2(802.5, 398.5)
 shape = SubResource("RectangleShape2D_m36w7")
 
 [node name="StaticBody2D20" type="StaticBody2D" parent="Objetos" unique_id=58371422]
-position = Vector2(2, 0)
 
 [node name="cono 4" type="Sprite2D" parent="Objetos/StaticBody2D20" unique_id=273093834]
 position = Vector2(808, 309)
@@ -462,7 +448,7 @@ position = Vector2(93, 87)
 scale = Vector2(3, 3)
 script = ExtResource("17_tjwcb")
 
-[node name="Camera2D" type="Camera2D" parent="personaje principal" unique_id=90251405]
+[node name="Camera2D2" type="Camera2D" parent="personaje principal" unique_id=90251405]
 position = Vector2(96, 45.000004)
 scale = Vector2(0.33333334, 0.33333334)
 zoom = Vector2(1.5, 1.5)
@@ -486,21 +472,6 @@ position = Vector2(608, 1164)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint5_enemigo3"), NodePath("../Waypoints/waypoint6_enemigo3")]
 
-[node name="letra A" parent="." unique_id=2111177116 instance=ExtResource("25_62qrs")]
-position = Vector2(240, 664)
-
-[node name="letra D" parent="." unique_id=1611822037 instance=ExtResource("26_5j5ef")]
-position = Vector2(1216, 1168)
-
-[node name="letra J" parent="." unique_id=262328995 instance=ExtResource("27_2gyoi")]
-position = Vector2(1232, 526)
-
-[node name="letra O" parent="." unique_id=1095807123 instance=ExtResource("28_4vpho")]
-position = Vector2(690, 408)
-
-[node name="letra R" parent="." unique_id=777958055 instance=ExtResource("29_342sr")]
-position = Vector2(792, 112)
-
 [node name="Waypoints" type="Node2D" parent="." unique_id=642373536]
 
 [node name="waypoint_enemigo1" type="Marker2D" parent="Waypoints" unique_id=28856585]
@@ -520,31 +491,3 @@ position = Vector2(608, 1164)
 
 [node name="waypoint6_enemigo3" type="Marker2D" parent="Waypoints" unique_id=1385359758]
 position = Vector2(612, 935)
-
-[node name="Placa" parent="." unique_id=859238062 instance=ExtResource("30_2gyoi")]
-position = Vector2(123, 1160)
-scale = Vector2(1.5, 1.5)
-
-[node name="Inventario" parent="." unique_id=1805440609 instance=ExtResource("31_342sr")]
-
-[node name="Interfaz_placa" parent="." unique_id=242905210 instance=ExtResource("32_hjp7m")]
-visible = false
-
-[node name="Tarjeta" parent="." unique_id=2139148 instance=ExtResource("33_hjp7m")]
-visible = false
-position = Vector2(362, 1072)
-
-[node name="Puerta" parent="." unique_id=579953837 instance=ExtResource("34_367bw")]
-position = Vector2(960, 1232)
-
-[node name="llave" parent="." unique_id=679451862 instance=ExtResource("35_2cdx0")]
-position = Vector2(136, 391)
-
-[node name="puerta1" parent="." unique_id=1741124528 instance=ExtResource("36_3bfdm")]
-position = Vector2(1024, 720)
-
-[node name="puerta2" parent="." unique_id=1641986653 instance=ExtResource("36_3bfdm")]
-position = Vector2(959, 457)
-
-[node name="puertas laterales" parent="." unique_id=1922002414 instance=ExtResource("37_lop1x")]
-position = Vector2(541, 1152)

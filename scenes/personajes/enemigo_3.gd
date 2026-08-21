@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@onready var special_collision: CollisionPolygon2D = $Area2D/SpecialCollision
+@onready var special_collision: CollisionPolygon2D = $Area2D/specialCollision
 
 @export var speed:float =200.0
 @export var waypoints: Array[Marker2D]

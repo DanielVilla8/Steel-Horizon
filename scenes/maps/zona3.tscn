@@ -12,6 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://dxrubhmyltgl0" path="res://assets/Tiles/CAJAOBJETOS.png" id="10_bvndd"]
 [ext_resource type="PackedScene" uid="uid://bel6o1civt72w" path="res://scenes/personajes/enemigo_2.tscn" id="11_6xx4h"]
 [ext_resource type="PackedScene" uid="uid://ynik3s7f8154" path="res://scenes/personajes/enemigo_3.tscn" id="12_tab38"]
+[ext_resource type="Script" uid="uid://beuvbsrieetoc" path="res://scenes/maps/palanca.gd" id="13_fm3in"]
+[ext_resource type="Texture2D" uid="uid://d08x0u3gjmabe" path="res://assets/Tiles/palanca.png" id="14_q3bed"]
+[ext_resource type="PackedScene" uid="uid://b2a6ef38ukviu" path="res://scenes/personajes/personaje_principal.tscn" id="15_q3bed"]
+[ext_resource type="Script" uid="uid://cnoaelysder85" path="res://scenes/personajes/personaje_principal.gd" id="16_w2ika"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsxu7"]
 texture = ExtResource("1_1xvmb")
@@ -119,10 +123,10 @@ size = Vector2(170, 158)
 size = Vector2(187, 183.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8wmi"]
-size = Vector2(166, 161)
+size = Vector2(177, 175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2khor"]
-size = Vector2(189, 177)
+size = Vector2(184.5, 169.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0thb"]
 size = Vector2(167, 150)
@@ -132,6 +136,9 @@ size = Vector2(177, 175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t50yw"]
 size = Vector2(152, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(70, 68)
 
 [node name="zona3" type="Node2D" unique_id=592487911]
 metadata/_edit_horizontal_guides_ = [1011.0]
@@ -143,9 +150,6 @@ tile_set = SubResource("TileSet_s26vt")
 [node name="foreground" type="TileMapLayer" parent="." unique_id=1915233531]
 tile_map_data = PackedByteArray("AAAnABYAAgAAAAAAAAAnABUAAgAAAAAAAAAnABQAAgAAAAAAAAAnABMAAgAAAAAAAAAnABIAAgAAAAAAAAAnABEAAgAAAAAAAAAnABAAAgAAAAAAAAAnAA8AAgAAAAAAAAAnAA4AAgAAAAAAAAAnAA0AAgAAAAAAAAAnAAwAAgAAAAAAAAAnAAsAAgAAAAAAAAAnAAoAAgAAAAAAAAAnAAkAAgAAAAAAAAAnAAgAAgAAAAAAAAAnAAcAAgAAAAAAAAAnAAYAAgAAAAAAAAAnAAUAAgAAAAAAAAAnAAQAAgAAAAAAAAAnAAMAAgAAAAAAAAAnAAIAAgAAAAAAAAAnAAEAAgAAAAAAAAABABgABQAAAAAAAAACABgABQAAAAAAAAADABgABQAAAAAAAAAEABgABQAAAAAAAAAFABgABQAAAAAAAAAGABgABQAAAAAAAAAHABgABQAAAAAAAAAIABgABQAAAAAAAAAJABgABQAAAAAAAAAKABgABQAAAAAAAAALABgABQAAAAAAAAAMABgABQAAAAAAAAANABgABQAAAAAAAAAOABgABQAAAAAAAAAPABgABQAAAAAAAAAQABgABQAAAAAAAAARABgABQAAAAAAAAASABgABQAAAAAAAAATABgABQAAAAAAAAAUABgABQAAAAAAAAAVABgABQAAAAAAAAAWABgABQAAAAAAAAAXABgABQAAAAAAAAAYABgABQAAAAAAAAAZABgABQAAAAAAAAAaABgABQAAAAAAAAAbABgABQAAAAAAAAAcABgABQAAAAAAAAAdABgABQAAAAAAAAAeABgABQAAAAAAAAAfABgABQAAAAAAAAAgABgABQAAAAAAAAAhABgABQAAAAAAAAAiABgABQAAAAAAAAAjABgABQAAAAAAAAAkABgABQAAAAAAAAAlABgABQAAAAAAAAAmABgABQAAAAAAAAAnABgABwAAAAAAAAAnABcAAgAAAAAAAAAAABgABgAAAAAAAAAAABcAAwAAAAAAAAAAABYAAwAAAAAAAAAAABUAAwAAAAAAAAAAABQAAwAAAAAAAAAAABMAAwAAAAAAAAAAABIAAwAAAAAAAAAAABEAAwAAAAAAAAAAABAAAwAAAAAAAAAAAA8AAwAAAAAAAAAAAA4AAwAAAAAAAAAAAA0AAwAAAAAAAAAAAAwAAwAAAAAAAAAAAAsAAwAAAAAAAAAAAAoAAwAAAAAAAAAAAAkAAwAAAAAAAAAAAAgAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAAIAAwAAAAAAAAAAAAMAAwAAAAAAAAAAAAQAAwAAAAAAAAAAAAUAAwAAAAAAAAAAAAYAAwAAAAAAAAAAAAcAAwAAAAAAAAAmAAAABAAAAAAAAAAlAAAABAAAAAAAAAAkAAAABAAAAAAAAAAjAAAABAAAAAAAAAAiAAAABAAAAAAAAAAhAAAABAAAAAAAAAAgAAAABAAAAAAAAAAfAAAABAAAAAAAAAAeAAAABAAAAAAAAAAdAAAABAAAAAAAAAAcAAAABAAAAAAAAAAbAAAABAAAAAAAAAAaAAAABAAAAAAAAAAZAAAABAAAAAAAAAAYAAAABAAAAAAAAAAXAAAABAAAAAAAAAAWAAAABAAAAAAAAAAVAAAABAAAAAAAAAAUAAAABAAAAAAAAAATAAAABAAAAAAAAAABAAAABAAAAAAAAAACAAAABAAAAAAAAAADAAAABAAAAAAAAAAEAAAABAAAAAAAAAAFAAAABAAAAAAAAAAGAAAABAAAAAAAAAAHAAAABAAAAAAAAAAIAAAABAAAAAAAAAAJAAAABAAAAAAAAAAKAAAABAAAAAAAAAALAAAABAAAAAAAAAASAAAABAAAAAAAAAARAAAABAAAAAAAAAAQAAAABAAAAAAAAAAPAAAABAAAAAAAAAAOAAAABAAAAAAAAAANAAAABAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAQAAAAAAAAAnAAAAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_iof2f")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1857000025]
-position = Vector2(579, 322)
 
 [node name="Objetos" type="Sprite2D" parent="." unique_id=2054137798]
 
@@ -289,7 +293,7 @@ scale = Vector2(2.6093743, 2.5312498)
 texture = ExtResource("10_bvndd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D13" unique_id=1848882987]
-position = Vector2(1613, 1139.5)
+position = Vector2(1612, 1141)
 shape = SubResource("RectangleShape2D_u8wmi")
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="Objetos" unique_id=376655127]
@@ -300,7 +304,7 @@ scale = Vector2(2.9218748, 2.7812486)
 texture = ExtResource("10_bvndd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D14" unique_id=1338254854]
-position = Vector2(1193.5, 1370.5)
+position = Vector2(1198.25, 1374.75)
 shape = SubResource("RectangleShape2D_2khor")
 
 [node name="StaticBody2D15" type="StaticBody2D" parent="Objetos" unique_id=1802632389]
@@ -347,11 +351,6 @@ position = Vector2(140, 338)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint3_enemigo2"), NodePath("../Waypoints/waypoint4_enemigo2")]
 
-[node name="enemigo 2_2" parent="." unique_id=626947083 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
-position = Vector2(63.000004, 1056)
-scale = Vector2(3, 3)
-waypoints = [NodePath("../Waypoints/waypoint5_enemigo3"), NodePath("../Waypoints/waypoint6_enemigo3")]
-
 [node name="enemigo 2_3" parent="." unique_id=498544571 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
 position = Vector2(447, 1441)
 scale = Vector2(3, 3)
@@ -373,7 +372,7 @@ scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint13_enemigo7"), NodePath("../Waypoints/waypoint14_enemigo7")]
 
 [node name="enemigo 2_7" parent="." unique_id=1572688539 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_6xx4h")]
-position = Vector2(1054, 1409)
+position = Vector2(911, 1494)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint15_enemigo8"), NodePath("../Waypoints/waypoint16_enemigo8")]
 
@@ -443,7 +442,7 @@ scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint41_enemigo21"), NodePath("../Waypoints/waypoint42_enemigo21")]
 
 [node name="enemigo 3_10" parent="." unique_id=953498991 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_tab38")]
-position = Vector2(1689, 1253)
+position = Vector2(1694, 1278)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint43_enemigo22"), NodePath("../Waypoints/waypoint44_enemigo22")]
 
@@ -496,13 +495,13 @@ position = Vector2(69, 499)
 position = Vector2(-6, 980)
 
 [node name="waypoint6_enemigo3" type="Marker2D" parent="Waypoints" unique_id=1718256119]
-position = Vector2(257, 979)
+position = Vector2(27, 1191)
 
 [node name="waypoint7_enemigo4" type="Marker2D" parent="Waypoints" unique_id=1584364598]
 position = Vector2(378, 1365)
 
 [node name="waypoint8_enemigo4" type="Marker2D" parent="Waypoints" unique_id=1062265943]
-position = Vector2(379, 1108)
+position = Vector2(351, 1108)
 
 [node name="waypoint9_enemigo5" type="Marker2D" parent="Waypoints" unique_id=1264760297]
 position = Vector2(632, 564)
@@ -523,10 +522,10 @@ position = Vector2(664, 823)
 position = Vector2(667, 1077)
 
 [node name="waypoint15_enemigo8" type="Marker2D" parent="Waypoints" unique_id=1402970525]
-position = Vector2(985, 1333)
+position = Vector2(828, 1368)
 
 [node name="waypoint16_enemigo8" type="Marker2D" parent="Waypoints" unique_id=994553908]
-position = Vector2(988, 1077)
+position = Vector2(1046, 1134)
 
 [node name="waypoint17_enemigo9" type="Marker2D" parent="Waypoints" unique_id=85719113]
 position = Vector2(796, 307)
@@ -607,7 +606,7 @@ position = Vector2(1787, 886)
 position = Vector2(1788, 1140)
 
 [node name="waypoint43_enemigo22" type="Marker2D" parent="Waypoints" unique_id=605054258]
-position = Vector2(1628, 1205)
+position = Vector2(1645, 1228)
 
 [node name="waypoint44_enemigo22" type="Marker2D" parent="Waypoints" unique_id=425496605]
 position = Vector2(1627, 1397)
@@ -647,3 +646,37 @@ position = Vector2(1528, 1399)
 
 [node name="waypoint56_enemigo28" type="Marker2D" parent="Waypoints" unique_id=1222108124]
 position = Vector2(1246, 1396)
+
+[node name="Palanca" type="Node2D" parent="." unique_id=573320996]
+position = Vector2(10, 64)
+script = ExtResource("13_fm3in")
+
+[node name="Sprite2D" type="Sprite2D" parent="Palanca" unique_id=777988441]
+position = Vector2(1821, 1439.0001)
+scale = Vector2(1.765625, 1.734375)
+texture = ExtResource("14_q3bed")
+
+[node name="Area2D" type="Area2D" parent="Palanca" unique_id=430304438]
+position = Vector2(-17, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca/Area2D" unique_id=458722779]
+position = Vector2(1838, 1430)
+shape = SubResource("RectangleShape2D_u0ya7")
+
+[node name="LabelInteractuar" type="Label" parent="Palanca" unique_id=768802985]
+offset_left = 1743.0
+offset_top = 1382.0
+offset_right = 1921.0
+offset_bottom = 1405.0
+text = "Presiona E para activar"
+
+[node name="personaje principal" parent="." unique_id=2003850916 instance=ExtResource("15_q3bed")]
+position = Vector2(150, 138)
+scale = Vector2(3, 3)
+script = ExtResource("16_w2ika")
+
+[node name="Camera2D2" type="Camera2D" parent="personaje principal" unique_id=1372718315]
+zoom = Vector2(1.5, 1.5)
+
+[connection signal="body_entered" from="Palanca/Area2D" to="Palanca" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Palanca/Area2D" to="Palanca" method="_on_area_2d_body_exited"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5rhnt0gq1pq1"
-path="res://.godot/imported/letra J.png-ba1a687a886ac364c68bf40ce2a00183.ctex"
+uid="uid://d08x0u3gjmabe"
+path="res://.godot/imported/palanca.png-894fc6b570066f8b8e61fdf3afa4f6fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/letra J.png"
-dest_files=["res://.godot/imported/letra J.png-ba1a687a886ac364c68bf40ce2a00183.ctex"]
+source_file="res://assets/Tiles/palanca.png"
+dest_files=["res://.godot/imported/palanca.png-894fc6b570066f8b8e61fdf3afa4f6fa.ctex"]
 
 [params]
 
