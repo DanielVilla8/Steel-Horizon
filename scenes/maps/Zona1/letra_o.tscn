@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://diefvj872fb6j"]
+
+[ext_resource type="Script" uid="uid://bmfrtla04g7p2" path="res://scenes/maps/Zona1/letra_o.gd" id="1_gtlrv"]
+[ext_resource type="Texture2D" uid="uid://dnltuj3duc3u7" path="res://assets/Tiles/letra 0.png" id="1_ppbho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(32, 32)
+
+[node name="letra O" type="Area2D" unique_id=1095807123]
+script = ExtResource("1_gtlrv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1868188930]
+texture = ExtResource("1_ppbho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470089887]
+shape = SubResource("RectangleShape2D_q5bq3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cykixu0r36rbg"]
+
+[ext_resource type="Texture2D" uid="uid://dnmtbftprwdih" path="res://assets/Tiles/llave.png" id="1_7232l"]
+[ext_resource type="Script" uid="uid://du8e32ropu34l" path="res://scenes/maps/llave.gd" id="1_huets"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(26, 12)
+
+[node name="llave" type="Area2D" unique_id=679451862]
+script = ExtResource("1_huets")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=900686158]
+texture = ExtResource("1_7232l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1770792319]
+shape = SubResource("RectangleShape2D_q5bq3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b563sshajf6mn"]
+
+[ext_resource type="Script" uid="uid://dybtjq7srsqm7" path="res://letra_r.gd" id="1_qskv2"]
+[ext_resource type="Texture2D" uid="uid://bmyvkcm12e0cv" path="res://assets/Tiles/letra R.png" id="2_0ql77"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(32, 32)
+
+[node name="letra R" type="Area2D" unique_id=777958055]
+script = ExtResource("1_qskv2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1759176850]
+texture = ExtResource("2_0ql77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2048367119]
+shape = SubResource("RectangleShape2D_q5bq3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

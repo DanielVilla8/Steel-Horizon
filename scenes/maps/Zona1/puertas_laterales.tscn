@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dugrpa1moxw4i"]
+
+[ext_resource type="Script" uid="uid://dd06xud7kb5hi" path="res://scenes/maps/Zona1/puertas_laterales.gd" id="1_capmo"]
+[ext_resource type="Texture2D" uid="uid://c2wx3glkg34m1" path="res://assets/Tiles/puertas laterales.png" id="1_clrgu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_capmo"]
+atlas = ExtResource("1_clrgu")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ys5t"]
+atlas = ExtResource("1_clrgu")
+region = Rect2(64, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2lq6"]
+atlas = ExtResource("1_clrgu")
+region = Rect2(128, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo0ne"]
+atlas = ExtResource("1_clrgu")
+region = Rect2(192, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asafd"]
+atlas = ExtResource("1_clrgu")
+region = Rect2(256, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4upl"]
+atlas = ExtResource("1_clrgu")
+region = Rect2(320, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjxoq"]
+atlas = ExtResource("1_clrgu")
+region = Rect2(384, 0, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5bq3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_capmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ys5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2lq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo0ne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asafd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4upl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjxoq")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7o0i"]
+size = Vector2(16, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x03vh"]
+size = Vector2(26, 128)
+
+[node name="puertas laterales" type="StaticBody2D" unique_id=1922002414]
+script = ExtResource("1_capmo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1224818221]
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=89104951]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=431348170]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1647907667]
+position = Vector2(29, 0)
+shape = SubResource("RectangleShape2D_x03vh")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
