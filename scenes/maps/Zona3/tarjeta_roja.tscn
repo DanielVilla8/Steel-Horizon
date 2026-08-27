@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b1y0sn60d8ms3"]
+
+[ext_resource type="Script" uid="uid://betbos4u0es2k" path="res://scenes/maps/Zona3/tarjeta_roja.gd" id="1_ooj7s"]
+[ext_resource type="Texture2D" uid="uid://dskciqpinokuv" path="res://assets/sprites/tiles/objetos/tarjeta roja.png" id="1_sivqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(16, 24)
+
+[node name="tarjeta_roja" type="Area2D" unique_id=978927062]
+script = ExtResource("1_ooj7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=661468116]
+texture = ExtResource("1_sivqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845279827]
+shape = SubResource("RectangleShape2D_q5bq3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var special_Collision: CollisionPolygon2D = $Area2D/specialCollision
 
-@export var speed: float = 250.0
+@export var speed: float = 200.0
 @export var waypoints: Array[Marker2D]
 
 
@@ -44,9 +44,9 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("Detecto:", body.name)
+	
 	
 	if body.is_in_group("player"):
-		print("¡Jugador Detectado!")
+		
 		set_physics_process(false)
 		special_Collision.change_color(Color(Color.RED, 0.3))

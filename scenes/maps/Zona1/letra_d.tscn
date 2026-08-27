@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cm5kqxm67gl2t"]
+
+[ext_resource type="Script" uid="uid://bk0skpngy02ac" path="res://scenes/maps/Zona1/letra_d.gd" id="1_gq5sm"]
+[ext_resource type="Texture2D" uid="uid://nvlaysw61s3n" path="res://assets/sprites/tiles/objetos/Letra D.png" id="2_oa6h1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iof2f"]
+size = Vector2(32, 32)
+
+[node name="letra D" type="Area2D" unique_id=1611822037]
+script = ExtResource("1_gq5sm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1035864250]
+texture = ExtResource("2_oa6h1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=695340755]
+shape = SubResource("RectangleShape2D_iof2f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

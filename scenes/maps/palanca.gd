@@ -14,10 +14,11 @@ func _process(delta: float) -> void:
 func activar_palanca() -> void:
 	palanca_activada = true
 	$LabelInteractuar.visible = false
-	print("Palanca activada. Obtuviste la tarjeta y el código.")
-	
-	GameManager.tiene_tarjeta = true
-	GameManager.codigo_nivel3 = 7
+	print("Palanca activada. La tarjeta cayó cerca.")
+
+	var tarjeta_roja = get_parent().get_node("tarjeta_roja")
+	tarjeta_roja.visible = true
+	tarjeta_roja.monitoring = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

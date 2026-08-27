@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dr287i4mxq5oo"]
+
+[ext_resource type="Texture2D" uid="uid://c26kua322nne" path="res://assets/sprites/tiles/objetos/tarjeta amarilla.png" id="1_0itxf"]
+[ext_resource type="Script" uid="uid://d0t45abcde2aj" path="res://scenes/maps/Zona1/tarjeta.gd" id="1_7l4nc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iof2f"]
+size = Vector2(16, 24)
+
+[node name="Tarjeta" type="Area2D" unique_id=2139148]
+script = ExtResource("1_7l4nc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=721677406]
+texture = ExtResource("1_0itxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=169931414]
+shape = SubResource("RectangleShape2D_iof2f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var special_collision: CollisionPolygon2D = $Area2D/specialCollision
 
-@export var speed:float =200.0
+@export var speed:float = 150.0
 @export var waypoints: Array[Marker2D]
 
 
@@ -17,11 +17,11 @@ func _physics_process(delta):
 	if abs(direction.x) > abs(direction.y):
 		if direction.x > 0:
 			$AnimatedSprite2D.play("right")
-			$Area2D.rotation_degrees = 180
+			$Area2D.rotation_degrees = -180
 			$Area2D.position = Vector2(6, 0)
 		else:
 			$AnimatedSprite2D.play("left")
-			$Area2D.rotation_degrees = 180
+			$Area2D.rotation_degrees = 0
 			$Area2D.position = Vector2(0, 0)
 	else:
 		if direction.y > 0:

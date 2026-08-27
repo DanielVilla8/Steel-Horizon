@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c7tvtr2aaptwo"]
+
+[ext_resource type="Script" uid="uid://qfj8siljaq0r" path="res://scenes/canvas_layer.gd" id="1_c4rma"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2010468336]
+script = ExtResource("1_c4rma")
+
+[node name="LabelNumero" type="Label" parent="." unique_id=1024445398]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -31.0
+offset_right = 62.0
+offset_bottom = 36.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48

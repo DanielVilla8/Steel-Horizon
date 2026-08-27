@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bel6o1civt72w"]
 
-[ext_resource type="Texture2D" uid="uid://c5owc5s6mev1j" path="res://assets/sprites personajes/enemigo 2/arriba.png" id="1_ij4qm"]
+[ext_resource type="Texture2D" uid="uid://c5owc5s6mev1j" path="res://assets/sprites/personajes/enemigo 2/arriba.png" id="1_ij4qm"]
 [ext_resource type="Script" uid="uid://cfoh45h3kdo7r" path="res://scenes/personajes/enemigo_2.gd" id="1_q7tmp"]
-[ext_resource type="Texture2D" uid="uid://c61flrm7uqcmy" path="res://assets/sprites personajes/enemigo 2/abajo.png" id="2_q7tmp"]
-[ext_resource type="Texture2D" uid="uid://k00qh3wcb3ny" path="res://assets/sprites personajes/enemigo 2/izquierda.png" id="3_n1b3n"]
-[ext_resource type="Texture2D" uid="uid://1m2l42kaupob" path="res://assets/sprites personajes/enemigo 2/derecha.png" id="4_wt2r5"]
+[ext_resource type="Texture2D" uid="uid://c61flrm7uqcmy" path="res://assets/sprites/personajes/enemigo 2/abajo.png" id="2_q7tmp"]
+[ext_resource type="Texture2D" uid="uid://k00qh3wcb3ny" path="res://assets/sprites/personajes/enemigo 2/izquierda.png" id="3_n1b3n"]
+[ext_resource type="Texture2D" uid="uid://1m2l42kaupob" path="res://assets/sprites/personajes/enemigo 2/derecha.png" id="4_wt2r5"]
 [ext_resource type="Script" uid="uid://cywr7bkyx8dxh" path="res://scenes/personajes/special_collision.gd" id="6_n1b3n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ij4qm"]

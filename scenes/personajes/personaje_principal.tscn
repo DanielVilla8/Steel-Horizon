@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b2a6ef38ukviu"]
 
+[ext_resource type="Script" uid="uid://cnoaelysder85" path="res://scenes/personajes/personaje_principal.gd" id="1_1rmhp"]
 [ext_resource type="Texture2D" uid="uid://dxoolcytj03y6" path="res://SPRITES/CAMINAR HACIA ABAJO SPRITES.png" id="1_acsxy"]
 [ext_resource type="Texture2D" uid="uid://dcy3n62xd7jiq" path="res://SPRITES/Quieto Abajo.png" id="1_rugco"]
 [ext_resource type="Texture2D" uid="uid://bjtr5o67uagvo" path="res://SPRITES/Quieto Izquierda.png" id="2_1rmhp"]
@@ -277,18 +278,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsltj"]
-size = Vector2(16, 9)
+size = Vector2(15, 24)
 
 [node name="personaje principal" type="CharacterBody2D" unique_id=2003850916 groups=["player"]]
 position = Vector2(89, 58)
-metadata/_edit_group_ = true
+script = ExtResource("1_1rmhp")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1938597457]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"Idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860561692]
-position = Vector2(0.5, 8.5)
+position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_hsltj")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=780413534]

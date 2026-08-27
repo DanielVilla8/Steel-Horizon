@@ -1,0 +1,1729 @@
+[gd_scene format=4 uid="uid://b5yabdlowd3en"]
+
+[ext_resource type="Texture2D" uid="uid://c7ayjo5kbj6j" path="res://assets/Tiles/suelo 2.png" id="1_52fvp"]
+[ext_resource type="Texture2D" uid="uid://bnhmpokgdlu8c" path="res://assets/Tiles/EEI.png" id="2_y52dn"]
+[ext_resource type="Texture2D" uid="uid://1dwjpwbrjbax" path="res://assets/Tiles/EED.png" id="3_8g8op"]
+[ext_resource type="Texture2D" uid="uid://8rdasrloywb8" path="res://assets/Tiles/borde inferior.png" id="4_17wmg"]
+[ext_resource type="Texture2D" uid="uid://3q2ucoiyaf4a" path="res://assets/Tiles/borde superior.png" id="5_mvthj"]
+[ext_resource type="Texture2D" uid="uid://dwaf5fqydei24" path="res://assets/Tiles/borde izquierdo.png" id="6_5pwru"]
+[ext_resource type="Texture2D" uid="uid://bfj6sm3wk0nj6" path="res://assets/Tiles/borde derecho.png" id="7_it7xr"]
+[ext_resource type="Texture2D" uid="uid://dcwyjeigo6vpy" path="res://assets/Tiles/EII.png" id="8_ne2xk"]
+[ext_resource type="Texture2D" uid="uid://o728sw5u8peq" path="res://assets/Tiles/EID.png" id="9_83bke"]
+[ext_resource type="Texture2D" uid="uid://h77d5ulltqv0" path="res://assets/Tiles/CONSOLA.png" id="10_8g8op"]
+[ext_resource type="PackedScene" uid="uid://b2a6ef38ukviu" path="res://scenes/personajes/personaje_principal.tscn" id="10_p7348"]
+[ext_resource type="Texture2D" uid="uid://dh8plu2oky3wd" path="res://assets/Tiles/SILLA.png" id="11_17wmg"]
+[ext_resource type="Script" uid="uid://cnoaelysder85" path="res://scenes/personajes/personaje_principal.gd" id="11_abtb7"]
+[ext_resource type="Texture2D" uid="uid://b7ubywto3hy40" path="res://assets/Tiles/SEÑAL.png" id="12_mvthj"]
+[ext_resource type="Texture2D" uid="uid://bjddmayf6lao8" path="res://assets/Tiles/CONO.png" id="13_5pwru"]
+[ext_resource type="Texture2D" uid="uid://dqamb1h0gp658" path="res://assets/Tiles/cable V.png" id="14_83bke"]
+[ext_resource type="Texture2D" uid="uid://dspgdvhtagax8" path="res://assets/Tiles/cable esquina DI.png" id="15_r8prv"]
+[ext_resource type="Texture2D" uid="uid://3nt8e0qsbbnw" path="res://assets/Tiles/cable esquina II.png" id="16_kogbs"]
+[ext_resource type="Texture2D" uid="uid://d07th07vgsfxf" path="res://assets/Tiles/cable H.png" id="17_k01jj"]
+[ext_resource type="Texture2D" uid="uid://cg5hy1flas0g" path="res://assets/Tiles/cable esquina DS.png" id="18_r8prv"]
+[ext_resource type="Script" uid="uid://dcnjcqbcmabtq" path="res://scenes/maps/Zona2/area_2d.gd" id="20_55op1"]
+[ext_resource type="Texture2D" uid="uid://cyhp3vwlyj4st" path="res://assets/Tiles/suelo electro.png" id="21_abtb7"]
+[ext_resource type="Script" uid="uid://xo2vnu8376if" path="res://scenes/maps/Zona2/meta.gd" id="23_53g1x"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r8prv"]
+texture = ExtResource("1_52fvp")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3yy0i"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_r8prv")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kogbs"]
+texture = ExtResource("2_y52dn")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -26.530273, 14.111847, -25.9658, 12.982903, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k01jj"]
+texture = ExtResource("3_8g8op")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 25.965797, -32, 26.530273)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tvjvu"]
+texture = ExtResource("4_17wmg")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -15.805267, -32, -15.805267, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wccr6"]
+texture = ExtResource("5_mvthj")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25.965797, 32, -26.530273, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iw3fi"]
+texture = ExtResource("6_5pwru")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.805267, -32, 32, -32, 32, 32, 16.369743, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umdkk"]
+texture = ExtResource("7_it7xr")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ycps"]
+texture = ExtResource("8_ne2xk")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, 17.498688, 32, 15.240799, 25.401321, -32, 25.965797)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s03ju"]
+texture = ExtResource("9_83bke")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -17.498688, -32, -15.240791, -25.401325, 32, -25.9658, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_mbb6w"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/8 = SubResource("TileSetAtlasSource_3ycps")
+sources/9 = SubResource("TileSetAtlasSource_s03ju")
+sources/10 = SubResource("TileSetAtlasSource_kogbs")
+sources/11 = SubResource("TileSetAtlasSource_k01jj")
+sources/12 = SubResource("TileSetAtlasSource_tvjvu")
+sources/13 = SubResource("TileSetAtlasSource_wccr6")
+sources/14 = SubResource("TileSetAtlasSource_iw3fi")
+sources/15 = SubResource("TileSetAtlasSource_umdkk")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iof2f"]
+size = Vector2(91.5, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s26vt"]
+size = Vector2(82, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0k6m7"]
+size = Vector2(59, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46tct"]
+size = Vector2(53, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqyjc"]
+size = Vector2(50, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlcrp"]
+size = Vector2(43, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
+size = Vector2(18, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vrlf"]
+size = Vector2(18, 113)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5gy4"]
+size = Vector2(18, 417)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbdty"]
+size = Vector2(13, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_auskg"]
+size = Vector2(13, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2pp6"]
+size = Vector2(1229, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7cuq"]
+size = Vector2(20, 766)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urqkn"]
+size = Vector2(13, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcyom"]
+size = Vector2(718, 15)
+
+[sub_resource type="GDScript" id="GDScript_53g1x"]
+script/source = "extends Node2D
+
+func  _ready():
+	visible = true
+	
+	for casilla in get_children():
+		print(casilla.name)
+		
+		if casilla.has_node(\"AnimatedSprite2D\"):
+			casilla.get_node(\"AnimatedSprite2D\").play()
+		
+	await get_tree().create_timer(7.0).timeout
+		#Ocultar electricidad
+		
+	visible = false
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7o0i"]
+size = Vector2(64, 63.9375)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psunf"]
+atlas = ExtResource("21_abtb7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40a0y"]
+atlas = ExtResource("21_abtb7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guahg"]
+atlas = ExtResource("21_abtb7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaua7"]
+atlas = ExtResource("21_abtb7")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5bq3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psunf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40a0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guahg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vaua7")
+}],
+"loop": 1,
+"name": &"electricidad",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(128, 64)
+
+[node name="zona2" type="Node2D" unique_id=698332591]
+
+[node name="background" type="TileMapLayer" parent="." unique_id=1338312836]
+tile_map_data = PackedByteArray("AAAAAAEAAQAAAAAAAAABAAEAAQAAAAAAAAACAAEAAQAAAAAAAAADAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAGAAEAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAAAAAADAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAHAAEAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAMAAQAAAAAAAAAHAAQAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAgAAQAAAAAAAAAAAAkAAQAAAAAAAAAAAAoAAQAAAAAAAAAAAAsAAQAAAAAAAAAAAAwAAQAAAAAAAAAAAA0AAQAAAAAAAAAAAA4AAQAAAAAAAAAAAA8AAQAAAAAAAAAAABAAAQAAAAAAAAAAABEAAQAAAAAAAAAAABIAAQAAAAAAAAABAAIAAQAAAAAAAAABAAMAAQAAAAAAAAABAAQAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAAAAAAAAABAAkAAQAAAAAAAAABAAoAAQAAAAAAAAABAAsAAQAAAAAAAAABAAwAAQAAAAAAAAABAA0AAQAAAAAAAAABAA4AAQAAAAAAAAABAA8AAQAAAAAAAAABABAAAQAAAAAAAAABABEAAQAAAAAAAAABABIAAQAAAAAAAAACAAIAAQAAAAAAAAACAAMAAQAAAAAAAAACAAQAAQAAAAAAAAACAAUAAQAAAAAAAAACAAYAAQAAAAAAAAACAAcAAQAAAAAAAAACAAgAAQAAAAAAAAACAAkAAQAAAAAAAAACAAoAAQAAAAAAAAACAAsAAQAAAAAAAAACAAwAAQAAAAAAAAACAA0AAQAAAAAAAAACAA4AAQAAAAAAAAACAA8AAQAAAAAAAAACABAAAQAAAAAAAAACABEAAQAAAAAAAAACABIAAQAAAAAAAAADAAIAAQAAAAAAAAADAAMAAQAAAAAAAAADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAADAAgAAQAAAAAAAAADAAkAAQAAAAAAAAADAAoAAQAAAAAAAAADAAsAAQAAAAAAAAADAAwAAQAAAAAAAAADAA0AAQAAAAAAAAADAA4AAQAAAAAAAAADAA8AAQAAAAAAAAADABAAAQAAAAAAAAADABEAAQAAAAAAAAADABIAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAMAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAEAAYAAQAAAAAAAAAEAAcAAQAAAAAAAAAEAAgAAQAAAAAAAAAEAAkAAQAAAAAAAAAEAAoAAQAAAAAAAAAEAAsAAQAAAAAAAAAEAAwAAQAAAAAAAAAEAA0AAQAAAAAAAAAEAA4AAQAAAAAAAAAEAA8AAQAAAAAAAAAEABAAAQAAAAAAAAAEABEAAQAAAAAAAAAEABIAAQAAAAAAAAAFAAIAAQAAAAAAAAAFAAMAAQAAAAAAAAAFAAQAAQAAAAAAAAAFAAUAAQAAAAAAAAAFAAYAAQAAAAAAAAAFAAcAAQAAAAAAAAAFAAgAAQAAAAAAAAAFAAkAAQAAAAAAAAAFAAoAAQAAAAAAAAAFAAsAAQAAAAAAAAAFAAwAAQAAAAAAAAAFAA0AAQAAAAAAAAAFAA4AAQAAAAAAAAAFAA8AAQAAAAAAAAAFABAAAQAAAAAAAAAFABEAAQAAAAAAAAAFABIAAQAAAAAAAAAGAAIAAQAAAAAAAAAGAAMAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAUAAQAAAAAAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAAAAAAGAAgAAQAAAAAAAAAGAAkAAQAAAAAAAAAGAAoAAQAAAAAAAAAGAAsAAQAAAAAAAAAGAAwAAQAAAAAAAAAGAA0AAQAAAAAAAAAGAA4AAQAAAAAAAAAGAA8AAQAAAAAAAAAGABAAAQAAAAAAAAAGABEAAQAAAAAAAAAGABIAAQAAAAAAAAAHAAUAAQAAAAAAAAAHAAYAAQAAAAAAAAAHAAcAAQAAAAAAAAAHAAgAAQAAAAAAAAAHAAkAAQAAAAAAAAAHAAoAAQAAAAAAAAAHAAsAAQAAAAAAAAAHAAwAAQAAAAAAAAAHAA0AAQAAAAAAAAAHAA4AAQAAAAAAAAAHAA8AAQAAAAAAAAAHABAAAQAAAAAAAAAHABEAAQAAAAAAAAAHABIAAQAAAAAAAAAIAAAAAQAAAAAAAAAIAAEAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAAAAAAIAAYAAQAAAAAAAAAIAAcAAQAAAAAAAAAIAAgAAQAAAAAAAAAIAAkAAQAAAAAAAAAIAAoAAQAAAAAAAAAIAAsAAQAAAAAAAAAIAAwAAQAAAAAAAAAIAA0AAQAAAAAAAAAIAA4AAQAAAAAAAAAIAA8AAQAAAAAAAAAIABAAAQAAAAAAAAAIABEAAQAAAAAAAAAIABIAAQAAAAAAAAAJAAAAAQAAAAAAAAAJAAEAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAAAAAAJAAgAAQAAAAAAAAAJAAkAAQAAAAAAAAAJAAoAAQAAAAAAAAAJAAsAAQAAAAAAAAAJAAwAAQAAAAAAAAAJAA0AAQAAAAAAAAAJAA4AAQAAAAAAAAAJAA8AAQAAAAAAAAAJABAAAQAAAAAAAAAJABEAAQAAAAAAAAAJABIAAQAAAAAAAAAKAAAAAQAAAAAAAAAKAAEAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAMAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAAKAAYAAQAAAAAAAAAKAAcAAQAAAAAAAAAKAAgAAQAAAAAAAAAKAAkAAQAAAAAAAAAKAAoAAQAAAAAAAAAKAAsAAQAAAAAAAAAKAAwAAQAAAAAAAAAKAA0AAQAAAAAAAAAKAA4AAQAAAAAAAAAKAA8AAQAAAAAAAAAKABAAAQAAAAAAAAAKABEAAQAAAAAAAAAKABIAAQAAAAAAAAALAAAAAQAAAAAAAAALAAEAAQAAAAAAAAALAAIAAQAAAAAAAAALAAMAAQAAAAAAAAALAAQAAQAAAAAAAAALAAUAAQAAAAAAAAALAAYAAQAAAAAAAAALAAcAAQAAAAAAAAALAAgAAQAAAAAAAAALAAkAAQAAAAAAAAALAAoAAQAAAAAAAAALAAsAAQAAAAAAAAALAAwAAQAAAAAAAAALAA0AAQAAAAAAAAALAA4AAQAAAAAAAAALAA8AAQAAAAAAAAALABAAAQAAAAAAAAALABEAAQAAAAAAAAALABIAAQAAAAAAAAAMAAAAAQAAAAAAAAAMAAEAAQAAAAAAAAAMAAIAAQAAAAAAAAAMAAMAAQAAAAAAAAAMAAQAAQAAAAAAAAAMAAUAAQAAAAAAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAAAAAAMAAgAAQAAAAAAAAAMAAkAAQAAAAAAAAAMAAoAAQAAAAAAAAAMAAsAAQAAAAAAAAAMAAwAAQAAAAAAAAAMAA0AAQAAAAAAAAAMAA4AAQAAAAAAAAAMAA8AAQAAAAAAAAAMABAAAQAAAAAAAAAMABEAAQAAAAAAAAAMABIAAQAAAAAAAAANAAAAAQAAAAAAAAANAAEAAQAAAAAAAAANAAIAAQAAAAAAAAANAAMAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAANAAYAAQAAAAAAAAANAAcAAQAAAAAAAAANAAgAAQAAAAAAAAANAAkAAQAAAAAAAAANAAoAAQAAAAAAAAANAAsAAQAAAAAAAAANAAwAAQAAAAAAAAANAA0AAQAAAAAAAAANAA4AAQAAAAAAAAANAA8AAQAAAAAAAAANABAAAQAAAAAAAAANABEAAQAAAAAAAAANABIAAQAAAAAAAAAOAAAAAQAAAAAAAAAOAAEAAQAAAAAAAAAOAAIAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAQAAQAAAAAAAAAOAAUAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAcAAQAAAAAAAAAOAAgAAQAAAAAAAAAOAAkAAQAAAAAAAAAOAAoAAQAAAAAAAAAOAAsAAQAAAAAAAAAOAAwAAQAAAAAAAAAOAA0AAQAAAAAAAAAOAA4AAQAAAAAAAAAOAA8AAQAAAAAAAAAOABAAAQAAAAAAAAAOABEAAQAAAAAAAAAOABIAAQAAAAAAAAAPAAAAAQAAAAAAAAAPAAEAAQAAAAAAAAAPAAIAAQAAAAAAAAAPAAMAAQAAAAAAAAAPAAQAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAAAAAAPAAgAAQAAAAAAAAAPAAkAAQAAAAAAAAAPAAoAAQAAAAAAAAAPAAsAAQAAAAAAAAAPAAwAAQAAAAAAAAAPAA0AAQAAAAAAAAAPAA4AAQAAAAAAAAAPAA8AAQAAAAAAAAAPABAAAQAAAAAAAAAPABEAAQAAAAAAAAAPABIAAQAAAAAAAAAQAAAAAQAAAAAAAAAQAAEAAQAAAAAAAAAQAAIAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAgAAQAAAAAAAAAQAAkAAQAAAAAAAAAQAAoAAQAAAAAAAAAQAAsAAQAAAAAAAAAQAAwAAQAAAAAAAAAQAA0AAQAAAAAAAAAQAA4AAQAAAAAAAAAQAA8AAQAAAAAAAAAQABAAAQAAAAAAAAAQABEAAQAAAAAAAAAQABIAAQAAAAAAAAARAAAAAQAAAAAAAAARAAEAAQAAAAAAAAARAAIAAQAAAAAAAAARAAMAAQAAAAAAAAARAAQAAQAAAAAAAAARAAUAAQAAAAAAAAARAAYAAQAAAAAAAAARAAcAAQAAAAAAAAARAAgAAQAAAAAAAAARAAkAAQAAAAAAAAARAAoAAQAAAAAAAAARAAsAAQAAAAAAAAARAAwAAQAAAAAAAAARAA0AAQAAAAAAAAARAA4AAQAAAAAAAAARAA8AAQAAAAAAAAARABAAAQAAAAAAAAARABEAAQAAAAAAAAARABIAAQAAAAAAAAASAAAAAQAAAAAAAAASAAEAAQAAAAAAAAASAAIAAQAAAAAAAAASAAMAAQAAAAAAAAASAAQAAQAAAAAAAAASAAUAAQAAAAAAAAASAAYAAQAAAAAAAAASAAcAAQAAAAAAAAASAAgAAQAAAAAAAAASAAkAAQAAAAAAAAASAAoAAQAAAAAAAAASAAsAAQAAAAAAAAASAAwAAQAAAAAAAAASAA0AAQAAAAAAAAASAA4AAQAAAAAAAAASAA8AAQAAAAAAAAASABAAAQAAAAAAAAASABEAAQAAAAAAAAASABIAAQAAAAAAAAATAAAAAQAAAAAAAAATAAEAAQAAAAAAAAATAAIAAQAAAAAAAAATAAMAAQAAAAAAAAATAAQAAQAAAAAAAAATAAUAAQAAAAAAAAATAAYAAQAAAAAAAAATAAcAAQAAAAAAAAATAAgAAQAAAAAAAAATAAkAAQAAAAAAAAATAAoAAQAAAAAAAAATAAsAAQAAAAAAAAATAAwAAQAAAAAAAAATAA0AAQAAAAAAAAATAA4AAQAAAAAAAAATAA8AAQAAAAAAAAATABAAAQAAAAAAAAATABEAAQAAAAAAAAATABIAAQAAAAAAAAAUAAAAAQAAAAAAAAAUAAEAAQAAAAAAAAAUAAIAAQAAAAAAAAAUAAMAAQAAAAAAAAAUAAQAAQAAAAAAAAAUAAUAAQAAAAAAAAAUAAYAAQAAAAAAAAAUAAcAAQAAAAAAAAAUAAgAAQAAAAAAAAAUAAkAAQAAAAAAAAAUAAoAAQAAAAAAAAAUAAsAAQAAAAAAAAAUAAwAAQAAAAAAAAAUAA0AAQAAAAAAAAAUAA4AAQAAAAAAAAAUAA8AAQAAAAAAAAAUABAAAQAAAAAAAAAUABEAAQAAAAAAAAAUABIAAQAAAAAAAAAVAAAAAQAAAAAAAAAVAAEAAQAAAAAAAAAVAAIAAQAAAAAAAAAVAAMAAQAAAAAAAAAVAAQAAQAAAAAAAAAVAAUAAQAAAAAAAAAVAAYAAQAAAAAAAAAVAAcAAQAAAAAAAAAVAAgAAQAAAAAAAAAVAAkAAQAAAAAAAAAVAAoAAQAAAAAAAAAVAAsAAQAAAAAAAAAVAAwAAQAAAAAAAAAVAA0AAQAAAAAAAAAVAA4AAQAAAAAAAAAVAA8AAQAAAAAAAAAVABAAAQAAAAAAAAAVABEAAQAAAAAAAAAVABIAAQAAAAAAAAAWAAAAAQAAAAAAAAAWAAEAAQAAAAAAAAAWAAIAAQAAAAAAAAAWAAMAAQAAAAAAAAAWAAQAAQAAAAAAAAAWAAUAAQAAAAAAAAAWAAYAAQAAAAAAAAAWAAcAAQAAAAAAAAAWAAgAAQAAAAAAAAAWAAkAAQAAAAAAAAAWAAoAAQAAAAAAAAAWAAsAAQAAAAAAAAAWAAwAAQAAAAAAAAAWAA0AAQAAAAAAAAAWAA4AAQAAAAAAAAAWAA8AAQAAAAAAAAAWABAAAQAAAAAAAAAWABEAAQAAAAAAAAAWABIAAQAAAAAAAAAXAAAAAQAAAAAAAAAXAAEAAQAAAAAAAAAXAAIAAQAAAAAAAAAXAAMAAQAAAAAAAAAXAAQAAQAAAAAAAAAXAAUAAQAAAAAAAAAXAAYAAQAAAAAAAAAXAAcAAQAAAAAAAAAXAAgAAQAAAAAAAAAXAAkAAQAAAAAAAAAXAAoAAQAAAAAAAAAXAAsAAQAAAAAAAAAXAAwAAQAAAAAAAAAXAA0AAQAAAAAAAAAXAA4AAQAAAAAAAAAXAA8AAQAAAAAAAAAXABAAAQAAAAAAAAAXABEAAQAAAAAAAAAXABIAAQAAAAAAAAAYAAAAAQAAAAAAAAAYAAEAAQAAAAAAAAAYAAIAAQAAAAAAAAAYAAMAAQAAAAAAAAAYAAQAAQAAAAAAAAAYAAUAAQAAAAAAAAAYAAYAAQAAAAAAAAAYAAcAAQAAAAAAAAAYAAgAAQAAAAAAAAAYAAkAAQAAAAAAAAAYAAoAAQAAAAAAAAAYAAsAAQAAAAAAAAAYAAwAAQAAAAAAAAAYAA0AAQAAAAAAAAAYAA4AAQAAAAAAAAAYAA8AAQAAAAAAAAAYABAAAQAAAAAAAAAYABEAAQAAAAAAAAAYABIAAQAAAAAAAAAAABMAAQAAAAAAAAABABMAAQAAAAAAAAACABMAAQAAAAAAAAADABMAAQAAAAAAAAAEABMAAQAAAAAAAAAFABMAAQAAAAAAAAAGABMAAQAAAAAAAAAHABMAAQAAAAAAAAAIABMAAQAAAAAAAAAJABMAAQAAAAAAAAAKABMAAQAAAAAAAAALABMAAQAAAAAAAAAMABMAAQAAAAAAAAAYABMAAQAAAAAAAAAXABMAAQAAAAAAAAAWABMAAQAAAAAAAAAVABMAAQAAAAAAAAAUABMAAQAAAAAAAAATABMAAQAAAAAAAAASABMAAQAAAAAAAAARABMAAQAAAAAAAAAQABMAAQAAAAAAAAAPABMAAQAAAAAAAAAOABMAAQAAAAAAAAANABMAAQAAAAAAAAAAAAYAAQAAAAAAAAADAAQAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_3yy0i")
+
+[node name="foreground" type="TileMapLayer" parent="." unique_id=98602784]
+tile_map_data = PackedByteArray("AAAAAAQADgAAAAAAAAAAAAUADgAAAAAAAAAAAAYADgAAAAAAAAAAAAcADgAAAAAAAAAAAAgADgAAAAAAAAAAAAkADgAAAAAAAAAAAAoADgAAAAAAAAAAAAsADgAAAAAAAAAAAAwADgAAAAAAAAAAAA0ADgAAAAAAAAAAAA4ADgAAAAAAAAAAABIADgAAAAAAAAAAABEADgAAAAAAAAAAABAADgAAAAAAAAAAAA8ADgAAAAAAAAAYAA4ADwAAAAAAAAAYAA0ADwAAAAAAAAAYAAwADwAAAAAAAAAYAAsADwAAAAAAAAAYAAoADwAAAAAAAAAYAAkADwAAAAAAAAAYAAgADwAAAAAAAAAYAAcADwAAAAAAAAAYAAYADwAAAAAAAAAYAAUADwAAAAAAAAAYAAQADwAAAAAAAAAYAAEADwAAAAAAAAAYAAIADwAAAAAAAAAYAAMADwAAAAAAAAAYABIADwAAAAAAAAAYABEADwAAAAAAAAABABMADAAAAAAAAAACABMADAAAAAAAAAADABMADAAAAAAAAAAEABMADAAAAAAAAAAFABMADAAAAAAAAAAGABMADAAAAAAAAAAHABMADAAAAAAAAAAIABMADAAAAAAAAAAJABMADAAAAAAAAAAKABMADAAAAAAAAAALABMADAAAAAAAAAAMABMADAAAAAAAAAANABMADAAAAAAAAAAOABMADAAAAAAAAAAPABMADAAAAAAAAAAQABMADAAAAAAAAAAXABMADAAAAAAAAAATABMADAAAAAAAAAASABMADAAAAAAAAAARABMADAAAAAAAAAAAABMACgAAAAAAAAAYABMACwAAAAAAAAAAAAAACAAAAAAAAAAYAAAACQAAAAAAAAAXAAAADQAAAAAAAAAWAAAADQAAAAAAAAAVAAAADQAAAAAAAAAUAAAADQAAAAAAAAATAAAADQAAAAAAAAASAAAADQAAAAAAAAARAAAADQAAAAAAAAAQAAAADQAAAAAAAAAPAAAADQAAAAAAAAAOAAAADQAAAAAAAAACAAAADQAAAAAAAAADAAAADQAAAAAAAAAEAAAADQAAAAAAAAAFAAAADQAAAAAAAAAGAAAADQAAAAAAAAAHAAAADQAAAAAAAAAIAAAADQAAAAAAAAAJAAAADQAAAAAAAAAKAAAADQAAAAAAAAALAAAADQAAAAAAAAAMAAAADQAAAAAAAAANAAAADQAAAAAAAAAAAAMADgAAAAAAAAAAAAIADgAAAAAAAAAAAAEADgAAAAAAAAAYAA8ADwAAAAAAAAAYABAADwAAAAAAAAAWABMADAAAAAAAAAA=")
+tile_set = SubResource("TileSet_mbb6w")
+
+[node name="personaje principal" parent="." unique_id=2003850916 instance=ExtResource("10_p7348")]
+position = Vector2(91, 103.00001)
+scale = Vector2(2.3, 2.3)
+script = ExtResource("11_abtb7")
+
+[node name="Objetos" type="Sprite2D" parent="." unique_id=1555084823]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Objetos" unique_id=421065006]
+
+[node name="Consola" type="Sprite2D" parent="Objetos/StaticBody2D" unique_id=603756528]
+position = Vector2(421, 116.00001)
+scale = Vector2(1.3925774, 1.4593099)
+texture = ExtResource("10_8g8op")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D" unique_id=1453841951]
+position = Vector2(419, 117)
+shape = SubResource("RectangleShape2D_iof2f")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Objetos" unique_id=1310549426]
+
+[node name="Silla 1" type="Sprite2D" parent="Objetos/StaticBody2D2" unique_id=1214230387]
+position = Vector2(743, 103)
+scale = Vector2(2.417968, 2.3085938)
+texture = ExtResource("11_17wmg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D2" unique_id=1689153937]
+position = Vector2(743, 103)
+shape = SubResource("RectangleShape2D_s26vt")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Objetos" unique_id=1488431917]
+
+[node name="señal" type="Sprite2D" parent="Objetos/StaticBody2D3" unique_id=580204473]
+position = Vector2(177, 104)
+scale = Vector2(1.8281246, 1.421875)
+texture = ExtResource("12_mvthj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D3" unique_id=1354274863]
+position = Vector2(177.5, 103)
+shape = SubResource("RectangleShape2D_0k6m7")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Objetos" unique_id=1328227748]
+position = Vector2(59, 283)
+
+[node name="Sprite2D" type="Sprite2D" parent="Objetos/StaticBody2D4" unique_id=2056995497]
+position = Vector2(-0.99999857, 9.000007)
+scale = Vector2(1.5468751, 1.6406254)
+texture = ExtResource("13_5pwru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D4" unique_id=1966352733]
+position = Vector2(-1.5, 9.5)
+shape = SubResource("RectangleShape2D_46tct")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Objetos" unique_id=1304434119]
+
+[node name="Cono" type="Sprite2D" parent="Objetos/StaticBody2D5" unique_id=1798183488]
+position = Vector2(60, 465)
+scale = Vector2(1.4687496, 1.7499988)
+texture = ExtResource("13_5pwru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D5" unique_id=1868160313]
+position = Vector2(61, 465)
+shape = SubResource("RectangleShape2D_tqyjc")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Objetos" unique_id=1172974513]
+
+[node name="cono" type="Sprite2D" parent="Objetos/StaticBody2D6" unique_id=695569174]
+position = Vector2(64, 648.00006)
+scale = Vector2(1.3125001, 1.4531243)
+texture = ExtResource("13_5pwru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D6" unique_id=1246865267]
+position = Vector2(64.5, 648)
+shape = SubResource("RectangleShape2D_tlcrp")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Objetos" unique_id=634942699]
+
+[node name="cables" type="Sprite2D" parent="Objetos/StaticBody2D7" unique_id=789119600]
+position = Vector2(63.25, 378)
+scale = Vector2(1.1666665, 1.78125)
+texture = ExtResource("14_83bke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D7" unique_id=504636563]
+position = Vector2(63, 378)
+shape = SubResource("RectangleShape2D_1vivr")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Objetos" unique_id=1072664624]
+
+[node name="cables2" type="Sprite2D" parent="Objetos/StaticBody2D8" unique_id=795294555]
+position = Vector2(63.000004, 564)
+scale = Vector2(1.1833333, 1.78125)
+texture = ExtResource("14_83bke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D8" unique_id=1090135434]
+position = Vector2(63, 563.5)
+shape = SubResource("RectangleShape2D_8vrlf")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Objetos" unique_id=1692101816]
+
+[node name="cables3" type="Sprite2D" parent="Objetos/StaticBody2D9" unique_id=1992878562]
+position = Vector2(64, 731)
+scale = Vector2(1.1833333, 1.78125)
+texture = ExtResource("14_83bke")
+
+[node name="cables5" type="Sprite2D" parent="Objetos/StaticBody2D9" unique_id=918116593]
+position = Vector2(63, 997.5)
+scale = Vector2(1.1833333, 2.9843738)
+texture = ExtResource("14_83bke")
+
+[node name="cables4" type="Sprite2D" parent="Objetos/StaticBody2D9" unique_id=88726966]
+position = Vector2(64, 845)
+scale = Vector2(1.1833333, 1.78125)
+texture = ExtResource("14_83bke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D9" unique_id=55974311]
+position = Vector2(63, 882.5)
+shape = SubResource("RectangleShape2D_v5gy4")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Objetos" unique_id=919068224]
+position = Vector2(1514, 1124)
+
+[node name="esquina derecha" type="Sprite2D" parent="Objetos/StaticBody2D10" unique_id=1635374734]
+position = Vector2(-1, 1)
+scale = Vector2(1, 1.03125)
+texture = ExtResource("15_r8prv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D10" unique_id=1126964593]
+position = Vector2(23.5, 0.5)
+shape = SubResource("RectangleShape2D_qbdty")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Objetos" unique_id=2104894919]
+position = Vector2(88, 1123)
+
+[node name="esquina izquierda" type="Sprite2D" parent="Objetos/StaticBody2D11" unique_id=1663252034]
+texture = ExtResource("16_kogbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D11" unique_id=355744554]
+position = Vector2(-24.5, -0.5)
+shape = SubResource("RectangleShape2D_auskg")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Objetos" unique_id=1810980182]
+
+[node name="Sprite2D" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=2017973836]
+position = Vector2(185.5, 1148)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=1478973043]
+position = Vector2(315, 1148)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=770004982]
+position = Vector2(446, 1148)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=372108490]
+position = Vector2(577, 1149)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=1060447385]
+position = Vector2(708, 1149)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=454092392]
+position = Vector2(839, 1149)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=1216457683]
+position = Vector2(969.99994, 1149)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=1046451280]
+position = Vector2(1101, 1149)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Objetos/StaticBody2D12" unique_id=1216747766]
+position = Vector2(1233, 1150)
+scale = Vector2(2.0468752, 1.0666647)
+texture = ExtResource("17_k01jj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D12" unique_id=1762088235]
+position = Vector2(684.5, 1149)
+shape = SubResource("RectangleShape2D_d2pp6")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Objetos" unique_id=1958236196]
+
+[node name="Sprite2D" type="Sprite2D" parent="Objetos/StaticBody2D13" unique_id=1131638082]
+position = Vector2(1537.0001, 864.00006)
+scale = Vector2(1.3552068, 2.8107903)
+texture = ExtResource("14_83bke")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Objetos/StaticBody2D13" unique_id=1555424654]
+position = Vector2(1537, 685)
+scale = Vector2(1.3552068, 2.8107903)
+texture = ExtResource("14_83bke")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Objetos/StaticBody2D13" unique_id=242968423]
+position = Vector2(1537.0001, 506)
+scale = Vector2(1.3552068, 2.8107903)
+texture = ExtResource("14_83bke")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Objetos/StaticBody2D13" unique_id=782347074]
+position = Vector2(1537.0001, 301.97266)
+scale = Vector2(1.3552068, 3.5616455)
+texture = ExtResource("14_83bke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D13" unique_id=1664190347]
+position = Vector2(1537, 571)
+shape = SubResource("RectangleShape2D_u7cuq")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="Objetos" unique_id=1596326985]
+position = Vector2(1512, 154)
+
+[node name="Sprite2D" type="Sprite2D" parent="Objetos/StaticBody2D14" unique_id=1238588352]
+position = Vector2(0, 0.5000038)
+scale = Vector2(1, 1.0156251)
+texture = ExtResource("18_r8prv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D14" unique_id=209421152]
+position = Vector2(24.5, 1.5)
+shape = SubResource("RectangleShape2D_urqkn")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="Objetos" unique_id=1776497452]
+
+[node name="Sprite2D" type="Sprite2D" parent="Objetos/StaticBody2D15" unique_id=468092436]
+position = Vector2(1369.75, 129.5)
+scale = Vector2(3.4453123, -1)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Objetos/StaticBody2D15" unique_id=948839431]
+position = Vector2(1139.875, 129.5)
+scale = Vector2(3.7539058, -1.0000001)
+texture = ExtResource("17_k01jj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Objetos/StaticBody2D15" unique_id=510646731]
+position = Vector2(916, 129.5)
+scale = Vector2(3.2499998, -1.0000007)
+texture = ExtResource("17_k01jj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D15" unique_id=1926171492]
+position = Vector2(1171, 129.5)
+shape = SubResource("RectangleShape2D_rcyom")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=923770360]
+position = Vector2(574, 321)
+
+[node name="Electricidad" type="Node2D" parent="." unique_id=1003765760]
+script = SubResource("GDScript_53g1x")
+
+[node name="CasillaElectrica" type="Area2D" parent="Electricidad" unique_id=8139849]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica" unique_id=699273517]
+position = Vector2(224.25, 287.75)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica" unique_id=943502726]
+position = Vector2(225, 288)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica2" type="Area2D" parent="Electricidad" unique_id=1816048398]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica2" unique_id=2019996089]
+position = Vector2(160, 287)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica2" unique_id=719509653]
+position = Vector2(160, 287)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica65" type="Area2D" parent="Electricidad" unique_id=1647618342]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica65" unique_id=105114266]
+position = Vector2(103.9375, 288)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica65" unique_id=369753553]
+position = Vector2(104, 288)
+scale = Vector2(0.75000006, 1)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica3" type="Area2D" parent="Electricidad" unique_id=1591327050]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica3" unique_id=1078551747]
+position = Vector2(354, 226)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica3" unique_id=1576979894]
+position = Vector2(354, 226)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica4" type="Area2D" parent="Electricidad" unique_id=1822657411]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica4" unique_id=690646455]
+position = Vector2(419, 286)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica4" unique_id=1745191230]
+position = Vector2(419, 286)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica5" type="Area2D" parent="Electricidad" unique_id=1008127854]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica5" unique_id=510064774]
+position = Vector2(352, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica5" unique_id=464872647]
+position = Vector2(352, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica6" type="Area2D" parent="Electricidad" unique_id=1578140558]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica6" unique_id=1784290205]
+position = Vector2(418, 350)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica6" unique_id=1463503595]
+position = Vector2(418, 350)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica7" type="Area2D" parent="Electricidad" unique_id=1395400689]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica7" unique_id=710628526]
+position = Vector2(288, 415)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica7" unique_id=1352392050]
+position = Vector2(287, 415)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica8" type="Area2D" parent="Electricidad" unique_id=1414369946]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica8" unique_id=1658001418]
+position = Vector2(160, 480)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica8" unique_id=796897573]
+position = Vector2(160, 480)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica9" type="Area2D" parent="Electricidad" unique_id=1786339126]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica9" unique_id=1239912655]
+position = Vector2(415, 417)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica9" unique_id=1175409813]
+position = Vector2(415, 417)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica10" type="Area2D" parent="Electricidad" unique_id=821468243]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica10" unique_id=1860988091]
+position = Vector2(482, 417)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica10" unique_id=1670639901]
+position = Vector2(482, 417)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica11" type="Area2D" parent="Electricidad" unique_id=47146681]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica11" unique_id=599829098]
+position = Vector2(547, 418)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica11" unique_id=321115688]
+position = Vector2(547, 418)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica12" type="Area2D" parent="Electricidad" unique_id=62267751]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica12" unique_id=1901228387]
+position = Vector2(288, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica12" unique_id=1128380825]
+position = Vector2(289, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica13" type="Area2D" parent="Electricidad" unique_id=1832097503]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica13" unique_id=1630856328]
+position = Vector2(352, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica13" unique_id=376864430]
+position = Vector2(352, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica14" type="Area2D" parent="Electricidad" unique_id=1735492639]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica14" unique_id=1248844494]
+position = Vector2(416, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica14" unique_id=124491007]
+position = Vector2(416, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica15" type="Area2D" parent="Electricidad" unique_id=629007253]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica15" unique_id=495097979]
+position = Vector2(416, 608)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica15" unique_id=1178455214]
+position = Vector2(416, 608)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica16" type="Area2D" parent="Electricidad" unique_id=1962911562]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica16" unique_id=501632344]
+position = Vector2(544, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica16" unique_id=1776611620]
+position = Vector2(544, 672)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica17" type="Area2D" parent="Electricidad" unique_id=1147806477]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica17" unique_id=972316924]
+position = Vector2(608, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica17" unique_id=1294143140]
+position = Vector2(608, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica18" type="Area2D" parent="Electricidad" unique_id=1835874738]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica18" unique_id=988408173]
+position = Vector2(608, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica18" unique_id=213870650]
+position = Vector2(608, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica19" type="Area2D" parent="Electricidad" unique_id=164524006]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica19" unique_id=108792316]
+position = Vector2(672, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica19" unique_id=568201222]
+position = Vector2(672, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica20" type="Area2D" parent="Electricidad" unique_id=1825728044]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica20" unique_id=1334218950]
+position = Vector2(736, 352)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica20" unique_id=2136920365]
+position = Vector2(736, 352)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica21" type="Area2D" parent="Electricidad" unique_id=983322627]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica21" unique_id=1975530752]
+position = Vector2(736, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica21" unique_id=1468946853]
+position = Vector2(736, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica22" type="Area2D" parent="Electricidad" unique_id=588164766]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica22" unique_id=1319321068]
+position = Vector2(736, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica22" unique_id=114048480]
+position = Vector2(736, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica23" type="Area2D" parent="Electricidad" unique_id=1087802604]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica23" unique_id=486797489]
+position = Vector2(800, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica23" unique_id=2111287421]
+position = Vector2(800, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica24" type="Area2D" parent="Electricidad" unique_id=1492511841]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica24" unique_id=1436470406]
+position = Vector2(800, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica24" unique_id=1438632121]
+position = Vector2(800, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica25" type="Area2D" parent="Electricidad" unique_id=1108126285]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica25" unique_id=21564634]
+position = Vector2(864, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica25" unique_id=2093606034]
+position = Vector2(864, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica26" type="Area2D" parent="Electricidad" unique_id=752900581]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica26" unique_id=23088744]
+position = Vector2(864, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica26" unique_id=662352753]
+position = Vector2(864, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica27" type="Area2D" parent="Electricidad" unique_id=842634532]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica27" unique_id=1219771730]
+position = Vector2(928, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica27" unique_id=141776124]
+position = Vector2(928, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica28" type="Area2D" parent="Electricidad" unique_id=242774770]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica28" unique_id=288834607]
+position = Vector2(928, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica28" unique_id=264862507]
+position = Vector2(928, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica29" type="Area2D" parent="Electricidad" unique_id=1954825213]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica29" unique_id=1841261198]
+position = Vector2(992, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica29" unique_id=2057728902]
+position = Vector2(992, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica30" type="Area2D" parent="Electricidad" unique_id=1792059089]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica30" unique_id=1108906138]
+position = Vector2(1056, 288)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica30" unique_id=1475373751]
+position = Vector2(1056, 288)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica31" type="Area2D" parent="Electricidad" unique_id=1532693950]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica31" unique_id=1973178530]
+position = Vector2(1056, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica31" unique_id=1447732511]
+position = Vector2(1056, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica32" type="Area2D" parent="Electricidad" unique_id=2120089784]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica32" unique_id=243699547]
+position = Vector2(1120, 224)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica32" unique_id=684578277]
+position = Vector2(1120, 224)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica33" type="Area2D" parent="Electricidad" unique_id=1320818587]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica33" unique_id=1829645353]
+position = Vector2(992, 352)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica33" unique_id=1885931917]
+position = Vector2(992, 352)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica34" type="Area2D" parent="Electricidad" unique_id=1532429299]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica34" unique_id=2144939455]
+position = Vector2(1184, 352)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica34" unique_id=290522131]
+position = Vector2(1184, 352)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica35" type="Area2D" parent="Electricidad" unique_id=1084331578]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica35" unique_id=1672907775]
+position = Vector2(1120, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica35" unique_id=1601445797]
+position = Vector2(1120, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica36" type="Area2D" parent="Electricidad" unique_id=307939279]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica36" unique_id=328511767]
+position = Vector2(1184, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica36" unique_id=609567125]
+position = Vector2(1184, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica37" type="Area2D" parent="Electricidad" unique_id=1604072646]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica37" unique_id=75160611]
+position = Vector2(1184, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica37" unique_id=1737787098]
+position = Vector2(1184, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica38" type="Area2D" parent="Electricidad" unique_id=935657537]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica38" unique_id=1338609332]
+position = Vector2(1248, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica38" unique_id=1429923634]
+position = Vector2(1248, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica39" type="Area2D" parent="Electricidad" unique_id=1060947194]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica39" unique_id=580747727]
+position = Vector2(1248, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica39" unique_id=822780736]
+position = Vector2(1248, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica40" type="Area2D" parent="Electricidad" unique_id=340324001]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica40" unique_id=2109050874]
+position = Vector2(1248, 608)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica40" unique_id=1240379410]
+position = Vector2(1248, 608)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica41" type="Area2D" parent="Electricidad" unique_id=861290066]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica41" unique_id=823607268]
+position = Vector2(1312, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica41" unique_id=1619509221]
+position = Vector2(1312, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica42" type="Area2D" parent="Electricidad" unique_id=1226375917]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica42" unique_id=2041074645]
+position = Vector2(1376, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica42" unique_id=413059350]
+position = Vector2(1376, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica43" type="Area2D" parent="Electricidad" unique_id=615736792]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica43" unique_id=1265655364]
+position = Vector2(1440, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica43" unique_id=1025804926]
+position = Vector2(1440, 416)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica44" type="Area2D" parent="Electricidad" unique_id=1333996700]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica44" unique_id=45508582]
+position = Vector2(1440, 480)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica44" unique_id=2144204750]
+position = Vector2(1440, 480)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica45" type="Area2D" parent="Electricidad" unique_id=719209294]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica45" unique_id=1659420028]
+position = Vector2(1440, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica45" unique_id=673434596]
+position = Vector2(1440, 544)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica46" type="Area2D" parent="Electricidad" unique_id=628345751]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica46" unique_id=188218746]
+position = Vector2(1440, 608)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica46" unique_id=1866835738]
+position = Vector2(1440, 608)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica47" type="Area2D" parent="Electricidad" unique_id=320022474]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica47" unique_id=629465977]
+position = Vector2(1440, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica47" unique_id=34246249]
+position = Vector2(1440, 672)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica48" type="Area2D" parent="Electricidad" unique_id=1564564108]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica48" unique_id=817014933]
+position = Vector2(1248, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica48" unique_id=1170140597]
+position = Vector2(1248, 672)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica49" type="Area2D" parent="Electricidad" unique_id=96837626]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica49" unique_id=743842356]
+position = Vector2(1248, 736)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica49" unique_id=1041603260]
+position = Vector2(1248, 736)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica50" type="Area2D" parent="Electricidad" unique_id=401817637]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica50" unique_id=1730302230]
+position = Vector2(1440, 736)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica50" unique_id=1302766050]
+position = Vector2(1440, 736)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica51" type="Area2D" parent="Electricidad" unique_id=456877036]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica51" unique_id=1379528997]
+position = Vector2(1440, 800)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica51" unique_id=541350646]
+position = Vector2(1440, 800)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica52" type="Area2D" parent="Electricidad" unique_id=457056784]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica52" unique_id=1316679318]
+position = Vector2(1248, 800)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica52" unique_id=1338865495]
+position = Vector2(1248, 800)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica53" type="Area2D" parent="Electricidad" unique_id=834697205]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica53" unique_id=203386152]
+position = Vector2(1248, 864)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica53" unique_id=353578477]
+position = Vector2(1248, 864)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica54" type="Area2D" parent="Electricidad" unique_id=678402496]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica54" unique_id=866532408]
+position = Vector2(1440, 864)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica54" unique_id=1006887538]
+position = Vector2(1440, 864)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica55" type="Area2D" parent="Electricidad" unique_id=2130952717]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica55" unique_id=128256695]
+position = Vector2(1440, 928)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica55" unique_id=1590137883]
+position = Vector2(1440, 928)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica56" type="Area2D" parent="Electricidad" unique_id=13457666]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica56" unique_id=1189244259]
+position = Vector2(1184, 800)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica56" unique_id=1579852187]
+position = Vector2(1184, 800)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica57" type="Area2D" parent="Electricidad" unique_id=8636513]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica57" unique_id=820801497]
+position = Vector2(1184, 992)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica57" unique_id=1793052320]
+position = Vector2(1184, 992)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica58" type="Area2D" parent="Electricidad" unique_id=1562793301]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica58" unique_id=1508085208]
+position = Vector2(1440, 992)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica58" unique_id=636232741]
+position = Vector2(1440, 992)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica59" type="Area2D" parent="Electricidad" unique_id=1869937470]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica59" unique_id=23586825]
+position = Vector2(1440, 1056)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica59" unique_id=1898100819]
+position = Vector2(1440, 1056)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica60" type="Area2D" parent="Electricidad" unique_id=1964513026]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica60" unique_id=1033618171]
+position = Vector2(1248, 1056)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica60" unique_id=949683296]
+position = Vector2(1248, 1056)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica61" type="Area2D" parent="Electricidad" unique_id=1672771062]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica61" unique_id=950215988]
+position = Vector2(1248, 1120)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica61" unique_id=1414934795]
+position = Vector2(1248, 1116)
+scale = Vector2(1, 0.8749995)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica62" type="Area2D" parent="Electricidad" unique_id=1918907092]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica62" unique_id=1642021660]
+position = Vector2(1440, 1120.0625)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica62" unique_id=981850355]
+position = Vector2(1440, 1120)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica63" type="Area2D" parent="Electricidad" unique_id=1146942040]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica63" unique_id=1709417331]
+position = Vector2(1440, 1184)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica63" unique_id=1342195167]
+position = Vector2(1440, 1184)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica64" type="Area2D" parent="Electricidad" unique_id=1277439752]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica64" unique_id=134946396]
+position = Vector2(1248, 1184)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica64" unique_id=928304052]
+position = Vector2(1248, 1184)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica66" type="Area2D" parent="Electricidad" unique_id=1939406080]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica66" unique_id=66619309]
+position = Vector2(160, 352)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica66" unique_id=1203600974]
+position = Vector2(160, 352)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica67" type="Area2D" parent="Electricidad" unique_id=1134122601]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica67" unique_id=1973135317]
+position = Vector2(160, 416)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica67" unique_id=1962964478]
+position = Vector2(160, 416)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica68" type="Area2D" parent="Electricidad" unique_id=1769326270]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica68" unique_id=1774914084]
+position = Vector2(160, 544)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica68" unique_id=1862960191]
+position = Vector2(160, 544)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica69" type="Area2D" parent="Electricidad" unique_id=1145124005]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica69" unique_id=212983613]
+position = Vector2(160, 608)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica69" unique_id=1558477796]
+position = Vector2(160, 607.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica70" type="Area2D" parent="Electricidad" unique_id=709321042]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica70" unique_id=649655225]
+position = Vector2(160, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica70" unique_id=485381900]
+position = Vector2(160, 672)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica71" type="Area2D" parent="Electricidad" unique_id=811057263]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica71" unique_id=1773419938]
+position = Vector2(224, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica71" unique_id=1887512273]
+position = Vector2(224, 671.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica72" type="Area2D" parent="Electricidad" unique_id=969043174]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica72" unique_id=672321962]
+position = Vector2(288, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica72" unique_id=9461394]
+position = Vector2(288, 671.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica73" type="Area2D" parent="Electricidad" unique_id=95027001]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica73" unique_id=1959623604]
+position = Vector2(288, 608)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica73" unique_id=877914575]
+position = Vector2(288, 607.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica74" type="Area2D" parent="Electricidad" unique_id=616602740]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica74" unique_id=872611538]
+position = Vector2(608, 608)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica74" unique_id=1186852501]
+position = Vector2(608, 607.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica75" type="Area2D" parent="Electricidad" unique_id=980112367]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica75" unique_id=1321809676]
+position = Vector2(608, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica75" unique_id=134487942]
+position = Vector2(608, 671.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica76" type="Area2D" parent="Electricidad" unique_id=2025484138]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica76" unique_id=950473971]
+position = Vector2(480, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica76" unique_id=525080608]
+position = Vector2(480, 671.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica77" type="Area2D" parent="Electricidad" unique_id=636187854]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica77" unique_id=304578276]
+position = Vector2(416, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica77" unique_id=998784529]
+position = Vector2(416, 671.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica78" type="Area2D" parent="Electricidad" unique_id=1857471584]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica78" unique_id=2008715448]
+position = Vector2(608, 352)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica78" unique_id=1709391701]
+position = Vector2(608, 352)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica79" type="Area2D" parent="Electricidad" unique_id=1706269157]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica79" unique_id=1045180740]
+position = Vector2(608, 288)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica79" unique_id=2079590918]
+position = Vector2(608, 288)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica80" type="Area2D" parent="Electricidad" unique_id=630245403]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica80" unique_id=927596846]
+position = Vector2(608, 224)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica80" unique_id=1108350813]
+position = Vector2(608, 224)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica81" type="Area2D" parent="Electricidad" unique_id=464036022]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica81" unique_id=1123455164]
+position = Vector2(672, 224)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica81" unique_id=1458790539]
+position = Vector2(672, 224)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica82" type="Area2D" parent="Electricidad" unique_id=1763403513]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica82" unique_id=1014917666]
+position = Vector2(736, 224)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica82" unique_id=1903827588]
+position = Vector2(736, 224)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica83" type="Area2D" parent="Electricidad" unique_id=1543847467]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica83" unique_id=437086754]
+position = Vector2(800, 288)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica83" unique_id=1586433658]
+position = Vector2(800, 288)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica84" type="Area2D" parent="Electricidad" unique_id=201717191]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica84" unique_id=35276749]
+position = Vector2(1120, 928)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica84" unique_id=1540249795]
+position = Vector2(1120, 928)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica85" type="Area2D" parent="Electricidad" unique_id=502221341]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica85" unique_id=83285432]
+position = Vector2(1056, 928)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica85" unique_id=995466615]
+position = Vector2(1056, 927.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica86" type="Area2D" parent="Electricidad" unique_id=1714796551]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica86" unique_id=104804909]
+position = Vector2(1120, 736)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica86" unique_id=8332067]
+position = Vector2(1120, 735.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica87" type="Area2D" parent="Electricidad" unique_id=268826267]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica87" unique_id=62486493]
+position = Vector2(992, 864)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica87" unique_id=1182831758]
+position = Vector2(992, 863.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica88" type="Area2D" parent="Electricidad" unique_id=933944345]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica88" unique_id=816763341]
+position = Vector2(992, 800)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica88" unique_id=161033626]
+position = Vector2(992, 799.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica89" type="Area2D" parent="Electricidad" unique_id=1041689518]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica89" unique_id=822236350]
+position = Vector2(992, 736)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica89" unique_id=709158203]
+position = Vector2(992, 735.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica90" type="Area2D" parent="Electricidad" unique_id=610564677]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica90" unique_id=1189322132]
+position = Vector2(1184, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica90" unique_id=1505374202]
+position = Vector2(1184, 671.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica91" type="Area2D" parent="Electricidad" unique_id=746580726]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica91" unique_id=859879022]
+position = Vector2(1120, 608)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica91" unique_id=562737886]
+position = Vector2(1120, 607.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica92" type="Area2D" parent="Electricidad" unique_id=1903200336]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica92" unique_id=479210346]
+position = Vector2(928, 672)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica92" unique_id=301064522]
+position = Vector2(928, 672)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica93" type="Area2D" parent="Electricidad" unique_id=543497305]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica93" unique_id=1301232044]
+position = Vector2(928, 608)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica93" unique_id=1741611001]
+position = Vector2(928, 607.99994)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="CasillaElectrica94" type="Area2D" parent="Electricidad" unique_id=1051891605]
+script = ExtResource("20_55op1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica94" unique_id=1022126325]
+position = Vector2(1184, 288)
+shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Electricidad/CasillaElectrica94" unique_id=480799003]
+position = Vector2(1184, 288)
+scale = Vector2(1, 0.99999905)
+sprite_frames = SubResource("SpriteFrames_q5bq3")
+animation = &"electricidad"
+
+[node name="Meta" type="Area2D" parent="." unique_id=813542624]
+position = Vector2(1344, 1192)
+script = ExtResource("23_53g1x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1384982180]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_q5bq3")
+
+[connection signal="body_entered" from="Electricidad/CasillaElectrica" to="Electricidad/CasillaElectrica" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica2" to="Electricidad/CasillaElectrica2" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica65" to="Electricidad/CasillaElectrica65" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica3" to="Electricidad/CasillaElectrica3" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica4" to="Electricidad/CasillaElectrica4" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica5" to="Electricidad/CasillaElectrica5" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica6" to="Electricidad/CasillaElectrica6" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica7" to="Electricidad/CasillaElectrica7" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica8" to="Electricidad/CasillaElectrica8" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica9" to="Electricidad/CasillaElectrica9" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica10" to="Electricidad/CasillaElectrica10" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica11" to="Electricidad/CasillaElectrica11" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica12" to="Electricidad/CasillaElectrica12" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica13" to="Electricidad/CasillaElectrica13" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica14" to="Electricidad/CasillaElectrica14" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica15" to="Electricidad/CasillaElectrica15" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica16" to="Electricidad/CasillaElectrica16" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica17" to="Electricidad/CasillaElectrica17" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica18" to="Electricidad/CasillaElectrica18" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica19" to="Electricidad/CasillaElectrica19" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica20" to="Electricidad/CasillaElectrica20" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica21" to="Electricidad/CasillaElectrica21" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica22" to="Electricidad/CasillaElectrica22" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica23" to="Electricidad/CasillaElectrica23" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica24" to="Electricidad/CasillaElectrica24" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica25" to="Electricidad/CasillaElectrica25" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica26" to="Electricidad/CasillaElectrica26" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica27" to="Electricidad/CasillaElectrica27" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica28" to="Electricidad/CasillaElectrica28" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica29" to="Electricidad/CasillaElectrica29" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica30" to="Electricidad/CasillaElectrica30" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica31" to="Electricidad/CasillaElectrica31" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica32" to="Electricidad/CasillaElectrica32" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica33" to="Electricidad/CasillaElectrica33" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica34" to="Electricidad/CasillaElectrica34" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica35" to="Electricidad/CasillaElectrica35" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica36" to="Electricidad/CasillaElectrica36" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica37" to="Electricidad/CasillaElectrica37" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica38" to="Electricidad/CasillaElectrica38" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica39" to="Electricidad/CasillaElectrica39" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica40" to="Electricidad/CasillaElectrica40" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica41" to="Electricidad/CasillaElectrica41" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica42" to="Electricidad/CasillaElectrica42" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica43" to="Electricidad/CasillaElectrica43" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica44" to="Electricidad/CasillaElectrica44" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica45" to="Electricidad/CasillaElectrica45" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica46" to="Electricidad/CasillaElectrica46" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica47" to="Electricidad/CasillaElectrica47" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica48" to="Electricidad/CasillaElectrica48" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica49" to="Electricidad/CasillaElectrica49" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica50" to="Electricidad/CasillaElectrica50" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica51" to="Electricidad/CasillaElectrica51" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica52" to="Electricidad/CasillaElectrica52" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica53" to="Electricidad/CasillaElectrica53" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica54" to="Electricidad/CasillaElectrica54" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica55" to="Electricidad/CasillaElectrica55" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica56" to="Electricidad/CasillaElectrica56" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica57" to="Electricidad/CasillaElectrica57" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica58" to="Electricidad/CasillaElectrica58" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica59" to="Electricidad/CasillaElectrica59" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica60" to="Electricidad/CasillaElectrica60" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica61" to="Electricidad/CasillaElectrica61" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica62" to="Electricidad/CasillaElectrica62" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica63" to="Electricidad/CasillaElectrica63" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica64" to="Electricidad/CasillaElectrica64" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica66" to="Electricidad/CasillaElectrica66" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica67" to="Electricidad/CasillaElectrica67" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica68" to="Electricidad/CasillaElectrica68" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica69" to="Electricidad/CasillaElectrica69" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica70" to="Electricidad/CasillaElectrica70" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica71" to="Electricidad/CasillaElectrica71" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica72" to="Electricidad/CasillaElectrica72" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica73" to="Electricidad/CasillaElectrica73" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica74" to="Electricidad/CasillaElectrica74" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica75" to="Electricidad/CasillaElectrica75" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica76" to="Electricidad/CasillaElectrica76" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica77" to="Electricidad/CasillaElectrica77" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica78" to="Electricidad/CasillaElectrica78" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica79" to="Electricidad/CasillaElectrica79" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica80" to="Electricidad/CasillaElectrica80" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica81" to="Electricidad/CasillaElectrica81" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica82" to="Electricidad/CasillaElectrica82" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica83" to="Electricidad/CasillaElectrica83" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica84" to="Electricidad/CasillaElectrica84" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica85" to="Electricidad/CasillaElectrica85" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica86" to="Electricidad/CasillaElectrica86" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica87" to="Electricidad/CasillaElectrica87" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica88" to="Electricidad/CasillaElectrica88" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica89" to="Electricidad/CasillaElectrica89" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica90" to="Electricidad/CasillaElectrica90" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica91" to="Electricidad/CasillaElectrica91" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica92" to="Electricidad/CasillaElectrica92" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica93" to="Electricidad/CasillaElectrica93" method="_on_body_entered"]
+[connection signal="body_entered" from="Electricidad/CasillaElectrica94" to="Electricidad/CasillaElectrica94" method="_on_body_entered"]

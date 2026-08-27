@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cdwah5h1nlabq"]
+
+[ext_resource type="Script" uid="uid://drt4fo3106dy" path="res://scenes/maps/Zona1/puerta.gd" id="1_aal38"]
+[ext_resource type="Texture2D" uid="uid://bjbmrenpwe5yr" path="res://assets/sprites/tiles/objetos/puertas.png" id="1_slsmi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aal38"]
+atlas = ExtResource("1_slsmi")
+region = Rect2(0, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v24rx"]
+atlas = ExtResource("1_slsmi")
+region = Rect2(128, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua0ov"]
+atlas = ExtResource("1_slsmi")
+region = Rect2(256, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trrpk"]
+atlas = ExtResource("1_slsmi")
+region = Rect2(384, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28p0c"]
+atlas = ExtResource("1_slsmi")
+region = Rect2(512, 0, 128, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iof2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aal38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v24rx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ua0ov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trrpk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28p0c")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s26vt"]
+size = Vector2(110, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urqkn"]
+size = Vector2(143, 112)
+
+[node name="Puerta" type="StaticBody2D" unique_id=579953837]
+script = ExtResource("1_aal38")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=459087494]
+sprite_frames = SubResource("SpriteFrames_iof2f")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=156568283]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_s26vt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1525675023]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=535610558]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_urqkn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
