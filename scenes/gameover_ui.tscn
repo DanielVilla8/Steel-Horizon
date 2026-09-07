@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dhce8jx1wh6j6"]
+
+[ext_resource type="Script" uid="uid://db2htvkjvjljs" path="res://scenes/gameover_ui.gd" id="1_38a1k"]
+
+[node name="gameover_ui" type="CanvasLayer" unique_id=506084534]
+process_mode = 3
+script = ExtResource("1_38a1k")
+
+[node name="Control" type="Control" parent="." unique_id=31104874]
+process_mode = 3
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.98800004
+offset_bottom = -0.22399902
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1451875609]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.2159017, 0.21590173, 0.21590167, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1058130428]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 896.0
+offset_bottom = 512.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=1521650740]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "HAS MUERTO"
+
+[node name="Button" type="Button" parent="Control/VBoxContainer" unique_id=1133722896]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "VOLVER A JUGAR"
+
+[node name="Button2" type="Button" parent="Control/VBoxContainer" unique_id=946723710]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "MENU"

@@ -157,7 +157,12 @@ animation = &"rigth"
 position = Vector2(5.75, 7)
 shape = SubResource("RectangleShape2D_s26vt")
 
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=473204468]
+target_position = Vector2(0, 0)
+collision_mask = 3
+
 [node name="Area2D" type="Area2D" parent="." unique_id=2000300507]
+collision_mask = 2
 
 [node name="specialCollision" type="CollisionPolygon2D" parent="Area2D" unique_id=808416266]
 polygon = PackedVector2Array(0, 0, -48, -24, -56, -8, -56, 0, -56, 8, -48, 24)

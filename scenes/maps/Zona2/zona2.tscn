@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dp5ou3gro13t4" path="res://scenes/maps/Zona2/tarjeta_azul.tscn" id="24_psunf"]
 [ext_resource type="PackedScene" uid="uid://cr80p3ag3poo7" path="res://scenes/maps/Zona2/puerta_2.tscn" id="25_40a0y"]
 [ext_resource type="Script" uid="uid://corhs1btxw0m8" path="res://scenes/maps/Zona2/salida_zona_2.gd" id="25_guahg"]
+[ext_resource type="PackedScene" uid="uid://cn6vaf0i2mfjy" path="res://scenes/pause_menu.tscn" id="27_vaua7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r8prv"]
 texture = ExtResource("1_52fvp")
@@ -490,6 +491,7 @@ shape = SubResource("RectangleShape2D_rcyom")
 script = SubResource("GDScript_53g1x")
 
 [node name="CasillaElectrica" type="Area2D" parent="Electricidad" unique_id=8139849]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica" unique_id=699273517]
@@ -502,6 +504,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica2" type="Area2D" parent="Electricidad" unique_id=1816048398]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica2" unique_id=2019996089]
@@ -514,6 +517,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica65" type="Area2D" parent="Electricidad" unique_id=1647618342]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica65" unique_id=105114266]
@@ -527,6 +531,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica3" type="Area2D" parent="Electricidad" unique_id=1591327050]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica3" unique_id=1078551747]
@@ -539,6 +544,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica4" type="Area2D" parent="Electricidad" unique_id=1822657411]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica4" unique_id=690646455]
@@ -551,6 +557,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica5" type="Area2D" parent="Electricidad" unique_id=1008127854]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica5" unique_id=510064774]
@@ -563,6 +570,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica6" type="Area2D" parent="Electricidad" unique_id=1578140558]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica6" unique_id=1784290205]
@@ -575,6 +583,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica7" type="Area2D" parent="Electricidad" unique_id=1395400689]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica7" unique_id=710628526]
@@ -587,6 +596,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica8" type="Area2D" parent="Electricidad" unique_id=1414369946]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica8" unique_id=1658001418]
@@ -599,6 +609,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica9" type="Area2D" parent="Electricidad" unique_id=1786339126]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica9" unique_id=1239912655]
@@ -611,6 +622,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica10" type="Area2D" parent="Electricidad" unique_id=821468243]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica10" unique_id=1860988091]
@@ -623,6 +635,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica11" type="Area2D" parent="Electricidad" unique_id=47146681]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica11" unique_id=599829098]
@@ -635,6 +648,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica12" type="Area2D" parent="Electricidad" unique_id=62267751]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica12" unique_id=1901228387]
@@ -647,6 +661,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica13" type="Area2D" parent="Electricidad" unique_id=1832097503]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica13" unique_id=1630856328]
@@ -659,6 +674,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica14" type="Area2D" parent="Electricidad" unique_id=1735492639]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica14" unique_id=1248844494]
@@ -671,6 +687,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica15" type="Area2D" parent="Electricidad" unique_id=629007253]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica15" unique_id=495097979]
@@ -683,6 +700,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica16" type="Area2D" parent="Electricidad" unique_id=1962911562]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica16" unique_id=501632344]
@@ -695,6 +713,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica17" type="Area2D" parent="Electricidad" unique_id=1147806477]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica17" unique_id=972316924]
@@ -707,6 +726,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica18" type="Area2D" parent="Electricidad" unique_id=1835874738]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica18" unique_id=988408173]
@@ -719,6 +739,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica19" type="Area2D" parent="Electricidad" unique_id=164524006]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica19" unique_id=108792316]
@@ -731,6 +752,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica20" type="Area2D" parent="Electricidad" unique_id=1825728044]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica20" unique_id=1334218950]
@@ -743,6 +765,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica21" type="Area2D" parent="Electricidad" unique_id=983322627]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica21" unique_id=1975530752]
@@ -755,6 +778,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica22" type="Area2D" parent="Electricidad" unique_id=588164766]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica22" unique_id=1319321068]
@@ -767,6 +791,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica23" type="Area2D" parent="Electricidad" unique_id=1087802604]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica23" unique_id=486797489]
@@ -779,6 +804,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica24" type="Area2D" parent="Electricidad" unique_id=1492511841]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica24" unique_id=1436470406]
@@ -791,6 +817,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica25" type="Area2D" parent="Electricidad" unique_id=1108126285]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica25" unique_id=21564634]
@@ -803,6 +830,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica26" type="Area2D" parent="Electricidad" unique_id=752900581]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica26" unique_id=23088744]
@@ -815,6 +843,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica27" type="Area2D" parent="Electricidad" unique_id=842634532]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica27" unique_id=1219771730]
@@ -827,6 +856,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica28" type="Area2D" parent="Electricidad" unique_id=242774770]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica28" unique_id=288834607]
@@ -839,6 +869,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica29" type="Area2D" parent="Electricidad" unique_id=1954825213]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica29" unique_id=1841261198]
@@ -851,6 +882,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica30" type="Area2D" parent="Electricidad" unique_id=1792059089]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica30" unique_id=1108906138]
@@ -863,6 +895,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica31" type="Area2D" parent="Electricidad" unique_id=1532693950]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica31" unique_id=1973178530]
@@ -875,6 +908,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica32" type="Area2D" parent="Electricidad" unique_id=2120089784]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica32" unique_id=243699547]
@@ -887,6 +921,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica33" type="Area2D" parent="Electricidad" unique_id=1320818587]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica33" unique_id=1829645353]
@@ -899,6 +934,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica34" type="Area2D" parent="Electricidad" unique_id=1532429299]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica34" unique_id=2144939455]
@@ -911,6 +947,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica35" type="Area2D" parent="Electricidad" unique_id=1084331578]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica35" unique_id=1672907775]
@@ -923,6 +960,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica36" type="Area2D" parent="Electricidad" unique_id=307939279]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica36" unique_id=328511767]
@@ -935,6 +973,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica37" type="Area2D" parent="Electricidad" unique_id=1604072646]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica37" unique_id=75160611]
@@ -947,6 +986,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica38" type="Area2D" parent="Electricidad" unique_id=935657537]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica38" unique_id=1338609332]
@@ -959,6 +999,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica39" type="Area2D" parent="Electricidad" unique_id=1060947194]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica39" unique_id=580747727]
@@ -971,6 +1012,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica40" type="Area2D" parent="Electricidad" unique_id=340324001]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica40" unique_id=2109050874]
@@ -983,6 +1025,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica41" type="Area2D" parent="Electricidad" unique_id=861290066]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica41" unique_id=823607268]
@@ -995,6 +1038,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica42" type="Area2D" parent="Electricidad" unique_id=1226375917]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica42" unique_id=2041074645]
@@ -1007,6 +1051,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica43" type="Area2D" parent="Electricidad" unique_id=615736792]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica43" unique_id=1265655364]
@@ -1019,6 +1064,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica44" type="Area2D" parent="Electricidad" unique_id=1333996700]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica44" unique_id=45508582]
@@ -1031,6 +1077,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica45" type="Area2D" parent="Electricidad" unique_id=719209294]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica45" unique_id=1659420028]
@@ -1043,6 +1090,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica46" type="Area2D" parent="Electricidad" unique_id=628345751]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica46" unique_id=188218746]
@@ -1055,6 +1103,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica47" type="Area2D" parent="Electricidad" unique_id=320022474]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica47" unique_id=629465977]
@@ -1067,6 +1116,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica48" type="Area2D" parent="Electricidad" unique_id=1564564108]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica48" unique_id=817014933]
@@ -1079,6 +1129,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica49" type="Area2D" parent="Electricidad" unique_id=96837626]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica49" unique_id=743842356]
@@ -1091,6 +1142,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica50" type="Area2D" parent="Electricidad" unique_id=401817637]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica50" unique_id=1730302230]
@@ -1103,6 +1155,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica51" type="Area2D" parent="Electricidad" unique_id=456877036]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica51" unique_id=1379528997]
@@ -1115,6 +1168,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica52" type="Area2D" parent="Electricidad" unique_id=457056784]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica52" unique_id=1316679318]
@@ -1127,6 +1181,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica53" type="Area2D" parent="Electricidad" unique_id=834697205]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica53" unique_id=203386152]
@@ -1139,6 +1194,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica54" type="Area2D" parent="Electricidad" unique_id=678402496]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica54" unique_id=866532408]
@@ -1151,6 +1207,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica55" type="Area2D" parent="Electricidad" unique_id=2130952717]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica55" unique_id=128256695]
@@ -1163,6 +1220,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica56" type="Area2D" parent="Electricidad" unique_id=13457666]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica56" unique_id=1189244259]
@@ -1175,6 +1233,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica57" type="Area2D" parent="Electricidad" unique_id=8636513]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica57" unique_id=820801497]
@@ -1187,6 +1246,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica58" type="Area2D" parent="Electricidad" unique_id=1562793301]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica58" unique_id=1508085208]
@@ -1199,6 +1259,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica59" type="Area2D" parent="Electricidad" unique_id=1869937470]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica59" unique_id=23586825]
@@ -1211,6 +1272,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica60" type="Area2D" parent="Electricidad" unique_id=1964513026]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica60" unique_id=1033618171]
@@ -1223,6 +1285,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica61" type="Area2D" parent="Electricidad" unique_id=1672771062]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica61" unique_id=950215988]
@@ -1236,6 +1299,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica62" type="Area2D" parent="Electricidad" unique_id=1918907092]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica62" unique_id=1642021660]
@@ -1249,6 +1313,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica63" type="Area2D" parent="Electricidad" unique_id=1146942040]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica63" unique_id=1709417331]
@@ -1262,6 +1327,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica64" type="Area2D" parent="Electricidad" unique_id=1277439752]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica64" unique_id=134946396]
@@ -1275,6 +1341,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica66" type="Area2D" parent="Electricidad" unique_id=1939406080]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica66" unique_id=66619309]
@@ -1288,6 +1355,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica67" type="Area2D" parent="Electricidad" unique_id=1134122601]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica67" unique_id=1973135317]
@@ -1301,6 +1369,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica68" type="Area2D" parent="Electricidad" unique_id=1769326270]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica68" unique_id=1774914084]
@@ -1314,6 +1383,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica69" type="Area2D" parent="Electricidad" unique_id=1145124005]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica69" unique_id=212983613]
@@ -1327,6 +1397,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica70" type="Area2D" parent="Electricidad" unique_id=709321042]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica70" unique_id=649655225]
@@ -1340,6 +1411,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica71" type="Area2D" parent="Electricidad" unique_id=811057263]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica71" unique_id=1773419938]
@@ -1366,6 +1438,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica73" type="Area2D" parent="Electricidad" unique_id=95027001]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica73" unique_id=1959623604]
@@ -1379,6 +1452,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica74" type="Area2D" parent="Electricidad" unique_id=616602740]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica74" unique_id=872611538]
@@ -1392,6 +1466,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica75" type="Area2D" parent="Electricidad" unique_id=980112367]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica75" unique_id=1321809676]
@@ -1405,6 +1480,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica76" type="Area2D" parent="Electricidad" unique_id=2025484138]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica76" unique_id=950473971]
@@ -1418,6 +1494,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica77" type="Area2D" parent="Electricidad" unique_id=636187854]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica77" unique_id=304578276]
@@ -1431,6 +1508,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica78" type="Area2D" parent="Electricidad" unique_id=1857471584]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica78" unique_id=2008715448]
@@ -1444,6 +1522,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica79" type="Area2D" parent="Electricidad" unique_id=1706269157]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica79" unique_id=1045180740]
@@ -1457,6 +1536,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica80" type="Area2D" parent="Electricidad" unique_id=630245403]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica80" unique_id=927596846]
@@ -1470,6 +1550,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica81" type="Area2D" parent="Electricidad" unique_id=464036022]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica81" unique_id=1123455164]
@@ -1483,6 +1564,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica82" type="Area2D" parent="Electricidad" unique_id=1763403513]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica82" unique_id=1014917666]
@@ -1496,6 +1578,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica83" type="Area2D" parent="Electricidad" unique_id=1543847467]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica83" unique_id=437086754]
@@ -1509,6 +1592,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica84" type="Area2D" parent="Electricidad" unique_id=201717191]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica84" unique_id=35276749]
@@ -1522,6 +1606,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica85" type="Area2D" parent="Electricidad" unique_id=502221341]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica85" unique_id=83285432]
@@ -1535,6 +1620,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica86" type="Area2D" parent="Electricidad" unique_id=1714796551]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica86" unique_id=104804909]
@@ -1548,6 +1634,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica87" type="Area2D" parent="Electricidad" unique_id=268826267]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica87" unique_id=62486493]
@@ -1561,6 +1648,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica88" type="Area2D" parent="Electricidad" unique_id=933944345]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica88" unique_id=816763341]
@@ -1574,6 +1662,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica89" type="Area2D" parent="Electricidad" unique_id=1041689518]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica89" unique_id=822236350]
@@ -1587,6 +1676,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica90" type="Area2D" parent="Electricidad" unique_id=610564677]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica90" unique_id=1189322132]
@@ -1600,6 +1690,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica91" type="Area2D" parent="Electricidad" unique_id=746580726]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica91" unique_id=859879022]
@@ -1613,6 +1704,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica92" type="Area2D" parent="Electricidad" unique_id=1903200336]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica92" unique_id=479210346]
@@ -1626,6 +1718,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica93" type="Area2D" parent="Electricidad" unique_id=543497305]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica93" unique_id=1301232044]
@@ -1639,6 +1732,7 @@ sprite_frames = SubResource("SpriteFrames_q5bq3")
 animation = &"electricidad"
 
 [node name="CasillaElectrica94" type="Area2D" parent="Electricidad" unique_id=1051891605]
+collision_mask = 3
 script = ExtResource("20_55op1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electricidad/CasillaElectrica94" unique_id=1022126325]
@@ -1653,6 +1747,7 @@ animation = &"electricidad"
 
 [node name="Meta" type="Area2D" parent="." unique_id=813542624]
 position = Vector2(1344, 1192)
+collision_mask = 3
 script = ExtResource("23_53g1x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1384982180]
@@ -1661,16 +1756,22 @@ shape = SubResource("RectangleShape2D_q5bq3")
 
 [node name="tarjeta azul" parent="." unique_id=1223472082 instance=ExtResource("24_psunf")]
 position = Vector2(1336, 1152)
+id_unico = "008"
 
 [node name="puerta 2" parent="." unique_id=626080026 instance=ExtResource("25_40a0y")]
 position = Vector2(1344, 1232)
+id_unico = "P-005"
 
 [node name="SalidaZona2" type="Area2D" parent="." unique_id=835247761]
+collision_mask = 3
 script = ExtResource("25_guahg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SalidaZona2" unique_id=543177960]
 position = Vector2(1343.5, 1260)
 shape = SubResource("RectangleShape2D_x03vh")
+
+[node name="Pause Menu" parent="." unique_id=678863798 instance=ExtResource("27_vaua7")]
+visible = false
 
 [connection signal="body_entered" from="Electricidad/CasillaElectrica" to="Electricidad/CasillaElectrica" method="_on_body_entered"]
 [connection signal="body_entered" from="Electricidad/CasillaElectrica2" to="Electricidad/CasillaElectrica2" method="_on_body_entered"]

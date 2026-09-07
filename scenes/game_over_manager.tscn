@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c3b4w6cwppk3x"]
+
+[ext_resource type="Script" uid="uid://ciqeustb53w0p" path="res://game_over_manager.gd" id="1_kbllt"]
+
+[node name="game_over_manager" type="Node" unique_id=711223606]
+script = ExtResource("1_kbllt")

@@ -7,6 +7,7 @@
 size = Vector2(32, 32)
 
 [node name="letra O" type="Area2D" unique_id=1095807123]
+collision_mask = 3
 script = ExtResource("1_gtlrv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1868188930]

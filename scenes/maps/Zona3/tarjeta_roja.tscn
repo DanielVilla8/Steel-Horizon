@@ -7,6 +7,7 @@
 size = Vector2(16, 24)
 
 [node name="tarjeta_roja" type="Area2D" unique_id=978927062]
+collision_mask = 3
 script = ExtResource("1_ooj7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=661468116]

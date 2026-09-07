@@ -1032,7 +1032,7 @@ scale = Vector2(3, 3)
 waypoints = [NodePath("../waypoints/waypoint 9"), NodePath("../waypoints/waypoint 10")]
 
 [node name="Enemigo 4_5" parent="." unique_id=2103346907 node_paths=PackedStringArray("waypoints") instance=ExtResource("22_ho0ik")]
-position = Vector2(-154, 536)
+position = Vector2(223, 450.00003)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../waypoints/waypoint 11"), NodePath("../waypoints/waypoint 12")]
 
@@ -1107,7 +1107,7 @@ scale = Vector2(3, 3)
 waypoints = [NodePath("../waypoints/waypoint 57"), NodePath("../waypoints/waypoint 58")]
 
 [node name="Enemigo 4_29" parent="." unique_id=1611730183 node_paths=PackedStringArray("waypoints") instance=ExtResource("22_ho0ik")]
-position = Vector2(2175, 1416)
+position = Vector2(2208, 1404)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../waypoints/waypoint 59"), NodePath("../waypoints/waypoint 60")]
 
@@ -1270,10 +1270,10 @@ position = Vector2(1670, 1329)
 position = Vector2(1670, 1153)
 
 [node name="waypoint 59" type="Marker2D" parent="waypoints" unique_id=2051462439]
-position = Vector2(2175, 1416)
+position = Vector2(2208, 1404)
 
 [node name="waypoint 60" type="Marker2D" parent="waypoints" unique_id=136986262]
-position = Vector2(1956, 1416)
+position = Vector2(1985, 1408)
 
 [node name="waypoint 61" type="Marker2D" parent="waypoints" unique_id=641191180]
 position = Vector2(1833, 1456)
@@ -1505,8 +1505,7 @@ z_index = 1
 position = Vector2(2432, 16)
 collision_mask = 3
 script = ExtResource("35_v7tcm")
-id_unico = "P-010"
-item_requerida = "tarjeta_escape"
+item_requerido = "tarjeta_escape"
 
 [node name="AnimatedSprite2D" parent="Puerta" index="0" unique_id=459087494]
 position = Vector2(0, 32)
@@ -1582,7 +1581,6 @@ shape = SubResource("RectangleShape2D_mcpvf")
 [node name="puertallave" type="StaticBody2D" parent="." unique_id=391081848]
 collision_mask = 3
 script = ExtResource("43_f0x61")
-id_unico = "P-007"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="puertallave" unique_id=1749432863]
 position = Vector2(450, 1038)
@@ -1603,7 +1601,6 @@ shape = SubResource("RectangleShape2D_ugxvf")
 [node name="puertallave3" type="StaticBody2D" parent="." unique_id=1387432045]
 collision_mask = 3
 script = ExtResource("43_f0x61")
-id_unico = "P-009"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="puertallave3" unique_id=1401959981]
 position = Vector2(1922, 539)
@@ -1624,7 +1621,6 @@ shape = SubResource("RectangleShape2D_ugxvf")
 [node name="puertallave2" type="StaticBody2D" parent="." unique_id=811539351]
 collision_mask = 3
 script = ExtResource("43_f0x61")
-id_unico = "P-008"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="puertallave2" unique_id=2107110205]
 position = Vector2(2047, 1039)

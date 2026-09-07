@@ -7,6 +7,7 @@
 size = Vector2(26, 12)
 
 [node name="llave" type="Area2D" unique_id=679451862]
+collision_mask = 3
 script = ExtResource("1_huets")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=900686158]

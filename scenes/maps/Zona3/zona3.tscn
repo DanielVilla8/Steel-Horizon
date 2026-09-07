@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://d08x0u3gjmabe" path="res://assets/sprites/tiles/objetos/palanca.png" id="15_wdwkk"]
 [ext_resource type="PackedScene" uid="uid://b2a6ef38ukviu" path="res://scenes/personajes/personaje_principal.tscn" id="16_b0hhi"]
 [ext_resource type="Script" uid="uid://wf5wfdfuyf11" path="res://scenes/maps/Zona3/salida_zona_3.gd" id="19_ufstc"]
+[ext_resource type="PackedScene" uid="uid://dhce8jx1wh6j6" path="res://scenes/gameover_ui.tscn" id="21_8b60x"]
+[ext_resource type="PackedScene" uid="uid://cn6vaf0i2mfjy" path="res://scenes/pause_menu.tscn" id="22_toicr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsxu7"]
 texture = ExtResource("1_nq5ya")
@@ -145,7 +147,7 @@ size = Vector2(177, 176)
 size = Vector2(152, 148)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
-size = Vector2(70, 68)
+size = Vector2(51, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jiy3a"]
 size = Vector2(41, 34)
@@ -168,6 +170,7 @@ tile_set = SubResource("TileSet_iof2f")
 [node name="Puerta" parent="." unique_id=579953837 instance=ExtResource("10_wsxu7")]
 position = Vector2(2432, 16)
 script = ExtResource("11_qnyvk")
+id_unico = "P-006"
 zona_requerida = "Zona3"
 
 [node name="AnimatedSprite2D" parent="Puerta" index="0" unique_id=459087494]
@@ -188,6 +191,7 @@ shape = SubResource("RectangleShape2D_dtglo")
 [node name="tarjeta_roja" parent="." unique_id=978927062 instance=ExtResource("12_8c67m")]
 visible = false
 position = Vector2(2061, 1394)
+id_unico = "009"
 
 [node name="Objetos" type="Sprite2D" parent="." unique_id=2054137798]
 
@@ -372,12 +376,12 @@ shape = SubResource("RectangleShape2D_5xg34")
 position = Vector2(-296, 96)
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/StaticBody2D17" unique_id=832000458]
-position = Vector2(2240, 1288)
+position = Vector2(2245, 1251.0001)
 scale = Vector2(2.375, 2.3281248)
 texture = ExtResource("10_ugk1k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D17" unique_id=1513532951]
-position = Vector2(2240, 1288)
+position = Vector2(2245, 1251)
 shape = SubResource("RectangleShape2D_t50yw")
 
 [node name="enemigo 2" parent="." unique_id=122921683 node_paths=PackedStringArray("waypoints") instance=ExtResource("11_ukbt6")]
@@ -476,7 +480,7 @@ scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint41_enemigo21"), NodePath("../Waypoints/waypoint42_enemigo21")]
 
 [node name="enemigo 3_10" parent="." unique_id=953498991 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_hv636")]
-position = Vector2(1694, 1278)
+position = Vector2(1728, 1235)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint43_enemigo22"), NodePath("../Waypoints/waypoint44_enemigo22")]
 
@@ -506,9 +510,14 @@ scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint53_enemigo27"), NodePath("../Waypoints/waypoint54_enemigo27")]
 
 [node name="enemigo 3_16" parent="." unique_id=2004265150 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_hv636")]
-position = Vector2(1589, 1471)
+position = Vector2(1597, 1415)
 scale = Vector2(3, 3)
-waypoints = [NodePath("../Waypoints/waypoint55_enemigo28"), NodePath("../Waypoints/waypoint56_enemigo28")]
+waypoints = [NodePath("../Waypoints/waypoint56_enemigo28"), NodePath("../Waypoints/waypoint56_enemigo28")]
+
+[node name="enemigo 3_18" parent="." unique_id=1888019945 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_hv636")]
+position = Vector2(1597, 1415)
+scale = Vector2(3, 3)
+waypoints = [NodePath("../Waypoints/waypoint56_enemigo28"), NodePath("../Waypoints/waypoint56_enemigo28")]
 
 [node name="enemigo 3_17" parent="." unique_id=687434804 node_paths=PackedStringArray("waypoints") instance=ExtResource("12_hv636")]
 position = Vector2(1788, 110)
@@ -639,10 +648,10 @@ position = Vector2(1787, 886)
 position = Vector2(1788, 1140)
 
 [node name="waypoint43_enemigo22" type="Marker2D" parent="Waypoints" unique_id=605054258]
-position = Vector2(1645, 1228)
+position = Vector2(1659, 1159)
 
 [node name="waypoint44_enemigo22" type="Marker2D" parent="Waypoints" unique_id=425496605]
-position = Vector2(1627, 1397)
+position = Vector2(1659, 1374)
 
 [node name="waypoint45_enemigo23" type="Marker2D" parent="Waypoints" unique_id=33033585]
 position = Vector2(2299, 821)
@@ -675,10 +684,10 @@ position = Vector2(2363, 1395)
 position = Vector2(2363, 1141)
 
 [node name="waypoint55_enemigo28" type="Marker2D" parent="Waypoints" unique_id=1448538178]
-position = Vector2(1528, 1399)
+position = Vector2(1528, 1372)
 
 [node name="waypoint56_enemigo28" type="Marker2D" parent="Waypoints" unique_id=1222108124]
-position = Vector2(1246, 1396)
+position = Vector2(1275, 1339)
 
 [node name="waypoint57_enemigo29" type="Marker2D" parent="Waypoints" unique_id=763150859]
 position = Vector2(1727, 60)
@@ -691,28 +700,29 @@ position = Vector2(10, 64)
 script = ExtResource("13_kvt46")
 
 [node name="Sprite2D" type="Sprite2D" parent="Palanca" unique_id=777988441]
-position = Vector2(1821, 1439.0001)
+position = Vector2(1821.0001, 1351.0001)
 scale = Vector2(1.765625, 1.734375)
 texture = ExtResource("15_wdwkk")
 
 [node name="Area2D" type="Area2D" parent="Palanca" unique_id=430304438]
 position = Vector2(-14, 6)
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca/Area2D" unique_id=458722779]
-position = Vector2(1834, 1433)
+position = Vector2(1832, 1352)
 shape = SubResource("RectangleShape2D_u0ya7")
 
 [node name="LabelInteractuar" type="Label" parent="Palanca" unique_id=768802985]
 offset_left = 1718.0
-offset_top = 1328.0
+offset_top = 1296.0
 offset_right = 1896.0
-offset_bottom = 1351.0
+offset_bottom = 1319.0
 text = "Presiona E para activar"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Palanca" unique_id=901801828]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca/StaticBody2D" unique_id=101892956]
-position = Vector2(1818, 1446)
+position = Vector2(1818, 1361)
 shape = SubResource("RectangleShape2D_jiy3a")
 
 [node name="personaje principal" parent="." unique_id=2003850916 instance=ExtResource("16_b0hhi")]
@@ -729,11 +739,18 @@ limit_right = 2562
 limit_bottom = 1601
 
 [node name="SalidaZona3" type="Area2D" parent="." unique_id=2077127254]
+collision_mask = 3
 script = ExtResource("19_ufstc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SalidaZona3" unique_id=1404691763]
 position = Vector2(2431.75, 43)
 shape = SubResource("RectangleShape2D_q5bq3")
+
+[node name="gameover_ui" parent="." unique_id=506084534 instance=ExtResource("21_8b60x")]
+visible = false
+
+[node name="Pause Menu" parent="." unique_id=678863798 instance=ExtResource("22_toicr")]
+visible = false
 
 [connection signal="body_entered" from="Palanca/Area2D" to="Palanca" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Palanca/Area2D" to="Palanca" method="_on_area_2d_body_exited"]

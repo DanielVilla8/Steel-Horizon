@@ -39,6 +39,8 @@
 [ext_resource type="PackedScene" uid="uid://jqv4v3woom5d" path="res://scenes/maps/Zona1/puerta_1.tscn" id="36_3bfdm"]
 [ext_resource type="PackedScene" uid="uid://dugrpa1moxw4i" path="res://scenes/maps/Zona1/puertas_laterales.tscn" id="37_lop1x"]
 [ext_resource type="Script" uid="uid://c1etulecmic1m" path="res://scenes/maps/Zona1/salida_zona_1.gd" id="38_x4wke"]
+[ext_resource type="PackedScene" uid="uid://cn6vaf0i2mfjy" path="res://scenes/pause_menu.tscn" id="40_kc6ms"]
+[ext_resource type="PackedScene" uid="uid://dhce8jx1wh6j6" path="res://scenes/gameover_ui.tscn" id="41_fyyq5"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_no2j0"]
 load_path = "res://.godot/imported/suelo.png-de13b7f08a8dafc4447edc5045d0eb4a.ctex"
@@ -62,7 +64,7 @@ texture_region_size = Vector2i(64, 64)
 texture = ExtResource("3_5hsx1")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.9026337, -32, 7.3285103, -32, 7.9657707, 32, -6.7736816, 32, -7.3381577, 25.965797, -6.7736816, 24.272377, -7.6471367, -13.382492)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.9026337, -32, 7.3285103, -32, 7.9657707, 32, -7.9026337, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bfhhb"]
 texture = ExtResource("4_jy68v")
@@ -81,7 +83,7 @@ texture_region_size = Vector2i(64, 64)
 texture = ExtResource("1_wq4qd")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.805267, -32, 32, -32, 32, 32, 16.369743, 32)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(17.498688, -32, 32, -32, 32, 32, 17.498688, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrpoc"]
 texture = ExtResource("1_kveyk")
@@ -377,12 +379,12 @@ shape = SubResource("RectangleShape2D_qnnyg")
 [node name="StaticBody2D13" type="StaticBody2D" parent="Objetos" unique_id=1295511693]
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos/StaticBody2D13" unique_id=1851527005]
-position = Vector2(1091.9999, 956.00006)
+position = Vector2(1091.9999, 1061)
 scale = Vector2(1.8906258, 1.7968754)
 texture = ExtResource("18_t2358")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/StaticBody2D13" unique_id=543082841]
-position = Vector2(1093, 957)
+position = Vector2(1093, 1061)
 shape = SubResource("RectangleShape2D_her8v")
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="Objetos" unique_id=1443380604]
@@ -498,7 +500,7 @@ scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint7_enemigo4"), NodePath("../Waypoints/waypoint8_enemigo4")]
 
 [node name="enemigo 5" parent="." unique_id=2129178557 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
-position = Vector2(1114, 837)
+position = Vector2(1063, 874)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../Waypoints/waypoint9_enemigo5"), NodePath("../Waypoints/waypoint10_enemigo5")]
 
@@ -519,18 +521,23 @@ waypoints = [NodePath("../Waypoints/waypoint15_enemigo8"), NodePath("../Waypoint
 
 [node name="letra A" parent="." unique_id=2111177116 instance=ExtResource("25_62qrs")]
 position = Vector2(240, 664)
+id_unico = "001"
 
 [node name="letra D" parent="." unique_id=1611822037 instance=ExtResource("26_5j5ef")]
 position = Vector2(1216, 1168)
+id_unico = "002"
 
 [node name="letra J" parent="." unique_id=262328995 instance=ExtResource("27_2gyoi")]
 position = Vector2(1232, 526)
+id_unico = "003"
 
 [node name="letra O" parent="." unique_id=1095807123 instance=ExtResource("28_4vpho")]
 position = Vector2(690, 408)
+id_unico = "004"
 
 [node name="letra R" parent="." unique_id=777958055 instance=ExtResource("29_342sr")]
 position = Vector2(792, 112)
+id_unico = "005"
 
 [node name="Waypoints" type="Node2D" parent="." unique_id=642373536]
 
@@ -559,10 +566,10 @@ position = Vector2(256, 510)
 position = Vector2(256, 255)
 
 [node name="waypoint9_enemigo5" type="Marker2D" parent="Waypoints" unique_id=860794653]
-position = Vector2(1114, 837)
+position = Vector2(1064, 877)
 
 [node name="waypoint10_enemigo5" type="Marker2D" parent="Waypoints" unique_id=1808581545]
-position = Vector2(833, 837)
+position = Vector2(829, 882)
 
 [node name="waypoint11_enemigo6" type="Marker2D" parent="Waypoints" unique_id=1169754769]
 position = Vector2(1216, 913)
@@ -574,7 +581,7 @@ position = Vector2(1214, 1116)
 position = Vector2(792, 620)
 
 [node name="waypoint14_enemigo7" type="Marker2D" parent="Waypoints" unique_id=596162280]
-position = Vector2(959, 625)
+position = Vector2(1095, 631)
 
 [node name="waypoint15_enemigo8" type="Marker2D" parent="Waypoints" unique_id=1677704071]
 position = Vector2(383, 222)
@@ -595,28 +602,41 @@ script = ExtResource("33_x4wke")
 [node name="Tarjeta" parent="." unique_id=2139148 instance=ExtResource("33_hjp7m")]
 visible = false
 position = Vector2(362, 1072)
+id_unico = "007"
 
 [node name="Puerta" parent="." unique_id=579953837 instance=ExtResource("34_367bw")]
 position = Vector2(960, 1232)
+id_unico = "P-001"
 
 [node name="llave" parent="." unique_id=679451862 instance=ExtResource("35_2cdx0")]
 position = Vector2(136, 391)
+id_unico = "006"
 
 [node name="puerta1" parent="." unique_id=1741124528 instance=ExtResource("36_3bfdm")]
 position = Vector2(1024, 720)
+id_unico = "P-002"
 
 [node name="puerta2" parent="." unique_id=1641986653 instance=ExtResource("36_3bfdm")]
 position = Vector2(959, 457)
+id_unico = "P-003"
 
 [node name="puertas laterales" parent="." unique_id=1922002414 instance=ExtResource("37_lop1x")]
 position = Vector2(541, 1152)
+id_unico = "P-004"
 
 [node name="SalidaZona1" type="Area2D" parent="." unique_id=1809038936]
+collision_mask = 3
 script = ExtResource("38_x4wke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SalidaZona1" unique_id=1254394823]
 position = Vector2(959.125, 1250.25)
 shape = SubResource("RectangleShape2D_k7o0i")
+
+[node name="Pause Menu" parent="." unique_id=678863798 instance=ExtResource("40_kc6ms")]
+visible = false
+
+[node name="gameover_ui" parent="." unique_id=506084534 instance=ExtResource("41_fyyq5")]
+visible = false
 
 [connection signal="pressed" from="Interfaz_placa/Panel/Button2" to="Interfaz_placa" method="_on_button_2_pressed"]
 [connection signal="body_entered" from="SalidaZona1" to="SalidaZona1" method="_on_body_entered"]

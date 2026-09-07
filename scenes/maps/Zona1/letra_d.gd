@@ -3,9 +3,21 @@ extends Area2D
 
 # Letra asignada
 @export var letra = "D"
+@export var id_unico: String = ""
 # Indica si el jugador esta cerca de la letra
 var jugador_cerca = false
 
+func _ready() -> void:
+	# Si al cargar la partida este ID ya fue recogido, desaparece del mapa automáticamente
+	if id_unico != "" and id_unico in Guardado.objetos_recolectados:
+		queue_free()
+		
+		call_deferred("_comprobar_si_ya_fue_recogido")
+		
+func _comprobar_si_ya_fue_recogido() -> void:
+	if id_unico in Guardado.objetos_recolectados:
+		queue_free()
+		
 func _on_body_entered(body):
 	# Comprueba que el cuerpo que entra sea el jugador
 	if body.is_in_group("player"):
@@ -20,14 +32,26 @@ func _process(delta):
 	# Comprueba que el jugador este cerca de la letra y
 	# que haya presionado la tecla asignada (E)
 	if jugador_cerca and Input.is_action_just_pressed("interactuar"):
-		# Agrega la letra al inventario
-		Inventario.agregar_letra(letra)
-		# Elimina la letra de la escena
-		queue_free()
+		_recolectar_letra()
+		
+func _recolectar_letra() -> void:
+	# 1. Registrar que este ID ya fue recogido en los datos de guardado
+	if not (id_unico in Guardado.objetos_recolectados):
+		Guardado.objetos_recolectados.append(id_unico)
+	
+	# 2. Agregar la letra al inventario
+	Inventario.agregar_letra(letra)
+	
+		# Cuando se junta la última letra (las 5 en total: A, D, J, O, R),
+		# Silvestre comenta sobre la contraseña
 
 		# Cuando se junta la última letra (las 5 en total: A, D, J, O, R),
 		# Silvestre comenta sobre la contraseña
-		if Inventario.letras.size() == 5:
-			DialogoSilvestre.mostrar_secuencia([
-				"Con el tiempo la contraseña ha sido cambiada, así que algunas letras no serán necesarias."
+	if Inventario.letras.size() == 5:
+		DialogoSilvestre.mostrar_secuencia([
+			"Con el tiempo la contraseña ha sido cambiada, así que algunas letras no serán necesarias."
 			])
+		print("Letra '", letra, "' (ID: ", id_unico, ") recolectada con exito.")
+	
+	# 3. Eliminar la letra de la escena visualmente
+	queue_free()

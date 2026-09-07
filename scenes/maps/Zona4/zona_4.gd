@@ -17,9 +17,13 @@ func _ready() -> void:
 	])
 
 func revelar_piezas() -> void:
-	pieza1.revelar()
-	pieza2.revelar()
-	pieza3.revelar()
+	# Reemplaza la línea 21 por una validación de instancia válida:
+	if is_instance_valid(pieza1):
+		pieza1.revelar()
+	if is_instance_valid(pieza2):
+		pieza2.revelar()
+	if is_instance_valid(pieza3):
+		pieza3.revelar()
 
 func _process(_delta: float) -> void:
 	if not is_instance_valid(tarjeta):

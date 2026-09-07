@@ -7,3 +7,5 @@ func _on_body_entered(body):
 		#Regresa el jugador al inicio
 		body.global_position = Vector2(64,128)
 		
+		if "velocity" in body:
+			body.velocity = Vector2.ZERO
