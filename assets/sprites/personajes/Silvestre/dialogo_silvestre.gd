@@ -141,3 +141,18 @@ func _cerrar() -> void:
 
 	# Emite la señal indicando que el diálogo terminó.
 	dialogo_terminado.emit()
+func forzar_cierre() -> void:
+	# Se usa cuando hay que cerrar el diálogo desde afuera,
+	# por ejemplo al salir al menú principal desde la pausa
+	cola.clear()
+	caja.visible = false
+	dialogo_activo = false
+
+func mostrar_secuencia_unica(id: String, mensajes: Array) -> void:
+	# Muestra la secuencia solo si ese ID no fue visto antes
+	# (se guarda en Guardado.objetos_recolectados, igual que tarjetas y llaves)
+	if id in Guardado.objetos_recolectados:
+		return
+	
+	Guardado.objetos_recolectados.append(id)
+	mostrar_secuencia(mensajes)

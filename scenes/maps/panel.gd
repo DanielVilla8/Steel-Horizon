@@ -56,7 +56,7 @@ func abrir():
 	# Solo la primera vez que se abre el panel, Silvestre comenta y sugiere el primer intento
 	if not ya_hablo_apertura:
 		ya_hablo_apertura = true
-		DialogoSilvestre.mostrar_secuencia([
+		DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona1_apertura", [
 			"Tómate el tiempo que necesites, si no quieres compartir cuerpo conmigo.",
 			"No tengo ni la menor idea de cuál es el código, así que dejémoslo a la suerte.",
 			"Prueba con DRO"
@@ -76,7 +76,7 @@ func _on_button_pressed() -> void:
 		if is_instance_valid(tarjeta):
 			tarjeta.show()
 		# Silvestre celebra el acierto y da la siguiente instrucción
-		DialogoSilvestre.mostrar_secuencia([
+		DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona1_acierto", [
 			"¡Qué buen trabajo hice!",
 			"Ahora toma la tarjeta y dirígete a la puerta (Recoge con E y abre la puerta con E)"
 		])
@@ -92,13 +92,13 @@ func _on_button_pressed() -> void:
 		intentos_fallidos += 1
 		if intentos_fallidos == 1:
 			# Primer intento fallido: Silvestre sugirió "DRO" y falló, ahora sugiere "JAR"
-			DialogoSilvestre.mostrar_secuencia([
+			DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona1_fallo1", [
 				"UPSI, creo que ese no era.",
 				"Prueba con JAR"
 			])
 		elif intentos_fallidos == 2:
 			# Segundo intento fallido: Silvestre se disculpa y deja que el jugador siga solo
-			DialogoSilvestre.mostrar_secuencia([
+			DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona1_fallo2", [
 				"Perdón, mala mía jeje.",
 				"Pe-perdón, vo-vo-voy a de-DJA... rte hacerlo por tu cuenta desde ahora."
 			])

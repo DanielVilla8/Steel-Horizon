@@ -48,7 +48,7 @@ func _recolectar_letra() -> void:
 		# Cuando se junta la última letra (las 5 en total: A, D, J, O, R),
 		# Silvestre comenta sobre la contraseña
 	if Inventario.letras.size() == 5:
-		DialogoSilvestre.mostrar_secuencia([
+		DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona1_letras", [
 			"Con el tiempo la contraseña ha sido cambiada, así que algunas letras no serán necesarias."
 			])
 		print("Letra '", letra, "' (ID: ", id_unico, ") recolectada con exito.")

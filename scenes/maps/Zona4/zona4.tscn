@@ -1031,11 +1031,6 @@ position = Vector2(769, 334)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../waypoints/waypoint 9"), NodePath("../waypoints/waypoint 10")]
 
-[node name="Enemigo 4_5" parent="." unique_id=2103346907 node_paths=PackedStringArray("waypoints") instance=ExtResource("22_ho0ik")]
-position = Vector2(-154, 536)
-scale = Vector2(3, 3)
-waypoints = [NodePath("../waypoints/waypoint 11"), NodePath("../waypoints/waypoint 12")]
-
 [node name="Enemigo 4_8" parent="." unique_id=1391259039 node_paths=PackedStringArray("waypoints") instance=ExtResource("22_ho0ik")]
 position = Vector2(624, 1222)
 scale = Vector2(3, 3)

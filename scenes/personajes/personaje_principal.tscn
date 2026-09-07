@@ -278,7 +278,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsltj"]
-size = Vector2(15, 18)
+size = Vector2(15, 9)
 
 [node name="personaje principal" type="CharacterBody2D" unique_id=2003850916 groups=["player"]]
 position = Vector2(89, 58)
@@ -290,5 +290,5 @@ sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"Idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860561692]
-position = Vector2(0.5, 4)
+position = Vector2(0.5, 8.5)
 shape = SubResource("RectangleShape2D_hsltj")

@@ -12,7 +12,7 @@ func _ready() -> void:
 	tarjeta.monitoring = false
 
 	# Silvestre comenta al entrar a la zona
-	DialogoSilvestre.mostrar_secuencia([
+	DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona4_intro", [
 		"Algo de aquí me huele muy raro, busca algo por los pasillos."
 	])
 

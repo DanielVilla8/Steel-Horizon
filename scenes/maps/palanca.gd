@@ -20,7 +20,7 @@ func activar_palanca() -> void:
 	tarjeta_roja.monitoring = true
 
 	# Silvestre felicita al jugador y da la siguiente instrucción
-	DialogoSilvestre.mostrar_secuencia([
+	DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona3_palanca", [
 		"¡Oh mira, la has encontrado, estoy orgulloso de ti!",
 		"Recoje la tarjeta y busca la puerta para avanzar a la siguiente y última habitación. "
 		

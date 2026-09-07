@@ -109,7 +109,7 @@ func _recolectar_tarjeta() -> void:
 
 	# Silvestre informa al jugador que finalmente no era necesario
 	# encontrar esta última tarjeta.
-	DialogoSilvestre.mostrar_secuencia([
+	DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona4_tarjeta", [
 		"Oh, parece que no había necesidad de encontrar esa última tarjeta, discúlpame jeje."
 	])
 

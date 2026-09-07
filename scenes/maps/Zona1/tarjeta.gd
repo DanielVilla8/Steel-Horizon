@@ -72,7 +72,7 @@ func _recolectar_tarjeta() -> void:
 	# Solo cuando se recoge la tarjeta de la Zona1,
 	# Silvestre muestra un diálogo relacionado con el significado del número.
 	if nombre_tarjeta == "Zona1":
-		DialogoSilvestre.mostrar_secuencia([
+		DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona1_tarjeta", [
 			"Estos números deben tener algún significado, memorízalos por si los necesitamos más adelante."
 		])
 		

@@ -4,7 +4,7 @@ extends Node2D
 
 func _ready() -> void:
 	MusicaManager.reproducir("zona1")
-	DialogoSilvestre.mostrar_secuencia([
+	DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona1_intro", [
 		"Oh, quién está ahí?",
 		"Nunca pensé que volvería a ver a un humano de nuevo.",
 		"¡ES DEMASIADO FRÍO AQUÍ!",

@@ -30,6 +30,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 		# Silvestre avisa al jugador de que se activó
 		# el protocolo de emergencia.
-		DialogoSilvestre.mostrar_secuencia([
+		DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona4_detonador", [
 			"Oh, parece que se ha activado un protocolo de emergencia, deberías apagar la bomba lo más antes posible."
 		])

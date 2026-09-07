@@ -124,7 +124,7 @@ func _on_button_pressed() -> void:
 		get_node("/root/zona4/llave").revelar()
 
 		# Silvestre indica al jugador cuál es el siguiente objetivo.
-		DialogoSilvestre.mostrar_secuencia([
+		DialogoSilvestre.mostrar_secuencia_unica("dialogo_zona4_acierto", [
 			"Bien, ahora solo queda encontrar las últimas llaves para escapar de acá, ten cuidado."
 		])
 
