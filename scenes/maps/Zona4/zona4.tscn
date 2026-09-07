@@ -314,6 +314,9 @@ size = Vector2(50, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_klyn4"]
 size = Vector2(66, 126.875)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jiy3a"]
+size = Vector2(94, 171)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flchp"]
 size = Vector2(118, 55)
 
@@ -1011,11 +1014,6 @@ position = Vector2(309, 587)
 scale = Vector2(3, 3)
 waypoints = [NodePath("../waypoints/waypoint 1"), NodePath("../waypoints/waypoint 2")]
 
-[node name="Enemigo 4_1" parent="." unique_id=1241757573 node_paths=PackedStringArray("waypoints") instance=ExtResource("22_ho0ik")]
-position = Vector2(306, 424)
-scale = Vector2(3, 3)
-waypoints = [NodePath("../waypoints/waypoint 3"), NodePath("../waypoints/waypoint 4")]
-
 [node name="Enemigo 4_2" parent="." unique_id=294441736 node_paths=PackedStringArray("waypoints") instance=ExtResource("22_ho0ik")]
 position = Vector2(865.00006, 164)
 scale = Vector2(3, 3)
@@ -1510,6 +1508,12 @@ offset_top = 658.0
 offset_right = 2545.0
 offset_bottom = 686.0
 theme_override_font_sizes/font_size = 20
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bomba" unique_id=1624835050]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bomba/StaticBody2D" unique_id=1490874255]
+position = Vector2(2492, 736.5)
+shape = SubResource("RectangleShape2D_jiy3a")
 
 [node name="Detonador" type="Area2D" parent="." unique_id=730869504]
 position = Vector2(449, 556)

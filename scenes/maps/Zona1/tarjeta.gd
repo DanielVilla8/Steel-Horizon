@@ -1,10 +1,10 @@
 extends Area2D
 
-#Nombre de la tarjeta
+# Nombre de la tarjeta
 @export var nombre_tarjeta = "Zona1"
-#Numero que entrega la tarjeta
+# Numero que entrega la tarjeta
 @export var numero = 7
-#Indica si el jugador esta cerca
+# Indica si el jugador esta cerca
 var jugador_cerca = false
 
 func _on_body_entered(body):
@@ -18,14 +18,20 @@ func _on_body_exited(body):
 func _process(delta):
 	if jugador_cerca and Input.is_action_just_pressed("interactuar"):
 		
-		#Guarda la tarjeta en el inventario
+		# Guarda la tarjeta en el inventario
 		Inventario.agregar_tarjeta(nombre_tarjeta)
 		  
-		#Guarda el numero en el inventario
+		# Guarda el numero en el inventario
 		Inventario.agregar_numero(numero)
 		
-		#Muestra el número en pantalla por 5 segundos
+		# Muestra el número en pantalla por 5 segundos
 		UIMensajes.mostrar_numero(numero)
+		
+		# Solo en Zona1, Silvestre comenta sobre el significado del número
+		if nombre_tarjeta == "Zona1":
+			DialogoSilvestre.mostrar_secuencia([
+				"Estos números deben tener algún significado, memorízalos por si los necesitamos más adelante."
+			])
 		
 		print("Tarjeta obtenida:", nombre_tarjeta)
 		print("Numero obtenido:", numero)

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://doj1acci4ranb"]
+
+[ext_resource type="Script" uid="uid://dwn5mp12xx76d" path="res://scenes/musica_manager.gd" id="1_01yyi"]
+
+[node name="MusicaManager" type="Node" unique_id=1011523716]
+process_mode = 3
+script = ExtResource("1_01yyi")
+
+[node name="Reproductor" type="AudioStreamPlayer2D" parent="." unique_id=200886833]

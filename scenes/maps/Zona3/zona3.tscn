@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://86ge8lsa6x6w"]
 
+[ext_resource type="Script" uid="uid://b6yncbn1p71r5" path="res://scenes/maps/Zona3/zona_3.gd" id="1_ccvkr"]
 [ext_resource type="Texture2D" uid="uid://d3m83vn6w4ixm" path="res://assets/sprites/tiles/suelo/suelo 1.png" id="1_nq5ya"]
 [ext_resource type="Texture2D" uid="uid://o728sw5u8peq" path="res://assets/sprites/tiles/paredes/EID.png" id="2_wsxu7"]
 [ext_resource type="Texture2D" uid="uid://dcwyjeigo6vpy" path="res://assets/sprites/tiles/paredes/EII.png" id="3_qnyvk"]
@@ -146,10 +147,14 @@ size = Vector2(152, 148)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
 size = Vector2(70, 68)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jiy3a"]
+size = Vector2(41, 34)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
 size = Vector2(110.5, 48)
 
 [node name="zona3" type="Node2D" unique_id=592487911]
+script = ExtResource("1_ccvkr")
 metadata/_edit_horizontal_guides_ = [1011.0]
 
 [node name="background" type="TileMapLayer" parent="." unique_id=327527805]
@@ -182,7 +187,7 @@ shape = SubResource("RectangleShape2D_dtglo")
 
 [node name="tarjeta_roja" parent="." unique_id=978927062 instance=ExtResource("12_8c67m")]
 visible = false
-position = Vector2(1901, 1496)
+position = Vector2(2061, 1394)
 
 [node name="Objetos" type="Sprite2D" parent="." unique_id=2054137798]
 
@@ -703,6 +708,12 @@ offset_top = 1328.0
 offset_right = 1896.0
 offset_bottom = 1351.0
 text = "Presiona E para activar"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Palanca" unique_id=901801828]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palanca/StaticBody2D" unique_id=101892956]
+position = Vector2(1818, 1446)
+shape = SubResource("RectangleShape2D_jiy3a")
 
 [node name="personaje principal" parent="." unique_id=2003850916 instance=ExtResource("16_b0hhi")]
 position = Vector2(85, 92)

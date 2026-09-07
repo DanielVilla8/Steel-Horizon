@@ -2,6 +2,7 @@ extends CanvasLayer
 
 
 var codigo = []
+
 @onready var contenedor_numeros = $Panel/Letras
 @onready var espacio1 = $Panel/HBoxContainer/Label
 @onready var espacio2 = $Panel/HBoxContainer/Label2
@@ -50,8 +51,13 @@ func _on_button_pressed() -> void:
 		visible = false
 		if is_instance_valid(bomba):
 			bomba.desactivar()
-		get_node("/root/zona4").revelar_piezas() 
+		get_node("/root/zona4").revelar_piezas()
 		get_node("/root/zona4/llave").revelar()
+
+		# Silvestre indica el siguiente paso: buscar las llaves
+		DialogoSilvestre.mostrar_secuencia([
+			"Bien, ahora solo queda encontrar las últimas llaves para escapar de acá, ten cuidado."
+		])
 	else:
 		print("¡Incorrecto!")
 		limpiar()

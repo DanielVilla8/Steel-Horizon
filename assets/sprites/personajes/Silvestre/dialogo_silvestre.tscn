@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://w8or1yld3va1"]
+
+[ext_resource type="Script" uid="uid://cdnuijetaymcx" path="res://assets/sprites/personajes/Silvestre/dialogo_silvestre.gd" id="1_8xj4g"]
+[ext_resource type="Texture2D" uid="uid://c5w6rvevgvjyq" path="res://assets/sprites/personajes/Silvestre/silvestre.png" id="1_koqp5"]
+
+[node name="DialogoSilvestre" type="CanvasLayer" unique_id=2125763579]
+process_mode = 3
+script = ExtResource("1_8xj4g")
+
+[node name="PanelDialogo" type="Control" parent="." unique_id=1691917522]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Caja" type="Panel" parent="PanelDialogo" unique_id=2092138855]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -180.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Retrato" type="TextureRect" parent="PanelDialogo/Caja" unique_id=172889779]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 1.0
+offset_right = 138.0
+offset_bottom = 144.0
+texture = ExtResource("1_koqp5")
+expand_mode = 1
+
+[node name="TextoDialogo" type="RichTextLabel" parent="PanelDialogo/Caja" unique_id=2059105214]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 10.0
+offset_right = 1100.0
+offset_bottom = 150.0
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20

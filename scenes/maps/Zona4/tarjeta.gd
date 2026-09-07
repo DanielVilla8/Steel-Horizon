@@ -30,4 +30,10 @@ func _process(delta):
 	if jugador_cerca and Input.is_action_just_pressed("interactuar"):
 		Inventario.agregar_tarjeta(nombre_tarjeta)
 		print("Tarjeta recogida:", nombre_tarjeta)
+
+		# Silvestre comenta que ya no hacía falta buscar las piezas
+		DialogoSilvestre.mostrar_secuencia([
+			"Oh, parece que no había necesidad de encontrar esa última tarjeta, discúlpame jeje."
+		])
+
 		queue_free()

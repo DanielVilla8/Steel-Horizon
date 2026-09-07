@@ -2,6 +2,7 @@ extends Control
 
 func _ready() -> void:
 	get_tree().paused = false
+	MusicaManager.reproducir("menu")
 
 func _on_play_pressed() -> void:
 	#Comenzar partida nueva
@@ -10,7 +11,7 @@ func _on_play_pressed() -> void:
 	Inventario.numeros.clear()
 	Inventario.llaves.clear()
 	
-	get_tree().change_scene_to_file("res://scenes/maps/Zona1/zona1.tscn")
+	get_tree().change_scene_to_file("res://scenes/maps/intro_screen.tscn")
 
 func _on_continuar_pressed() -> void:
 	#Cargar Partida
@@ -27,7 +28,7 @@ func _on_continuar_pressed() -> void:
 	var ruta = ""
 	
 	if zona == "Zona1":
-		ruta = "res://scenes/maps/Zona1/zona1.tscnn"
+		ruta = "res://scenes/maps/Zona1/zona1.tscn"
 	
 	elif zona == "Zona2":
 		ruta = "res://scenes/maps/Zona2/zona2.tscn"
@@ -50,6 +51,7 @@ func _on_continuar_pressed() -> void:
 	else:
 		print("ERROR: No existe esta escena:")
 		print(ruta)
+
 func _on_options_pressed() -> void:
 	print("Opciones")
 

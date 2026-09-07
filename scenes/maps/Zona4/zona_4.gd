@@ -7,8 +7,14 @@ extends Node2D
 @onready var tarjeta: Area2D = $Tarjeta
 
 func _ready() -> void:
+	MusicaManager.reproducir("zona4")
 	tarjeta.visible = false
 	tarjeta.monitoring = false
+
+	# Silvestre comenta al entrar a la zona
+	DialogoSilvestre.mostrar_secuencia([
+		"Algo de aquí me huele muy raro, busca algo por los pasillos."
+	])
 
 func revelar_piezas() -> void:
 	pieza1.revelar()
