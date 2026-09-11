@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bmyvkcm12e0cv" path="res://assets/sprites/tiles/objetos/letra R.png" id="2_0ql77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(36, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egcl2"]
 size = Vector2(32, 32)
 
 [node name="letra R" type="Area2D" unique_id=777958055]
@@ -15,6 +18,11 @@ texture = ExtResource("2_0ql77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2048367119]
 shape = SubResource("RectangleShape2D_q5bq3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=168819606]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=40547912]
+shape = SubResource("RectangleShape2D_egcl2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

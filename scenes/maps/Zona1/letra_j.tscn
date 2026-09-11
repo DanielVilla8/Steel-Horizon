@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://dw2h8hobb5jwr" path="res://scenes/maps/Zona1/letra_j.gd" id="1_61scy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(38, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egcl2"]
 size = Vector2(32, 32)
 
 [node name="letra J" type="Area2D" unique_id=262328995]
@@ -14,7 +17,13 @@ script = ExtResource("1_61scy")
 texture = ExtResource("1_8ope0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401666055]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_q5bq3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1399445680]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=561613121]
+shape = SubResource("RectangleShape2D_egcl2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

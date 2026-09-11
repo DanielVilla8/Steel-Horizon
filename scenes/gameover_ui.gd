@@ -13,10 +13,12 @@ func trigger_game_over() -> void:
 	get_tree().paused = true #Pausa del juego mientras esta el menu
 	
 func _on_retry_pressed() -> void:
-	hide()#Oculta la interfaz
 	get_tree().paused = false
+	hide()#Oculta la interfaz
+	Guardado.reiniciar_partida()
+	# Llama al reinicio global antes de recargar, para borrar objetos, puertas e inventario.
+	get_tree().reload_current_scene()
 	queue_free()
-	get_tree().reload_current_scene() #Reinicia el nivel al punto inicial
 	
 func _on_menu_pressed() -> void:
 	hide()#Oculta la interfaz

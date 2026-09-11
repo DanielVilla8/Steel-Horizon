@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://du8e32ropu34l" path="res://scenes/maps/llave.gd" id="1_huets"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(33, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_canp4"]
 size = Vector2(26, 12)
 
 [node name="llave" type="Area2D" unique_id=679451862]
@@ -14,7 +17,13 @@ script = ExtResource("1_huets")
 texture = ExtResource("1_7232l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1770792319]
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_q5bq3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=855041114]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1796525420]
+shape = SubResource("RectangleShape2D_canp4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

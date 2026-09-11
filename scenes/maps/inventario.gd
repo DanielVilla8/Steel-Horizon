@@ -26,9 +26,19 @@ func agregar_numero(numero):
 func agregar_llave(llave):
 	llaves.append(llave)
 	print("Llave recogida:", llave)
+	
 var piezas_tarjeta = 0
 #Cuenta cuántas piezas de la tarjeta lleva el jugador
 
 func agregar_pieza_tarjeta() -> void:
 	piezas_tarjeta += 1
 	print("Pieza de tarjeta recogida. Total:", piezas_tarjeta)
+	
+func limpiar_inventario() -> void:
+	# Vacía completamente todas las listas para un reinicio global
+	letras.clear()
+	tarjetas.clear()
+	numeros.clear()
+	llaves.clear()
+	piezas_tarjeta = 0
+	print("Inventario vaciado por completo.")

@@ -31,7 +31,7 @@ func _abrir_puerta() -> void:
 
 	print("Puerta abierta")
 	# Reproduce la animación
-	puerta.play("abrir")
+	puerta.play("open")
 	# Desactiva la colisión
 	colision.set_deferred("disabled", true)
 	# Cuando termine la animación
@@ -43,7 +43,7 @@ func _abrir_puerta() -> void:
 func _aplicar_estado_abierto_inmediato() -> void:
 	esta_abierta = true
 	colision.set_deferred("disabled", true)
-	puerta.play("abrir")
+	puerta.play("open")
 	puerta.stop()
 	puerta.frame = 6
 func _on_area_2d_body_entered(body):

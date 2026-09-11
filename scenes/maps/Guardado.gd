@@ -106,7 +106,7 @@ func cargar_partida():
 	objetos_recolectados = datos.get("objetos_recolectados", [])
 	# Recupera los objetos que ya habían sido recolectados.
 
-	estados_puertas = datos.get("estado_puertas", {})
+	estados_puertas = datos.get("estados_puertas", {})
 	# Recupera los estados de las puertas.
 
 
@@ -118,3 +118,15 @@ func cargar_partida():
 
 	return datos
 	# Devuelve todos los datos de la partida cargada.
+	
+func reiniciar_partida():
+	# Reinicia todo el estado del juego como si fuera una partida nueva.
+	objetos_recolectados.clear()
+	#Vacia la lista de los objetos ya recogidos
+	estados_puertas.clear()
+	Inventario.limpiar_inventario()
+	# Llama a la función del Autoload Inventario para vaciar letras, tarjetas, llaves, números y piezas de tarjeta.
+	hay_partida = false
+	# Indica que ya no hay una partida guardada activa, como si fuera un inicio limpio.
+	print("Partida reiniciada desde cero")
+	# Muestra un mensaje en la consola confirmando que el reinicio se hizo correctamente.

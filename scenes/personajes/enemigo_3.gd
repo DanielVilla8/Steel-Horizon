@@ -11,15 +11,9 @@ var current_index = 0
 func _physics_process(delta):
 	# Si se ha detectado al jugador dentro del área, verificar línea de visión directa
 	if is_instance_valid(target_player):
-		if can_see_player():
-			print("¡Jugador visto y capturado!")
-			set_physics_process(false)
-			target_player.die()
-			return # Detiene la patrulla
-			
-			if special_collision and special_collision.has_method("change_color"):
-				special_collision.change_color(Color(Color.RED, 0.3))
-
+		# Comprueba que el jugador detectado todavía exist
+		_check_and_kill_player()
+		
 	# Lógica de patrulla por waypoints
 	if waypoints.size() == 0:
 		return
@@ -59,22 +53,70 @@ func _physics_process(delta):
 	move_and_slide()
 
 func can_see_player() -> bool:
-	if not is_instance_valid(target_player):
-		return false
+		# Función que determina si el enemigo tiene línea de visión directa hacia el jugador.
 
-	ray_cast.global_position = global_position
+	if not is_instance_valid(target_player):
+		# Comprueba que el jugador todavía exista.
+		return false
+		# Si no existe, devuelve falso.
+		
+	var player_target_point = target_player.global_position
+	# Por defecto, el punto objetivo es el origen del jugador (puede ser
+	# la cabeza/pivote del sprite, no el centro real de su colisión).
+	if target_player.has_node("CollisionShape2D"):
+	# Si el jugador tiene un CollisionShape2D, usamos su posición
+	# global en vez del pivote del nodo, para apuntar al cuerpo real.
+		player_target_point = target_player.get_node("CollisionShape2D").global_position
+		# Esto evita que el rayo termine justo en la cabeza y nunca
+		# llegue a cruzar la colisión del jugador (el bug original).
+		
+	ray_cast.global_position = $Area2D.global_position
+	# Coloca el RayCast2D en la posición del enemigo.
+
+
 	ray_cast.rotation = 0
-	ray_cast.target_position = ray_cast.to_local(target_player.global_position)
+	# Mantiene el RayCast2D sin rotación.
+
+
+	ray_cast.target_position = ray_cast.to_local(player_target_point)
+	# Dirige el RayCast2D desde el enemigo hacia la posición del jugador.
+
 
 	ray_cast.add_exception(self)
-	ray_cast.force_raycast_update()
+	# Evita que el RayCast2D detecte al propio enemigo.
 
+	ray_cast.force_raycast_update()
+	# Actualiza inmediatamente el RayCast2D para obtener información actualizada.
+	
 	if ray_cast.is_colliding():
+		# Comprueba si el rayo chocó contra algún objeto.
 		var collider = ray_cast.get_collider()
+		# Obtiene el objeto contra el que chocó el rayo.
+
 		print("Choco contra: ", collider.name)
+		# Muestra en la consola qué objeto fue detectado.
+
 		return collider == target_player
+		# Devuelve true solamente si el objeto detectado es el jugador.
+
 
 	return false
+	# Si no encontró ningún objeto, devuelve false.
+	
+func _check_and_kill_player() -> void:
+	if can_see_player():
+		print("¡Jugador visto y capturado!")
+		
+		if special_collision and special_collision.has_method("change_color"):
+			special_collision.change_color(Color(Color.RED, 0.3))
+			# Este código intenta cambiar el color del área de visión,
+			# pero está después de return, por lo que actualmente no se ejecuta.
+			
+
+		set_physics_process(false)
+		
+		if target_player.has_method("die"):
+			target_player.die()
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Detecto:", body.name)

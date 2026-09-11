@@ -49,4 +49,4 @@ func _recolectar_letra() -> void:
 			"Con el tiempo la contraseña ha sido cambiada, así que algunas letras no serán necesarias."
 			])
 			
-		queue_free()
+	queue_free()

@@ -30,30 +30,8 @@ func _physics_process(delta):
 	# Si se ha detectado al jugador dentro del área, verificar línea de visión directa
 	if is_instance_valid(target_player):
 		# Comprueba que el jugador detectado todavía existe.
-
-		if can_see_player():
-			# Verifica mediante el RayCast2D si el enemigo realmente
-			# puede ver al jugador sin obstáculos.
-
-			print("¡Jugador visto y capturado!")
-			# Muestra un mensaje en la consola indicando que el jugador fue detectado.
-
-			set_physics_process(false)
-			# Detiene el procesamiento de física del enemigo.
-
-			target_player.die()
-			# Llama a la función die() del jugador para activar su derrota.
-
-			return
-			# Detiene la ejecución de esta función para que el enemigo
-			# deje de patrullar.
-
-			if special_collision and special_collision.has_method("change_color"):
-				special_collision.change_color(Color(Color.RED, 0.3))
-			# Este código intenta cambiar el color del área de visión,
-			# pero está después de return, por lo que actualmente no se ejecuta.
-
-
+		_check_and_kill_player()
+		
 	# Lógica de patrulla por waypoints
 	if waypoints.size() == 0:
 		# Comprueba si existen puntos de patrulla.
@@ -124,7 +102,7 @@ func _physics_process(delta):
 			$Area2D.rotation_degrees = -90
 			# Gira el cono de visión hacia abajo.
 
-			$Area2D.position = Vector2(0, 7)
+			$Area2D.position = Vector2(0, 12)
 			# Coloca el área de visión delante del enemigo.
 
 		else:
@@ -136,7 +114,7 @@ func _physics_process(delta):
 			$Area2D.rotation_degrees = 90
 			# Gira el cono de visión hacia arriba.
 
-			$Area2D.position = Vector2(0, -13)
+			$Area2D.position = Vector2(0, -12)
 			# Coloca el área de visión delante del enemigo.
 
 
@@ -156,8 +134,7 @@ func _physics_process(delta):
 
 			current_index = 0
 			# Si llegó al último, vuelve al primero para repetir la patrulla.
-
-
+			
 	move_and_slide()
 	# Aplica el movimiento físico del enemigo.
 
@@ -167,12 +144,20 @@ func can_see_player() -> bool:
 
 	if not is_instance_valid(target_player):
 		# Comprueba que el jugador todavía exista.
-
 		return false
 		# Si no existe, devuelve falso.
-
-
-	ray_cast.global_position = global_position
+		
+	var player_target_point = target_player.global_position
+	# Por defecto, el punto objetivo es el origen del jugador (puede ser
+	# la cabeza/pivote del sprite, no el centro real de su colisión).
+	if target_player.has_node("CollisionShape2D"):
+		# Si el jugador tiene un CollisionShape2D, usamos su posición
+		# global en vez del pivote del nodo, para apuntar al cuerpo real.
+		player_target_point = target_player.get_node("CollisionShape2D").global_position
+		# Esto evita que el rayo termine justo en la cabeza y nunca
+		# llegue a cruzar la colisión del jugador (el bug original).
+		
+	ray_cast.global_position = $Area2D.global_position
 	# Coloca el RayCast2D en la posición del enemigo.
 
 
@@ -180,21 +165,18 @@ func can_see_player() -> bool:
 	# Mantiene el RayCast2D sin rotación.
 
 
-	ray_cast.target_position = ray_cast.to_local(target_player.global_position)
+	ray_cast.target_position = ray_cast.to_local(player_target_point)
 	# Dirige el RayCast2D desde el enemigo hacia la posición del jugador.
 
 
 	ray_cast.add_exception(self)
 	# Evita que el RayCast2D detecte al propio enemigo.
 
-
 	ray_cast.force_raycast_update()
 	# Actualiza inmediatamente el RayCast2D para obtener información actualizada.
-
-
+	
 	if ray_cast.is_colliding():
 		# Comprueba si el rayo chocó contra algún objeto.
-
 		var collider = ray_cast.get_collider()
 		# Obtiene el objeto contra el que chocó el rayo.
 
@@ -207,7 +189,21 @@ func can_see_player() -> bool:
 
 	return false
 	# Si no encontró ningún objeto, devuelve false.
+	
+func _check_and_kill_player() -> void:
+	if can_see_player():
+		print("¡Jugador visto y capturado!")
+		
+		if special_collision and special_collision.has_method("change_color"):
+			special_collision.change_color(Color(Color.RED, 0.3))
+			# Este código intenta cambiar el color del área de visión,
+			# pero está después de return, por lo que actualmente no se ejecuta.
+			
 
+		set_physics_process(false)
+		
+		if target_player.has_method("die"):
+			target_player.die()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	# Se ejecuta cuando un cuerpo entra en el área de visión del enemigo.
@@ -224,8 +220,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		target_player = body
 		# Guarda al jugador como objetivo para comprobar posteriormente
 		# si existe una línea de visión directa.
-
-
+		
+		_check_and_kill_player()
+		# Evaluar inmediatamente al entrar para evitar que la salida rápida lo cancele
+		
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	# Se ejecuta cuando un cuerpo sale del área de visión.
 

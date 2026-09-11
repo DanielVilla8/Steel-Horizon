@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://hgn7440wh8aw" path="res://scenes/maps/Zona2/tarjeta_azul.gd" id="1_rwh1s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
+size = Vector2(24, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7o0i"]
 size = Vector2(16, 24)
 
 [node name="tarjeta azul" type="Area2D" unique_id=1223472082]
@@ -15,6 +18,11 @@ texture = ExtResource("1_0cmaw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=194109615]
 shape = SubResource("RectangleShape2D_q5bq3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=772319844]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1667623231]
+shape = SubResource("RectangleShape2D_k7o0i")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
