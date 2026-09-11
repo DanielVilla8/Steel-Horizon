@@ -1,18 +1,20 @@
 extends Control
 
+@onready var boton_continuar: Button = $ColorRect/VBoxContainer/Continuar
+
 func _ready() -> void:
 	# Se asegura de que el juego no arranque pausado al entrar al menú
 	get_tree().paused = false
 	# Reproduce la música del menú principal
 	MusicaManager.reproducir("menu")
-
+	
+	# Deshabilita el botón si no existe la partida guardada
+	if not FileAccess.file_exists("user://partida.save"):
+		boton_continuar.disabled = true
+		
 func _on_play_pressed() -> void:
 	#Comenzar partida nueva
-	# Limpia el inventario para que no queden datos de una partida anterior
-	Inventario.letras.clear()
-	Inventario.tarjetas.clear()
-	Inventario.numeros.clear()
-	Inventario.llaves.clear()
+	Guardado.reiniciar_partida()
 	
 	# Cambia a la pantalla de introducción para arrancar el juego desde cero
 	get_tree().change_scene_to_file("res://scenes/maps/intro_screen.tscn")

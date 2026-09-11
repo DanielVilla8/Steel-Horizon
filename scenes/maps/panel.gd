@@ -14,7 +14,7 @@ var intentos_fallidos = 0
 @onready var espacio2 = $Panel/HBoxContainer/Label2
 @onready var espacio3 = $Panel/HBoxContainer/Label3
 # Referencia de la tarjeta
-@onready var tarjeta = $"../Tarjeta"
+@onready var tarjeta = $"../Y-Short/Tarjeta"
 
 func _ready():
 	actualizar_letras()

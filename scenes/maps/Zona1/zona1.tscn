@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bw31yj3yhrkjk" path="res://scenes/maps/Zona1/zona_1.gd" id="1_8ggk0"]
 [ext_resource type="Texture2D" uid="uid://3ipvj1q13n1b" path="res://assets/sprites/tiles/paredes/union TIN.png" id="1_kveyk"]
 [ext_resource type="Texture2D" uid="uid://bfj6sm3wk0nj6" path="res://assets/sprites/tiles/paredes/borde derecho.png" id="1_wq4qd"]
+[ext_resource type="Texture2D" uid="uid://b8bqs3yuhwoxg" path="res://assets/sprites/tiles/suelo/suelo.png" id="2_0h5a2"]
 [ext_resource type="Texture2D" uid="uid://8rdasrloywb8" path="res://assets/sprites/tiles/paredes/borde inferior.png" id="2_q1gfa"]
 [ext_resource type="Texture2D" uid="uid://c7ve68hqkiypx" path="res://assets/sprites/tiles/paredes/borde union V.png" id="3_5hsx1"]
 [ext_resource type="Texture2D" uid="uid://cpb2qijxiqki4" path="res://assets/sprites/tiles/paredes/UNION T SUPERIOR.png" id="4_jy68v"]
@@ -42,11 +43,8 @@
 [ext_resource type="PackedScene" uid="uid://cn6vaf0i2mfjy" path="res://scenes/pause_menu.tscn" id="40_kc6ms"]
 [ext_resource type="PackedScene" uid="uid://dhce8jx1wh6j6" path="res://scenes/gameover_ui.tscn" id="41_fyyq5"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_no2j0"]
-load_path = "res://.godot/imported/suelo.png-de13b7f08a8dafc4447edc5045d0eb4a.ctex"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj1bo"]
-texture = SubResource("CompressedTexture2D_no2j0")
+texture = ExtResource("2_0h5a2")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 

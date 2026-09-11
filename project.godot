@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Steel Horizon"
-run/main_scene="uid://bioe2om1d42qa"
+run/main_scene="uid://epac824ctl4r"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
