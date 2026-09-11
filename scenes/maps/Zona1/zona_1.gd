@@ -17,5 +17,5 @@ func _ready() -> void:
 		"Deberás atravesar a toda la custodia de robots sin ser detectado.",
 		"Yo te ayudaré en lo que sea posible.",
 		"Busca en TODAS las habitaciones las piezas del código para continuar a la siguiente zona.",
-		
+		"Presiona W para caminar hacia adelante, S para caminar hacia abajo, A para izquierda, D para derecha, interactuas con E y presiona espacio para pausar.",
 	])
