@@ -264,6 +264,35 @@ id_unico = "P-003"
 position = Vector2(1024, 720)
 id_unico = "P-002"
 
+[node name="llave" parent="Y-Short" unique_id=679451862 instance=ExtResource("35_2cdx0")]
+position = Vector2(136, 391)
+id_unico = "006"
+
+[node name="letra A" parent="Y-Short" unique_id=2111177116 instance=ExtResource("25_62qrs")]
+position = Vector2(240, 664)
+id_unico = "001"
+
+[node name="letra D" parent="Y-Short" unique_id=1611822037 instance=ExtResource("26_5j5ef")]
+position = Vector2(1216, 1168)
+id_unico = "002"
+
+[node name="letra J" parent="Y-Short" unique_id=262328995 instance=ExtResource("27_2gyoi")]
+position = Vector2(1232, 526)
+id_unico = "003"
+
+[node name="letra O" parent="Y-Short" unique_id=1095807123 instance=ExtResource("28_4vpho")]
+position = Vector2(690, 408)
+id_unico = "004"
+
+[node name="letra R" parent="Y-Short" unique_id=777958055 instance=ExtResource("29_342sr")]
+position = Vector2(792, 112)
+id_unico = "005"
+
+[node name="Tarjeta" parent="Y-Short" unique_id=2139148 instance=ExtResource("33_hjp7m")]
+visible = false
+position = Vector2(362, 1072)
+id_unico = "007"
+
 [node name="Objetos" type="Sprite2D" parent="Y-Short" unique_id=1294800886]
 position = Vector2(-2, 0)
 
@@ -537,26 +566,6 @@ scale = Vector2(3, 3)
 speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint15_enemigo8"), NodePath("../Waypoints/waypoint16_enemigo8")]
 
-[node name="letra A" parent="." unique_id=2111177116 instance=ExtResource("25_62qrs")]
-position = Vector2(240, 664)
-id_unico = "001"
-
-[node name="letra D" parent="." unique_id=1611822037 instance=ExtResource("26_5j5ef")]
-position = Vector2(1216, 1168)
-id_unico = "002"
-
-[node name="letra J" parent="." unique_id=262328995 instance=ExtResource("27_2gyoi")]
-position = Vector2(1232, 526)
-id_unico = "003"
-
-[node name="letra O" parent="." unique_id=1095807123 instance=ExtResource("28_4vpho")]
-position = Vector2(690, 408)
-id_unico = "004"
-
-[node name="letra R" parent="." unique_id=777958055 instance=ExtResource("29_342sr")]
-position = Vector2(792, 112)
-id_unico = "005"
-
 [node name="Waypoints" type="Node2D" parent="." unique_id=642373536]
 
 [node name="waypoint_enemigo1" type="Marker2D" parent="Waypoints" unique_id=28856585]
@@ -617,18 +626,9 @@ scale = Vector2(1.5, 1.5)
 visible = false
 script = ExtResource("33_x4wke")
 
-[node name="Tarjeta" parent="." unique_id=2139148 instance=ExtResource("33_hjp7m")]
-visible = false
-position = Vector2(362, 1072)
-id_unico = "007"
-
 [node name="Puerta" parent="." unique_id=579953837 instance=ExtResource("34_367bw")]
 position = Vector2(960, 1232)
 id_unico = "P-001"
-
-[node name="llave" parent="." unique_id=679451862 instance=ExtResource("35_2cdx0")]
-position = Vector2(136, 391)
-id_unico = "006"
 
 [node name="puertas laterales" parent="." unique_id=1922002414 instance=ExtResource("37_lop1x")]
 position = Vector2(541, 1152)

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dskciqpinokuv" path="res://assets/sprites/tiles/objetos/tarjeta roja.png" id="1_sivqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
-size = Vector2(22, 29)
+size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7o0i"]
 size = Vector2(16, 24)
@@ -17,7 +17,6 @@ script = ExtResource("1_ooj7s")
 texture = ExtResource("1_sivqs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845279827]
-position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_q5bq3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1578030034]

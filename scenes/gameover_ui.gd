@@ -11,6 +11,8 @@ func _ready() -> void:
 func trigger_game_over() -> void:
 	show()
 	get_tree().paused = true #Pausa del juego mientras esta el menu
+	Guardado.jugador_esta_vivo = false
+	#Marca al jugador como muerto para bloquear el autoguardado
 	
 func _on_retry_pressed() -> void:
 	get_tree().paused = false

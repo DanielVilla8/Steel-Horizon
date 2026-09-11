@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://epac824ctl4r"]
+
+[ext_resource type="Script" uid="uid://bi6tkipoa2gra" path="res://advertencia_screen.gd" id="1_gf6ib"]
+
+[node name="AdvertenciaScreen" type="Control" unique_id=1718863148]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gf6ib")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=705819959]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=1508366768]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 29
+bbcode_enabled = true
+text = " ⚠️ ADVERTENCIA
+
+Steel Horizon está recomendado para mayores de 10 años.
+
+El videojuego contiene elementos de sigilo, persecución y tensión, donde el jugador deberá evitar ser detectado por los enemigos.
+
+Se recomienda jugar de manera responsable y realizar pausas durante sesiones prolongadas.
+
+"
+
+[node name="TextoParpadeo" type="RichTextLabel" parent="." unique_id=686509531]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 611.0
+offset_bottom = 611.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[b]Presiona ENTER para continuar.[/b]"
+
+[node name="Timer" type="Timer" parent="." unique_id=882487075]
+wait_time = 0.6
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

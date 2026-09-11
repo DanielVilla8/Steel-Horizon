@@ -150,7 +150,7 @@ script = ExtResource("1_1lays")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=867873991]
 sprite_frames = SubResource("SpriteFrames_iof2f")
-animation = &"above"
+animation = &"left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1228484693]
 shape = SubResource("RectangleShape2D_s26vt")

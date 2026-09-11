@@ -64,11 +64,11 @@ func _physics_process(delta):
 		if direction.x > 0:
 			$AnimatedSprite2D.play("rigth")
 			$Area2D.rotation_degrees = 180
-			$Area2D.position = Vector2(9, 0)
+			$Area2D.position = Vector2(3, -7)
 		else:
 				$AnimatedSprite2D.play("left")
 				$Area2D.rotation_degrees = 0
-				$Area2D.position = Vector2(0, 0)
+				$Area2D.position = Vector2(-3, -7)
 	else:
 		if direction.y > 0:
 			$AnimatedSprite2D.play("above")
@@ -77,7 +77,7 @@ func _physics_process(delta):
 		else:
 			$AnimatedSprite2D.play("below")
 			$Area2D.rotation_degrees = 90
-			$Area2D.position = Vector2(0, 8)
+			$Area2D.position = Vector2(0, -8)
 			
 	velocity = direction * speed
 	# Calcula la velocidad del enemigo multiplicando la dirección

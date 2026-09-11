@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bmyvkcm12e0cv" path="res://assets/sprites/tiles/objetos/letra R.png" id="2_0ql77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5bq3"]
-size = Vector2(36, 36)
+size = Vector2(48, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_egcl2"]
 size = Vector2(32, 32)

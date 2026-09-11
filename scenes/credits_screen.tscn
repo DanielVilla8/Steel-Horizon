@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bxoxokgsm2hn4"]
+
+[ext_resource type="Script" uid="uid://ceynbun3ttdwc" path="res://credits_screen.gd" id="1_8n838"]
+
+[node name="CreditsScreen" type="Control" unique_id=498436261]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8n838")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2045904801]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.043039158, 0.04303915, 0.04303915, 1)
+
+[node name="TextoCreditos" type="RichTextLabel" parent="." unique_id=1249457981]
+layout_mode = 0
+offset_top = 648.0
+offset_right = 1152.0
+offset_bottom = 2648.0
+bbcode_enabled = true
+text = "[center][b]STEEL HORIZON[/b][/center]
+
+
+[center][b]Desarrollado por:[/b]
+Hernández Pérez Samuel Adonay
+Meléndez Villanueva José Daniel
+Melara Rivera Jeremy Eliseo
+Mónico Pérez Ricardo Josué[/center]
+
+
+[center][b]Líder de proyecto[/b]
+Meléndez Villanueva José Daniel[/center]
+
+
+[center][b]Programación:[/b]
+Hernández Pérez Samuel Adonay
+Meléndez Villanueva José Daniel[/center]
+
+
+[center][b]Diseño de niveles:[/b]
+Hernández Pérez Samuel Adonay
+Meléndez Villanueva José Daniel
+Melara Rivera Jeremy Eliseo[/center]
+
+
+[center][b]Diseño gráfico / Pixel Art:[/b]
+Hernández Pérez Samuel Adonay
+Meléndez Villanueva José Daniel
+Melara Rivera Jeremy Eliseo
+Mónico Pérez Ricardo Josué[/center]
+
+
+[center][b]Motor de desarrollo:[/b]
+Godot Engine[/center]
+
+
+[center][b]Herramientas utilizadas:[/b]
+Pixelorama, Soundtrap[/center]
+
+
+[center][b]Música y efectos de sonido:[/b]
+Melara Rivera Jeremy Eliseo
+Mónico Pérez Ricardo Josué[/center]
+
+
+[center][b]Guion / historia[/b]
+Hernández Pérez Samuel Adonay
+Meléndez Villanueva José Daniel
+Medrano Angel[/center]
+
+
+[center][b]Asesor académico[/b]
+Castellanos Ávila Bryan Josué[/center]
+
+
+[center]Gracias por jugar.[/center]"

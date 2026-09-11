@@ -28,13 +28,10 @@ stretch_mode = 6
 
 [node name="PanelTexto" type="Panel" parent="." unique_id=814350421]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -150.0
+offset_bottom = 159.0
 grow_horizontal = 2
-grow_vertical = 0
 offset_transform_enabled = true
 theme_override_styles/panel = SubResource("StyleBoxFlat_u0ya7")
 
@@ -47,3 +44,22 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 22
 theme_override_font_sizes/bold_font_size = 17
+
+[node name="AvisoContinuar" type="RichTextLabel" parent="." unique_id=1888054914]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 618.0
+offset_right = 21.0
+offset_bottom = 618.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[b]Presiona ENTER para continuar.[/b]"
+
+[node name="Timer" type="Timer" parent="AvisoContinuar" unique_id=489920556]
+wait_time = 0.6
+autostart = true
+
+[connection signal="timeout" from="AvisoContinuar/Timer" to="." method="_on_timer_timeout"]

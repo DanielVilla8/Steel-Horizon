@@ -15,10 +15,17 @@ var objetos_recolectados: Array = []
 var estados_puertas: Dictionary = {}
 # Guarda el estado de las puertas, por ejemplo, si están abiertas o cerradas.
 
+var jugador_esta_vivo = true
+#Guardara el estado del jugador, a partir de eso dependero si se guarda la partida
 
 func guardar_partida(zona_actual, posicion_jugador, direccion_jugador):
 	# Función encargada de guardar toda la información importante de la partida.
-
+	
+	if not jugador_esta_vivo:
+		#Si el jugador esta muerto, no sobreescribira el guardado
+		print("Guardado bloquedo: el jugador esta muerto")
+		return
+		
 	var datos = {
 		"zona": zona_actual,
 		# Guarda la zona o nivel donde se encuentra el jugador.
@@ -128,5 +135,7 @@ func reiniciar_partida():
 	# Llama a la función del Autoload Inventario para vaciar letras, tarjetas, llaves, números y piezas de tarjeta.
 	hay_partida = false
 	# Indica que ya no hay una partida guardada activa, como si fuera un inicio limpio.
+	jugador_esta_vivo = true
+	#Reactiva el guardado automatico para nueva partida
 	print("Partida reiniciada desde cero")
 	# Muestra un mensaje en la consola confirmando que el reinicio se hizo correctamente.

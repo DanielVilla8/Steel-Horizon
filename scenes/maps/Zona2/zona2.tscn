@@ -491,6 +491,10 @@ texture = ExtResource("17_k01jj")
 position = Vector2(1171, 129.5)
 shape = SubResource("RectangleShape2D_rcyom")
 
+[node name="tarjeta azul" parent="Y-Short" unique_id=1223472082 instance=ExtResource("24_psunf")]
+position = Vector2(1336, 1152)
+id_unico = "008"
+
 [node name="Electricidad" type="Node2D" parent="." unique_id=1003765760]
 z_index = -1
 script = SubResource("GDScript_53g1x")
@@ -1758,10 +1762,6 @@ script = ExtResource("23_53g1x")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1384982180]
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_q5bq3")
-
-[node name="tarjeta azul" parent="." unique_id=1223472082 instance=ExtResource("24_psunf")]
-position = Vector2(1336, 1152)
-id_unico = "008"
 
 [node name="puerta 2" parent="." unique_id=626080026 instance=ExtResource("25_40a0y")]
 position = Vector2(1344, 1232)
