@@ -248,7 +248,7 @@ speed = 150.0
 [node name="Camera2D" type="Camera2D" parent="Y-Short/personaje principal" unique_id=90251405]
 position = Vector2(96, 45.000004)
 scale = Vector2(0.33333334, 0.33333334)
-zoom = Vector2(1.4, 1.4)
+zoom = Vector2(1.1, 1.1)
 limit_left = 0
 limit_top = 0
 limit_right = 1280
@@ -519,48 +519,49 @@ shape = SubResource("RectangleShape2D_dblbh")
 
 [node name="enemigo 1" parent="." unique_id=1563502562 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
 position = Vector2(608, 641)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint_enemigo1"), NodePath("../Waypoints/waypoint2_enemigo1")]
 
 [node name="enemigo 2" parent="." unique_id=816885085 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
 position = Vector2(931, 343)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint3_enemigo2"), NodePath("../Waypoints/waypoint4_enemigo2")]
 
 [node name="enemigo 3" parent="." unique_id=1670277959 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
 position = Vector2(608, 1164)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
+speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint5_enemigo3"), NodePath("../Waypoints/waypoint6_enemigo3")]
 
 [node name="enemigo 4" parent="." unique_id=714674726 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
 position = Vector2(256, 510.00003)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint7_enemigo4"), NodePath("../Waypoints/waypoint8_enemigo4")]
 
 [node name="enemigo 5" parent="." unique_id=2129178557 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
 position = Vector2(1063, 874)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint9_enemigo5"), NodePath("../Waypoints/waypoint10_enemigo5")]
 
 [node name="enemigo 6" parent="." unique_id=2004121394 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
 position = Vector2(1213, 821)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint11_enemigo6"), NodePath("../Waypoints/waypoint12_enemigo6")]
 
 [node name="enemigo 7" parent="." unique_id=807157036 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
 position = Vector2(792.00006, 620)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint13_enemigo7"), NodePath("../Waypoints/waypoint14_enemigo7")]
 
 [node name="enemigo 8" parent="." unique_id=1102875778 node_paths=PackedStringArray("waypoints") instance=ExtResource("24_dm5hg")]
 position = Vector2(383.00006, 222)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 speed = 150.0
 waypoints = [NodePath("../Waypoints/waypoint15_enemigo8"), NodePath("../Waypoints/waypoint16_enemigo8")]
 

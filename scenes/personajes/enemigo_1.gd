@@ -1,8 +1,6 @@
 extends CharacterBody2D
-
 # Define al enemigo como un CharacterBody2D, permitiendo controlar
 # su movimiento y física.
-
 @onready var special_collision: CollisionPolygon2D = $Area2D/specialCollision
 # Obtiene el CollisionPolygon2D del área de visión del enemigo.
 # Se utiliza para detectar al jugador dentro del cono de visión.
@@ -10,6 +8,9 @@ extends CharacterBody2D
 @onready var ray_cast: RayCast2D = $RayCast2D
 # Obtiene el RayCast2D, que sirve para comprobar si existe
 # una línea de visión directa entre el enemigo y el jugador.
+#@onready carga la referencia a un nodo hijo (como el RayCast2D o el Area2D) en el momento seguro 
+#en que ya está listo en la escena, y la guarda en una variable para no tener que escribir la ruta 
+#completa ($Area2D/specialCollision) cada vez que se necesita.
 
 @export var speed: float = 100.0
 # Velocidad a la que se mueve el enemigo durante la patrulla.
@@ -22,11 +23,18 @@ var current_index = 0
 
 var target_player: Node2D = null
 # Guarda la referencia al jugador cuando este entra en el área de visión.
-
+#Esa variable sirve para verificar si el personaje entra al cono de vision
+#del enemigo, empieza en null porque no hay personaje que netre en el area del cono de vision
 
 func _physics_process(delta):
 	# Se ejecuta continuamente y controla la detección y el movimiento del enemigo.
-
+	#"Esta función se ejecuta constantemente y hace dos cosas: primero, si ya hay un jugador
+	#detectado, revisa si todavía tiene línea de visión directa hacia él. Segundo, controla la
+	#patrulla — mueve al enemigo hacia el waypoint actual, cambia su animación según la
+	#dirección, y rota el cono de visión para que apunte hacia donde se mueve. Cuando llega
+	#cerca del waypoint, pasa al siguiente, y si llega al último, vuelve al primero, repitiendo el
+	#ciclo
+	
 	# Si se ha detectado al jugador dentro del área, verificar línea de visión directa
 	if is_instance_valid(target_player):
 		# Comprueba que el jugador detectado todavía existe.
@@ -140,8 +148,11 @@ func _physics_process(delta):
 
 
 func can_see_player() -> bool:
-	# Función que determina si el enemigo tiene línea de visión directa hacia el jugador.
-
+	#Esta función lanza un rayo desde el enemigo hacia el jugador para comprobar si hay
+	#un obstáculo (como una pared) entre ellos. Si el rayo llega sin chocar con nada
+	#antes, y lo que encuentra es justo el jugador, entonces hay visión directa; 
+	#si choca primero con otra cosa, no lo detecta.
+	
 	if not is_instance_valid(target_player):
 		# Comprueba que el jugador todavía exista.
 		return false
@@ -191,6 +202,10 @@ func can_see_player() -> bool:
 	# Si no encontró ningún objeto, devuelve false.
 	
 func _check_and_kill_player() -> void:
+	#"Esta función revisa si el enemigo tiene visión directa
+	#hacia el jugador llamando a can_see_player(). Si la detección es verdadera, detiene
+	#el movimiento del enemigo y ejecuta la función die() del jugador, terminando el nivel.
+	
 	if can_see_player():
 		print("¡Jugador visto y capturado!")
 		
@@ -201,13 +216,16 @@ func _check_and_kill_player() -> void:
 			
 
 		set_physics_process(false)
-		
+		#detiene el movimiento del enemigo
 		if target_player.has_method("die"):
 			target_player.die()
-
+			#lo elimina
+			
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	# Se ejecuta cuando un cuerpo entra en el área de visión del enemigo.
-
+	#"Cuando algo entra al cono de visión, se comprueba si pertenece al
+	# grupo player; si es así, se guarda como objetivo y se evalúa de inmediato.
+	
 	print("Detecto:", body.name)
 	# Muestra en la consola qué cuerpo entró al área.
 
@@ -226,7 +244,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	# Se ejecuta cuando un cuerpo sale del área de visión.
-
+	#Cuando algo sale del cono, se compara si es el mismo objetivo guardado,
+	#y si lo es, se limpia la variable a null, para que el enemigo 'olvide'
+	#que lo estaba vigilando."
 	if body == target_player:
 		# Comprueba si el cuerpo que salió era el jugador detectado.
 

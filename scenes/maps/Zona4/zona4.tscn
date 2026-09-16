@@ -424,6 +424,7 @@ zona_actual = "Zona4"
 
 [node name="Camera2D2" type="Camera2D" parent="Y-Short/personaje principal" unique_id=1120491490]
 position = Vector2(26, 80.66667)
+zoom = Vector2(0.5, 0.5)
 limit_left = 0
 limit_top = 0
 limit_right = 2560

@@ -6,21 +6,24 @@ extends Area2D
 # Nombre de la llave
 @export var nombre_llave = "Llave1"
 # Nombre que tendrá la llave dentro del inventario.
-
+#"nombre_llave es el texto que se muestra al jugador en el inventario,
 
 @export var id_unico: String = ""
 # Identificador único de la llave.
 # Sirve para saber si esta llave ya fue recogida y guardar ese estado.
-
+#identificador interno que usa el sistema de guardado para saber si esa llaveç
+#en particular ya fue recogida, sin depender del nombre visible."
 
 # Indica si el jugador está cerca
 var jugador_cerca = false
 # Guarda si el jugador se encuentra dentro del área de la llave.
 
-
+#CUANDO CARGA LA PARTIDA
 func _ready() -> void:
 	# Se ejecuta cuando la llave está lista en la escena.
-
+	#"Esta parte tiene una comprobación duplicada — queue_free() ya elimina la llave, 
+	#y la llamada a _comprobar_si_ya_fue_recogido() vuelve a hacer lo mismo. Funciona igual, 
+	#pero es código redundante que se podría simplificar."
 	# Si al cargar la partida este ID ya fue recogido,
 	# desaparece del mapa automáticamente.
 	if id_unico != "" and id_unico in Guardado.objetos_recolectados:
@@ -68,8 +71,11 @@ func _on_body_exited(body):
 
 func _process(delta):
 	# Se ejecuta continuamente para comprobar si el jugador
-	# quiere recoger la llave.
-
+	# quiere recoger la llave
+	#"Se usa _process en vez de recoger automáticamente al entrar, para que el jugador
+	# tenga control sobre cuándo interactuar — solo se recoge si está cerca Y presiona la tecla de 
+	#interacción, en vez de recogerla automáticamente con solo tocarla."
+	
 	# Comprueba que el jugador esté cerca de la llave
 	# y que haya presionado la tecla asignada (E).
 	if jugador_cerca and Input.is_action_just_pressed("interactuar"):

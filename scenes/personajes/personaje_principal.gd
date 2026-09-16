@@ -69,6 +69,11 @@ func guardar():
 
 # Carga los datos de una partida guardada.
 func cargar():
+	#primero revisa si existen datos guardados; si no hay, no hace nada. Si hay
+	#datos, comprueba que la zona guardada coincida con la zona actual — si no coincide, no
+	#aplica la posición, para evitar que el jugador aparezca en un lugar incorrecto. Si
+	#coincide, restaura la posición global, la última dirección, y reproduce la animación de
+	#reposo correspondiente."
 	var datos = Guardado.cargar_partida()
 	
 	# Si no existen datos guardados, termina la función.

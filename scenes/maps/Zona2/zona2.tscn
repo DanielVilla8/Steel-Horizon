@@ -241,9 +241,9 @@ zona_actual = "Zona2"
 
 [node name="Camera2D" type="Camera2D" parent="Y-Short/personaje principal" unique_id=1584924575]
 position = Vector2(194, 90)
-scale = Vector2(0.39999998, 0.39999998)
-limit_left = 1
-limit_top = -1
+scale = Vector2(0.39999992, 0.39999992)
+limit_left = 0
+limit_top = 0
 limit_right = 1600
 limit_bottom = 1280
 
